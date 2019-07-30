@@ -1,2 +1,2 @@
-# pytimeset
-Library that defines time intervals and sets and offers typical operations between them using Cython for speed.
+# PyTimeSet
+Library that allows high speed arithmetics with time intervals, powered by Cython.
