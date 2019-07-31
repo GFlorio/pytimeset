@@ -6,8 +6,8 @@ class TimeInterval:
     def __init__(self, start: datetime, end: datetime):
         if start > end:
             raise ValueError("The start of the interval must not be after the end!")
-        self.start = start
-        self.end = end
+        self._start = start
+        self._end = end
 
     def contains(self, moment: datetime) -> bool:
         return self.start <= moment < self.end
@@ -16,6 +16,8 @@ class TimeInterval:
         return self.end > other.start and other.end > self.start
 
     def is_subset(self, other: 'TimeInterval') -> bool:
+        if self.is_empty():
+            return True
         return self.start >= other.start and self.end <= other.end
 
     def duration(self) -> timedelta:
@@ -35,6 +37,14 @@ class TimeInterval:
     def translate(self, by: timedelta) -> 'TimeInterval':
         return TimeInterval(self.start+by, self.end+by)
 
+    @property
+    def start(self):
+        return self._start
+
+    @property
+    def end(self):
+        return self._end
+
     def __eq__(self, other):
         if not isinstance(other, TimeInterval):
             return False
@@ -45,5 +55,3 @@ class TimeInterval:
 
     def __str__(self):
         return f'TimeInterval [{self.start}; {self.end})'
-
-

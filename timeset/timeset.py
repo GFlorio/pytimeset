@@ -78,6 +78,13 @@ class TimeSet:
             for x in self.intervals
         )
 
+    def overlaps(self, other: 'TimeSet'):
+        for i in self.intervals:
+            for j in other.intervals:
+                if i.overlaps_with(j):
+                    return True
+        return False
+
     def is_empty(self) -> bool:
         return len(self.intervals) == 0
 
