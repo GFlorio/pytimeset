@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "54a5b925c18788d7ed6d4759ae42f73871281a580975e606bbb7065cdbbafe5a"
+            "sha256": "c32bd3f67a246091848ae751d52108d9b56855678bc9cbdd39ff0817839dc517"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,7 +15,8 @@
             }
         ]
     },
-    "default": {
+    "default": {},
+    "develop": {
         "cython": {
             "hashes": [
                 "sha256:07efba7b32c082c519b75e3b03821c2f32848e2b3e9986c784bbd8ffaf0666d7",
@@ -50,6 +51,5 @@
             "index": "pypi",
             "version": "==0.29.13"
         }
-    },
-    "develop": {}
+    }
 }
