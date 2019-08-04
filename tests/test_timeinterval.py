@@ -4,11 +4,12 @@ from unittest import TestCase
 from timeset import TimeInterval
 
 # TimeIntervals are immutable, so no need to setup new objects every test.
+
 t0 = datetime(2019, 7, 19)
 t1 = datetime(2019, 7, 20)
 t2 = datetime(2019, 7, 21)
 t3 = datetime(2019, 7, 22)
-t4 = datetime(2019, 7, 22)
+t4 = datetime(2019, 7, 23)
 
 empty = TimeInterval(t0, t0)
 i0 = TimeInterval(t0, t2)
