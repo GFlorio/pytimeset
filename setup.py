@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, Extension
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -14,5 +14,6 @@ setup(
     long_description_content_type="text/markdown",
     author_email='gabriel@gabrielflorio.com',
     description='Defines sets and intervals to work with time, and provides arithmetic operations '
-                'for them. '
+                'for them. ',
+    ext_modules=[Extension('timeset', ['timeset.c'])]
 )
