@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='pytimeset',
-    version='0.5.2',
+    version='0.5.4',
     packages=['timeset'],
     url='https://github.com/GFlorio/pytimeset',
     license='MIT',
@@ -14,6 +14,6 @@ setup(
     long_description_content_type="text/markdown",
     author_email='gabriel@gabrielflorio.com',
     description='Defines sets and intervals to work with time, and provides arithmetic operations '
-                'for them. ',
+                'for them. Uses Cython extensions for performance.',
     ext_modules=[Extension('timeset.timeset', ['timeset/timeset.c'])]
 )

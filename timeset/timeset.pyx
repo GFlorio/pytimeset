@@ -225,6 +225,8 @@ cdef class TimeSet:
         cdef IntervalList* full_list = self._intervals
         cdef IntervalList* _iter = full_list
         cdef TimeSet ts
+        if self.is_empty():
+            return other
         while _iter.next is not NULL:
             _iter = _iter.next
         _iter.next = other._intervals

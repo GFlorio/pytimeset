@@ -35,6 +35,11 @@ class TestTimeSet(TestCase):
         intervals = list(s0.intervals.union(s1.intervals))
         self.assertEqual(u, TimeSet(intervals))
 
+    def test_empty_union(self):
+        e = TimeSet.empty()
+        s = choice(sets)
+        self.assertEqual(e.union(s), s)
+
     def test_intersection(self):
         s0, s1 = sample(sets, k=2)
         intersection = s0.intersection(s1)
