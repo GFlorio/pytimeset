@@ -258,10 +258,12 @@ cdef class TimeSet:
                 iter2 = iter2.next
             iter1 = iter1.next
         ts = TimeSet.from_list(new_list.next)
+        free_list(new_list.next)
         return ts
 
     cpdef TimeSet difference(self, TimeSet other):
         #This only works if both sets are normalized
+        cdef TimeSet ts
         cdef IntervalList* iter1 = self._intervals
         cdef IntervalList* iter2
         # Start the list with a dummy head
@@ -295,7 +297,9 @@ cdef class TimeSet:
                 tail = tail.next
                 tail.next = NULL
             iter1 = iter1.next
-        return TimeSet.from_list(new_list.next)
+        ts = TimeSet.from_list(new_list.next)
+        free_list(new_list.next)
+        return ts
 
     def contains(self, moment: datetime) -> bool:
         cdef IntervalList* _iter = self._intervals
