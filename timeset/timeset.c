@@ -590,8 +590,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__pytimeset__timeset
-#define __PYX_HAVE_API__pytimeset__timeset
+#define __PYX_HAVE__timeset__timeset
+#define __PYX_HAVE_API__timeset__timeset
 /* Early includes */
 #include "stdlib.h"
 #ifdef _OPENMP
@@ -802,72 +802,72 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "timeset.pyx",
+  "timeset/timeset.pyx",
 };
 
 /*--- Type declarations ---*/
-struct __pyx_obj_9pytimeset_7timeset_TimeInterval;
-struct __pyx_obj_9pytimeset_7timeset_TimeSet;
-struct __pyx_t_9pytimeset_7timeset_Interval;
-typedef struct __pyx_t_9pytimeset_7timeset_Interval __pyx_t_9pytimeset_7timeset_Interval;
-struct __pyx_t_9pytimeset_7timeset_IntervalList;
-typedef struct __pyx_t_9pytimeset_7timeset_IntervalList __pyx_t_9pytimeset_7timeset_IntervalList;
+struct __pyx_obj_7timeset_7timeset_TimeInterval;
+struct __pyx_obj_7timeset_7timeset_TimeSet;
+struct __pyx_t_7timeset_7timeset_Interval;
+typedef struct __pyx_t_7timeset_7timeset_Interval __pyx_t_7timeset_7timeset_Interval;
+struct __pyx_t_7timeset_7timeset_IntervalList;
+typedef struct __pyx_t_7timeset_7timeset_IntervalList __pyx_t_7timeset_7timeset_IntervalList;
 
-/* "pytimeset/timeset.pyx":15
+/* "timeset/timeset.pyx":15
  * from cpython.mem cimport PyMem_Malloc, PyMem_Free
  * 
  * ctypedef struct Interval:             # <<<<<<<<<<<<<<
  *     double start
  *     double end
  */
-struct __pyx_t_9pytimeset_7timeset_Interval {
+struct __pyx_t_7timeset_7timeset_Interval {
   double start;
   double end;
 };
 
-/* "pytimeset/timeset.pyx":109
+/* "timeset/timeset.pyx":109
  * 
  * 
  * ctypedef struct IntervalList:             # <<<<<<<<<<<<<<
  *     Interval interval
  *     IntervalList* next
  */
-struct __pyx_t_9pytimeset_7timeset_IntervalList {
-  __pyx_t_9pytimeset_7timeset_Interval interval;
-  __pyx_t_9pytimeset_7timeset_IntervalList *next;
+struct __pyx_t_7timeset_7timeset_IntervalList {
+  __pyx_t_7timeset_7timeset_Interval interval;
+  __pyx_t_7timeset_7timeset_IntervalList *next;
 };
 
-/* "pytimeset/timeset.pyx":54
+/* "timeset/timeset.pyx":54
  * 
  * 
  * cdef class TimeInterval:             # <<<<<<<<<<<<<<
  *     cdef Interval interval
  * 
  */
-struct __pyx_obj_9pytimeset_7timeset_TimeInterval {
+struct __pyx_obj_7timeset_7timeset_TimeInterval {
   PyObject_HEAD
-  struct __pyx_vtabstruct_9pytimeset_7timeset_TimeInterval *__pyx_vtab;
-  __pyx_t_9pytimeset_7timeset_Interval interval;
+  struct __pyx_vtabstruct_7timeset_7timeset_TimeInterval *__pyx_vtab;
+  __pyx_t_7timeset_7timeset_Interval interval;
 };
 
 
-/* "pytimeset/timeset.pyx":130
+/* "timeset/timeset.pyx":130
  *         return 0
  * 
  * cdef class TimeSet:             # <<<<<<<<<<<<<<
  *     cdef IntervalList* _intervals
  *     cdef frozenset _timeintervals
  */
-struct __pyx_obj_9pytimeset_7timeset_TimeSet {
+struct __pyx_obj_7timeset_7timeset_TimeSet {
   PyObject_HEAD
-  struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *__pyx_vtab;
-  __pyx_t_9pytimeset_7timeset_IntervalList *_intervals;
+  struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *__pyx_vtab;
+  __pyx_t_7timeset_7timeset_IntervalList *_intervals;
   PyObject *_timeintervals;
 };
 
 
 
-/* "pytimeset/timeset.pyx":54
+/* "timeset/timeset.pyx":54
  * 
  * 
  * cdef class TimeInterval:             # <<<<<<<<<<<<<<
@@ -875,20 +875,20 @@ struct __pyx_obj_9pytimeset_7timeset_TimeSet {
  * 
  */
 
-struct __pyx_vtabstruct_9pytimeset_7timeset_TimeInterval {
-  struct __pyx_obj_9pytimeset_7timeset_TimeInterval *(*from_interval)(__pyx_t_9pytimeset_7timeset_Interval);
-  int (*contains)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, PyObject *, int __pyx_skip_dispatch);
-  int (*overlaps_with)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, int __pyx_skip_dispatch);
-  int (*is_subset)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, int __pyx_skip_dispatch);
-  PyObject *(*duration)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, int __pyx_skip_dispatch);
-  int (*is_empty)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, int __pyx_skip_dispatch);
-  struct __pyx_obj_9pytimeset_7timeset_TimeInterval *(*intersection)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, int __pyx_skip_dispatch);
-  struct __pyx_obj_9pytimeset_7timeset_TimeInterval *(*translate)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, PyObject *, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_7timeset_7timeset_TimeInterval {
+  struct __pyx_obj_7timeset_7timeset_TimeInterval *(*from_interval)(__pyx_t_7timeset_7timeset_Interval);
+  int (*contains)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, PyObject *, int __pyx_skip_dispatch);
+  int (*overlaps_with)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, struct __pyx_obj_7timeset_7timeset_TimeInterval *, int __pyx_skip_dispatch);
+  int (*is_subset)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, struct __pyx_obj_7timeset_7timeset_TimeInterval *, int __pyx_skip_dispatch);
+  PyObject *(*duration)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, int __pyx_skip_dispatch);
+  int (*is_empty)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, int __pyx_skip_dispatch);
+  struct __pyx_obj_7timeset_7timeset_TimeInterval *(*intersection)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, struct __pyx_obj_7timeset_7timeset_TimeInterval *, int __pyx_skip_dispatch);
+  struct __pyx_obj_7timeset_7timeset_TimeInterval *(*translate)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, PyObject *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_9pytimeset_7timeset_TimeInterval *__pyx_vtabptr_9pytimeset_7timeset_TimeInterval;
+static struct __pyx_vtabstruct_7timeset_7timeset_TimeInterval *__pyx_vtabptr_7timeset_7timeset_TimeInterval;
 
 
-/* "pytimeset/timeset.pyx":130
+/* "timeset/timeset.pyx":130
  *         return 0
  * 
  * cdef class TimeSet:             # <<<<<<<<<<<<<<
@@ -896,17 +896,17 @@ static struct __pyx_vtabstruct_9pytimeset_7timeset_TimeInterval *__pyx_vtabptr_9
  *     cdef frozenset _timeintervals
  */
 
-struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet {
-  void (*_initialize_list)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, __pyx_t_9pytimeset_7timeset_Interval);
-  void (*_normalize)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, __pyx_t_9pytimeset_7timeset_Interval *, int);
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *(*from_list)(__pyx_t_9pytimeset_7timeset_IntervalList *);
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *(*__pyx_union)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, struct __pyx_obj_9pytimeset_7timeset_TimeSet *, int __pyx_skip_dispatch);
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *(*intersection)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, struct __pyx_obj_9pytimeset_7timeset_TimeSet *, int __pyx_skip_dispatch);
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *(*difference)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, struct __pyx_obj_9pytimeset_7timeset_TimeSet *, int __pyx_skip_dispatch);
-  int (*is_subset)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, struct __pyx_obj_9pytimeset_7timeset_TimeSet *, int __pyx_skip_dispatch);
-  int (*is_empty)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_7timeset_7timeset_TimeSet {
+  void (*_initialize_list)(struct __pyx_obj_7timeset_7timeset_TimeSet *, __pyx_t_7timeset_7timeset_Interval);
+  void (*_normalize)(struct __pyx_obj_7timeset_7timeset_TimeSet *, __pyx_t_7timeset_7timeset_Interval *, int);
+  struct __pyx_obj_7timeset_7timeset_TimeSet *(*from_list)(__pyx_t_7timeset_7timeset_IntervalList *);
+  struct __pyx_obj_7timeset_7timeset_TimeSet *(*__pyx_union)(struct __pyx_obj_7timeset_7timeset_TimeSet *, struct __pyx_obj_7timeset_7timeset_TimeSet *, int __pyx_skip_dispatch);
+  struct __pyx_obj_7timeset_7timeset_TimeSet *(*intersection)(struct __pyx_obj_7timeset_7timeset_TimeSet *, struct __pyx_obj_7timeset_7timeset_TimeSet *, int __pyx_skip_dispatch);
+  struct __pyx_obj_7timeset_7timeset_TimeSet *(*difference)(struct __pyx_obj_7timeset_7timeset_TimeSet *, struct __pyx_obj_7timeset_7timeset_TimeSet *, int __pyx_skip_dispatch);
+  int (*is_subset)(struct __pyx_obj_7timeset_7timeset_TimeSet *, struct __pyx_obj_7timeset_7timeset_TimeSet *, int __pyx_skip_dispatch);
+  int (*is_empty)(struct __pyx_obj_7timeset_7timeset_TimeSet *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *__pyx_vtabptr_9pytimeset_7timeset_TimeSet;
+static struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *__pyx_vtabptr_7timeset_7timeset_TimeSet;
 
 /* --- Runtime support code (head) --- */
 /* Refnanny.proto */
@@ -1328,7 +1328,7 @@ static void __Pyx_AddTraceback(const char *funcname, int c_line,
 /* CIntToPy.proto */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value);
 
-static PyObject* __pyx_convert__to_py___pyx_t_9pytimeset_7timeset_Interval(__pyx_t_9pytimeset_7timeset_Interval s);
+static PyObject* __pyx_convert__to_py___pyx_t_7timeset_7timeset_Interval(__pyx_t_7timeset_7timeset_Interval s);
 /* CIntFromPy.proto */
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
 
@@ -1357,45 +1357,45 @@ static int __Pyx_check_binary_version(void);
 /* InitStrings.proto */
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
-static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7timeset_12TimeInterval_from_interval(__pyx_t_9pytimeset_7timeset_Interval __pyx_v_interval); /* proto*/
-static int __pyx_f_9pytimeset_7timeset_12TimeInterval_contains(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_moment, int __pyx_skip_dispatch); /* proto*/
-static int __pyx_f_9pytimeset_7timeset_12TimeInterval_overlaps_with(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
-static int __pyx_f_9pytimeset_7timeset_12TimeInterval_is_subset(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_9pytimeset_7timeset_12TimeInterval_duration(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
-static int __pyx_f_9pytimeset_7timeset_12TimeInterval_is_empty(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
-static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7timeset_12TimeInterval_intersection(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
-static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7timeset_12TimeInterval_translate(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v__by, int __pyx_skip_dispatch); /* proto*/
-static void __pyx_f_9pytimeset_7timeset_7TimeSet__initialize_list(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, __pyx_t_9pytimeset_7timeset_Interval __pyx_v_interval); /* proto*/
-static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, __pyx_t_9pytimeset_7timeset_Interval *__pyx_v_intervals, int __pyx_v_size); /* proto*/
-static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset_7TimeSet_from_list(__pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v__list); /* proto*/
-static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset_7TimeSet_union(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
-static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset_7TimeSet_intersection(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
-static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset_7TimeSet_difference(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
-static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
-static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_empty(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_f_7timeset_7timeset_12TimeInterval_from_interval(__pyx_t_7timeset_7timeset_Interval __pyx_v_interval); /* proto*/
+static int __pyx_f_7timeset_7timeset_12TimeInterval_contains(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_moment, int __pyx_skip_dispatch); /* proto*/
+static int __pyx_f_7timeset_7timeset_12TimeInterval_overlaps_with(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
+static int __pyx_f_7timeset_7timeset_12TimeInterval_is_subset(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_7timeset_7timeset_12TimeInterval_duration(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static int __pyx_f_7timeset_7timeset_12TimeInterval_is_empty(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_f_7timeset_7timeset_12TimeInterval_intersection(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_f_7timeset_7timeset_12TimeInterval_translate(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v__by, int __pyx_skip_dispatch); /* proto*/
+static void __pyx_f_7timeset_7timeset_7TimeSet__initialize_list(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, __pyx_t_7timeset_7timeset_Interval __pyx_v_interval); /* proto*/
+static void __pyx_f_7timeset_7timeset_7TimeSet__normalize(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, __pyx_t_7timeset_7timeset_Interval *__pyx_v_intervals, int __pyx_v_size); /* proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_f_7timeset_7timeset_7TimeSet_from_list(__pyx_t_7timeset_7timeset_IntervalList *__pyx_v__list); /* proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_f_7timeset_7timeset_7TimeSet_union(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_f_7timeset_7timeset_7TimeSet_intersection(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_f_7timeset_7timeset_7TimeSet_difference(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
+static int __pyx_f_7timeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch); /* proto*/
+static int __pyx_f_7timeset_7timeset_7TimeSet_is_empty(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
 
 /* Module declarations from 'cpython.mem' */
 
-/* Module declarations from 'pytimeset.timeset' */
-static PyTypeObject *__pyx_ptype_9pytimeset_7timeset_TimeInterval = 0;
-static PyTypeObject *__pyx_ptype_9pytimeset_7timeset_TimeSet = 0;
-static __pyx_t_9pytimeset_7timeset_Interval __pyx_v_9pytimeset_7timeset_empty;
-static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_9pytimeset_7timeset_empty_set = 0;
-static int __pyx_f_9pytimeset_7timeset_contains(__pyx_t_9pytimeset_7timeset_Interval, double); /*proto*/
-static int __pyx_f_9pytimeset_7timeset_overlaps(__pyx_t_9pytimeset_7timeset_Interval, __pyx_t_9pytimeset_7timeset_Interval); /*proto*/
-static int __pyx_f_9pytimeset_7timeset_is_subset(__pyx_t_9pytimeset_7timeset_Interval, __pyx_t_9pytimeset_7timeset_Interval); /*proto*/
-static double __pyx_f_9pytimeset_7timeset_duration(__pyx_t_9pytimeset_7timeset_Interval); /*proto*/
-static int __pyx_f_9pytimeset_7timeset_Interval_is_empty(__pyx_t_9pytimeset_7timeset_Interval); /*proto*/
-static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_Interval_intersection(__pyx_t_9pytimeset_7timeset_Interval, __pyx_t_9pytimeset_7timeset_Interval); /*proto*/
-static int __pyx_f_9pytimeset_7timeset_equals(__pyx_t_9pytimeset_7timeset_Interval, __pyx_t_9pytimeset_7timeset_Interval); /*proto*/
-static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_translate(__pyx_t_9pytimeset_7timeset_Interval, double); /*proto*/
-static void __pyx_f_9pytimeset_7timeset_free_list(__pyx_t_9pytimeset_7timeset_IntervalList *); /*proto*/
-static int __pyx_f_9pytimeset_7timeset_mycmp(const void *, const void *); /*proto*/
-#define __Pyx_MODULE_NAME "pytimeset.timeset"
-extern int __pyx_module_is_main_pytimeset__timeset;
-int __pyx_module_is_main_pytimeset__timeset = 0;
+/* Module declarations from 'timeset.timeset' */
+static PyTypeObject *__pyx_ptype_7timeset_7timeset_TimeInterval = 0;
+static PyTypeObject *__pyx_ptype_7timeset_7timeset_TimeSet = 0;
+static __pyx_t_7timeset_7timeset_Interval __pyx_v_7timeset_7timeset_empty;
+static struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_7timeset_7timeset_empty_set = 0;
+static int __pyx_f_7timeset_7timeset_contains(__pyx_t_7timeset_7timeset_Interval, double); /*proto*/
+static int __pyx_f_7timeset_7timeset_overlaps(__pyx_t_7timeset_7timeset_Interval, __pyx_t_7timeset_7timeset_Interval); /*proto*/
+static int __pyx_f_7timeset_7timeset_is_subset(__pyx_t_7timeset_7timeset_Interval, __pyx_t_7timeset_7timeset_Interval); /*proto*/
+static double __pyx_f_7timeset_7timeset_duration(__pyx_t_7timeset_7timeset_Interval); /*proto*/
+static int __pyx_f_7timeset_7timeset_Interval_is_empty(__pyx_t_7timeset_7timeset_Interval); /*proto*/
+static __pyx_t_7timeset_7timeset_Interval __pyx_f_7timeset_7timeset_Interval_intersection(__pyx_t_7timeset_7timeset_Interval, __pyx_t_7timeset_7timeset_Interval); /*proto*/
+static int __pyx_f_7timeset_7timeset_equals(__pyx_t_7timeset_7timeset_Interval, __pyx_t_7timeset_7timeset_Interval); /*proto*/
+static __pyx_t_7timeset_7timeset_Interval __pyx_f_7timeset_7timeset_translate(__pyx_t_7timeset_7timeset_Interval, double); /*proto*/
+static void __pyx_f_7timeset_7timeset_free_list(__pyx_t_7timeset_7timeset_IntervalList *); /*proto*/
+static int __pyx_f_7timeset_7timeset_mycmp(const void *, const void *); /*proto*/
+#define __Pyx_MODULE_NAME "timeset.timeset"
+extern int __pyx_module_is_main_timeset__timeset;
+int __pyx_module_is_main_timeset__timeset = 0;
 
-/* Implementation of 'pytimeset.timeset' */
+/* Implementation of 'timeset.timeset' */
 static PyObject *__pyx_builtin_MemoryError;
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ValueError;
@@ -1487,46 +1487,46 @@ static PyObject *__pyx_n_s_total_seconds;
 static PyObject *__pyx_n_s_translate;
 static PyObject *__pyx_n_s_typing;
 static PyObject *__pyx_n_s_union;
-static int __pyx_pf_9pytimeset_7timeset_12TimeInterval___init__(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_start, PyObject *__pyx_v_end); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_2contains(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_moment); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_4overlaps_with(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_other); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_6is_subset(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_other); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_8duration(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_10is_empty(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_12intersection(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_other); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_14translate(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v__by); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_5start___get__(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_3end___get__(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_16__eq__(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_other); /* proto */
-static Py_hash_t __pyx_pf_9pytimeset_7timeset_12TimeInterval_18__hash__(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_20__str__(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self); /* proto */
-static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, PyObject *__pyx_v_intervals); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_2from_interval(CYTHON_UNUSED PyTypeObject *__pyx_v_cls, PyObject *__pyx_v_start, PyObject *__pyx_v_end); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_4empty(CYTHON_UNUSED PyTypeObject *__pyx_v_cls); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_6union(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_8intersection(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_10difference(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, PyObject *__pyx_v_moment); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_14is_subset(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_16is_empty(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self); /* proto */
-static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_pf_9pytimeset_7timeset_7TimeSet_18limiting_interval(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_20duration(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_22start(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_24end(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other); /* proto */
-static Py_hash_t __pyx_pf_9pytimeset_7timeset_7TimeSet_28__hash__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_30__str__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_32__repr__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self); /* proto */
-static void __pyx_pf_9pytimeset_7timeset_7TimeSet_34__dealloc__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self); /* proto */
-static PyObject *__pyx_tp_new_9pytimeset_7timeset_TimeInterval(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_9pytimeset_7timeset_TimeSet(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static int __pyx_pf_7timeset_7timeset_12TimeInterval___init__(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_start, PyObject *__pyx_v_end); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_2contains(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_moment); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_4overlaps_with(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_other); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_6is_subset(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_other); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_8duration(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_10is_empty(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_12intersection(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_other); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_14translate(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v__by); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_5start___get__(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_3end___get__(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_16__eq__(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_other); /* proto */
+static Py_hash_t __pyx_pf_7timeset_7timeset_12TimeInterval_18__hash__(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_20__str__(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self); /* proto */
+static int __pyx_pf_7timeset_7timeset_7TimeSet___init__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, PyObject *__pyx_v_intervals); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_2from_interval(CYTHON_UNUSED PyTypeObject *__pyx_v_cls, PyObject *__pyx_v_start, PyObject *__pyx_v_end); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_4empty(CYTHON_UNUSED PyTypeObject *__pyx_v_cls); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_6union(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_8intersection(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_10difference(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_12contains(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, PyObject *__pyx_v_moment); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_14is_subset(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_16is_empty(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self); /* proto */
+static struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_pf_7timeset_7timeset_7TimeSet_18limiting_interval(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_20duration(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_22start(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_24end(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_9intervals___get__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other); /* proto */
+static Py_hash_t __pyx_pf_7timeset_7timeset_7TimeSet_28__hash__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_30__str__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_32__repr__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self); /* proto */
+static void __pyx_pf_7timeset_7timeset_7TimeSet_34__dealloc__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self); /* proto */
+static PyObject *__pyx_tp_new_7timeset_7timeset_TimeInterval(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_7timeset_7timeset_TimeSet(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_tuple__3;
 /* Late includes */
 
-/* "pytimeset/timeset.pyx":19
+/* "timeset/timeset.pyx":19
  *     double end
  * 
  * cdef bint contains(Interval self, double element):             # <<<<<<<<<<<<<<
@@ -1534,13 +1534,13 @@ static PyObject *__pyx_tuple__3;
  * 
  */
 
-static int __pyx_f_9pytimeset_7timeset_contains(__pyx_t_9pytimeset_7timeset_Interval __pyx_v_self, double __pyx_v_element) {
+static int __pyx_f_7timeset_7timeset_contains(__pyx_t_7timeset_7timeset_Interval __pyx_v_self, double __pyx_v_element) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("contains", 0);
 
-  /* "pytimeset/timeset.pyx":20
+  /* "timeset/timeset.pyx":20
  * 
  * cdef bint contains(Interval self, double element):
  *     return self.start <= element < self.end             # <<<<<<<<<<<<<<
@@ -1554,7 +1554,7 @@ static int __pyx_f_9pytimeset_7timeset_contains(__pyx_t_9pytimeset_7timeset_Inte
   __pyx_r = __pyx_t_1;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":19
+  /* "timeset/timeset.pyx":19
  *     double end
  * 
  * cdef bint contains(Interval self, double element):             # <<<<<<<<<<<<<<
@@ -1568,7 +1568,7 @@ static int __pyx_f_9pytimeset_7timeset_contains(__pyx_t_9pytimeset_7timeset_Inte
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":22
+/* "timeset/timeset.pyx":22
  *     return self.start <= element < self.end
  * 
  * cdef bint overlaps(Interval self, Interval other):             # <<<<<<<<<<<<<<
@@ -1576,14 +1576,14 @@ static int __pyx_f_9pytimeset_7timeset_contains(__pyx_t_9pytimeset_7timeset_Inte
  * 
  */
 
-static int __pyx_f_9pytimeset_7timeset_overlaps(__pyx_t_9pytimeset_7timeset_Interval __pyx_v_self, __pyx_t_9pytimeset_7timeset_Interval __pyx_v_other) {
+static int __pyx_f_7timeset_7timeset_overlaps(__pyx_t_7timeset_7timeset_Interval __pyx_v_self, __pyx_t_7timeset_7timeset_Interval __pyx_v_other) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   int __pyx_t_2;
   __Pyx_RefNannySetupContext("overlaps", 0);
 
-  /* "pytimeset/timeset.pyx":23
+  /* "timeset/timeset.pyx":23
  * 
  * cdef bint overlaps(Interval self, Interval other):
  *     return self.end > other.start and other.end > self.start             # <<<<<<<<<<<<<<
@@ -1602,7 +1602,7 @@ static int __pyx_f_9pytimeset_7timeset_overlaps(__pyx_t_9pytimeset_7timeset_Inte
   __pyx_r = __pyx_t_1;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":22
+  /* "timeset/timeset.pyx":22
  *     return self.start <= element < self.end
  * 
  * cdef bint overlaps(Interval self, Interval other):             # <<<<<<<<<<<<<<
@@ -1616,7 +1616,7 @@ static int __pyx_f_9pytimeset_7timeset_overlaps(__pyx_t_9pytimeset_7timeset_Inte
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":25
+/* "timeset/timeset.pyx":25
  *     return self.end > other.start and other.end > self.start
  * 
  * cdef bint is_subset(Interval self, Interval other):             # <<<<<<<<<<<<<<
@@ -1624,24 +1624,24 @@ static int __pyx_f_9pytimeset_7timeset_overlaps(__pyx_t_9pytimeset_7timeset_Inte
  *         return True
  */
 
-static int __pyx_f_9pytimeset_7timeset_is_subset(__pyx_t_9pytimeset_7timeset_Interval __pyx_v_self, __pyx_t_9pytimeset_7timeset_Interval __pyx_v_other) {
+static int __pyx_f_7timeset_7timeset_is_subset(__pyx_t_7timeset_7timeset_Interval __pyx_v_self, __pyx_t_7timeset_7timeset_Interval __pyx_v_other) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   int __pyx_t_2;
   __Pyx_RefNannySetupContext("is_subset", 0);
 
-  /* "pytimeset/timeset.pyx":26
+  /* "timeset/timeset.pyx":26
  * 
  * cdef bint is_subset(Interval self, Interval other):
  *     if Interval_is_empty(self):             # <<<<<<<<<<<<<<
  *         return True
  *     return self.start >= other.start and self.end <= other.end
  */
-  __pyx_t_1 = (__pyx_f_9pytimeset_7timeset_Interval_is_empty(__pyx_v_self) != 0);
+  __pyx_t_1 = (__pyx_f_7timeset_7timeset_Interval_is_empty(__pyx_v_self) != 0);
   if (__pyx_t_1) {
 
-    /* "pytimeset/timeset.pyx":27
+    /* "timeset/timeset.pyx":27
  * cdef bint is_subset(Interval self, Interval other):
  *     if Interval_is_empty(self):
  *         return True             # <<<<<<<<<<<<<<
@@ -1651,7 +1651,7 @@ static int __pyx_f_9pytimeset_7timeset_is_subset(__pyx_t_9pytimeset_7timeset_Int
     __pyx_r = 1;
     goto __pyx_L0;
 
-    /* "pytimeset/timeset.pyx":26
+    /* "timeset/timeset.pyx":26
  * 
  * cdef bint is_subset(Interval self, Interval other):
  *     if Interval_is_empty(self):             # <<<<<<<<<<<<<<
@@ -1660,7 +1660,7 @@ static int __pyx_f_9pytimeset_7timeset_is_subset(__pyx_t_9pytimeset_7timeset_Int
  */
   }
 
-  /* "pytimeset/timeset.pyx":28
+  /* "timeset/timeset.pyx":28
  *     if Interval_is_empty(self):
  *         return True
  *     return self.start >= other.start and self.end <= other.end             # <<<<<<<<<<<<<<
@@ -1679,7 +1679,7 @@ static int __pyx_f_9pytimeset_7timeset_is_subset(__pyx_t_9pytimeset_7timeset_Int
   __pyx_r = __pyx_t_1;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":25
+  /* "timeset/timeset.pyx":25
  *     return self.end > other.start and other.end > self.start
  * 
  * cdef bint is_subset(Interval self, Interval other):             # <<<<<<<<<<<<<<
@@ -1693,7 +1693,7 @@ static int __pyx_f_9pytimeset_7timeset_is_subset(__pyx_t_9pytimeset_7timeset_Int
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":30
+/* "timeset/timeset.pyx":30
  *     return self.start >= other.start and self.end <= other.end
  * 
  * cdef double duration(Interval self):             # <<<<<<<<<<<<<<
@@ -1701,12 +1701,12 @@ static int __pyx_f_9pytimeset_7timeset_is_subset(__pyx_t_9pytimeset_7timeset_Int
  * 
  */
 
-static double __pyx_f_9pytimeset_7timeset_duration(__pyx_t_9pytimeset_7timeset_Interval __pyx_v_self) {
+static double __pyx_f_7timeset_7timeset_duration(__pyx_t_7timeset_7timeset_Interval __pyx_v_self) {
   double __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("duration", 0);
 
-  /* "pytimeset/timeset.pyx":31
+  /* "timeset/timeset.pyx":31
  * 
  * cdef double duration(Interval self):
  *     return self.end - self.start             # <<<<<<<<<<<<<<
@@ -1716,7 +1716,7 @@ static double __pyx_f_9pytimeset_7timeset_duration(__pyx_t_9pytimeset_7timeset_I
   __pyx_r = (__pyx_v_self.end - __pyx_v_self.start);
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":30
+  /* "timeset/timeset.pyx":30
  *     return self.start >= other.start and self.end <= other.end
  * 
  * cdef double duration(Interval self):             # <<<<<<<<<<<<<<
@@ -1730,7 +1730,7 @@ static double __pyx_f_9pytimeset_7timeset_duration(__pyx_t_9pytimeset_7timeset_I
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":33
+/* "timeset/timeset.pyx":33
  *     return self.end - self.start
  * 
  * cdef bint Interval_is_empty(Interval self):             # <<<<<<<<<<<<<<
@@ -1738,22 +1738,22 @@ static double __pyx_f_9pytimeset_7timeset_duration(__pyx_t_9pytimeset_7timeset_I
  * 
  */
 
-static int __pyx_f_9pytimeset_7timeset_Interval_is_empty(__pyx_t_9pytimeset_7timeset_Interval __pyx_v_self) {
+static int __pyx_f_7timeset_7timeset_Interval_is_empty(__pyx_t_7timeset_7timeset_Interval __pyx_v_self) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("Interval_is_empty", 0);
 
-  /* "pytimeset/timeset.pyx":34
+  /* "timeset/timeset.pyx":34
  * 
  * cdef bint Interval_is_empty(Interval self):
  *     return duration(self) < 0.0001  # Avoid float arithmetic problems             # <<<<<<<<<<<<<<
  * 
  * cdef Interval Interval_intersection(Interval self, Interval other):
  */
-  __pyx_r = (__pyx_f_9pytimeset_7timeset_duration(__pyx_v_self) < 0.0001);
+  __pyx_r = (__pyx_f_7timeset_7timeset_duration(__pyx_v_self) < 0.0001);
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":33
+  /* "timeset/timeset.pyx":33
  *     return self.end - self.start
  * 
  * cdef bint Interval_is_empty(Interval self):             # <<<<<<<<<<<<<<
@@ -1767,7 +1767,7 @@ static int __pyx_f_9pytimeset_7timeset_Interval_is_empty(__pyx_t_9pytimeset_7tim
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":36
+/* "timeset/timeset.pyx":36
  *     return duration(self) < 0.0001  # Avoid float arithmetic problems
  * 
  * cdef Interval Interval_intersection(Interval self, Interval other):             # <<<<<<<<<<<<<<
@@ -1775,39 +1775,39 @@ static int __pyx_f_9pytimeset_7timeset_Interval_is_empty(__pyx_t_9pytimeset_7tim
  *     if not overlaps(self, other):
  */
 
-static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_Interval_intersection(__pyx_t_9pytimeset_7timeset_Interval __pyx_v_self, __pyx_t_9pytimeset_7timeset_Interval __pyx_v_other) {
+static __pyx_t_7timeset_7timeset_Interval __pyx_f_7timeset_7timeset_Interval_intersection(__pyx_t_7timeset_7timeset_Interval __pyx_v_self, __pyx_t_7timeset_7timeset_Interval __pyx_v_other) {
   double __pyx_v_start;
   double __pyx_v_end;
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_r;
+  __pyx_t_7timeset_7timeset_Interval __pyx_r;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   double __pyx_t_2;
   double __pyx_t_3;
   double __pyx_t_4;
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_t_5;
+  __pyx_t_7timeset_7timeset_Interval __pyx_t_5;
   __Pyx_RefNannySetupContext("Interval_intersection", 0);
 
-  /* "pytimeset/timeset.pyx":38
+  /* "timeset/timeset.pyx":38
  * cdef Interval Interval_intersection(Interval self, Interval other):
  *     cdef double start, end
  *     if not overlaps(self, other):             # <<<<<<<<<<<<<<
  *         # Return an EMPTY interval!
  *         return empty
  */
-  __pyx_t_1 = ((!(__pyx_f_9pytimeset_7timeset_overlaps(__pyx_v_self, __pyx_v_other) != 0)) != 0);
+  __pyx_t_1 = ((!(__pyx_f_7timeset_7timeset_overlaps(__pyx_v_self, __pyx_v_other) != 0)) != 0);
   if (__pyx_t_1) {
 
-    /* "pytimeset/timeset.pyx":40
+    /* "timeset/timeset.pyx":40
  *     if not overlaps(self, other):
  *         # Return an EMPTY interval!
  *         return empty             # <<<<<<<<<<<<<<
  *     start = max(self.start, other.start)
  *     end = min(self.end, other.end)
  */
-    __pyx_r = __pyx_v_9pytimeset_7timeset_empty;
+    __pyx_r = __pyx_v_7timeset_7timeset_empty;
     goto __pyx_L0;
 
-    /* "pytimeset/timeset.pyx":38
+    /* "timeset/timeset.pyx":38
  * cdef Interval Interval_intersection(Interval self, Interval other):
  *     cdef double start, end
  *     if not overlaps(self, other):             # <<<<<<<<<<<<<<
@@ -1816,7 +1816,7 @@ static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_Interval
  */
   }
 
-  /* "pytimeset/timeset.pyx":41
+  /* "timeset/timeset.pyx":41
  *         # Return an EMPTY interval!
  *         return empty
  *     start = max(self.start, other.start)             # <<<<<<<<<<<<<<
@@ -1832,7 +1832,7 @@ static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_Interval
   }
   __pyx_v_start = __pyx_t_4;
 
-  /* "pytimeset/timeset.pyx":42
+  /* "timeset/timeset.pyx":42
  *         return empty
  *     start = max(self.start, other.start)
  *     end = min(self.end, other.end)             # <<<<<<<<<<<<<<
@@ -1848,7 +1848,7 @@ static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_Interval
   }
   __pyx_v_end = __pyx_t_3;
 
-  /* "pytimeset/timeset.pyx":43
+  /* "timeset/timeset.pyx":43
  *     start = max(self.start, other.start)
  *     end = min(self.end, other.end)
  *     return Interval(start, end)             # <<<<<<<<<<<<<<
@@ -1860,7 +1860,7 @@ static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_Interval
   __pyx_r = __pyx_t_5;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":36
+  /* "timeset/timeset.pyx":36
  *     return duration(self) < 0.0001  # Avoid float arithmetic problems
  * 
  * cdef Interval Interval_intersection(Interval self, Interval other):             # <<<<<<<<<<<<<<
@@ -1874,7 +1874,7 @@ static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_Interval
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":45
+/* "timeset/timeset.pyx":45
  *     return Interval(start, end)
  * 
  * cdef bint equals(Interval self, Interval other):             # <<<<<<<<<<<<<<
@@ -1882,14 +1882,14 @@ static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_Interval
  * 
  */
 
-static int __pyx_f_9pytimeset_7timeset_equals(__pyx_t_9pytimeset_7timeset_Interval __pyx_v_self, __pyx_t_9pytimeset_7timeset_Interval __pyx_v_other) {
+static int __pyx_f_7timeset_7timeset_equals(__pyx_t_7timeset_7timeset_Interval __pyx_v_self, __pyx_t_7timeset_7timeset_Interval __pyx_v_other) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   int __pyx_t_2;
   __Pyx_RefNannySetupContext("equals", 0);
 
-  /* "pytimeset/timeset.pyx":46
+  /* "timeset/timeset.pyx":46
  * 
  * cdef bint equals(Interval self, Interval other):
  *     return self.start == other.start and self.end == other.end             # <<<<<<<<<<<<<<
@@ -1908,7 +1908,7 @@ static int __pyx_f_9pytimeset_7timeset_equals(__pyx_t_9pytimeset_7timeset_Interv
   __pyx_r = __pyx_t_1;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":45
+  /* "timeset/timeset.pyx":45
  *     return Interval(start, end)
  * 
  * cdef bint equals(Interval self, Interval other):             # <<<<<<<<<<<<<<
@@ -1922,7 +1922,7 @@ static int __pyx_f_9pytimeset_7timeset_equals(__pyx_t_9pytimeset_7timeset_Interv
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":48
+/* "timeset/timeset.pyx":48
  *     return self.start == other.start and self.end == other.end
  * 
  * cdef Interval translate(Interval self, double _by):             # <<<<<<<<<<<<<<
@@ -1930,13 +1930,13 @@ static int __pyx_f_9pytimeset_7timeset_equals(__pyx_t_9pytimeset_7timeset_Interv
  * 
  */
 
-static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_translate(__pyx_t_9pytimeset_7timeset_Interval __pyx_v_self, double __pyx_v__by) {
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_r;
+static __pyx_t_7timeset_7timeset_Interval __pyx_f_7timeset_7timeset_translate(__pyx_t_7timeset_7timeset_Interval __pyx_v_self, double __pyx_v__by) {
+  __pyx_t_7timeset_7timeset_Interval __pyx_r;
   __Pyx_RefNannyDeclarations
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_t_1;
+  __pyx_t_7timeset_7timeset_Interval __pyx_t_1;
   __Pyx_RefNannySetupContext("translate", 0);
 
-  /* "pytimeset/timeset.pyx":49
+  /* "timeset/timeset.pyx":49
  * 
  * cdef Interval translate(Interval self, double _by):
  *     return Interval(self.start+_by, self.end+_by)             # <<<<<<<<<<<<<<
@@ -1948,7 +1948,7 @@ static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_translat
   __pyx_r = __pyx_t_1;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":48
+  /* "timeset/timeset.pyx":48
  *     return self.start == other.start and self.end == other.end
  * 
  * cdef Interval translate(Interval self, double _by):             # <<<<<<<<<<<<<<
@@ -1962,7 +1962,7 @@ static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_translat
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":57
+/* "timeset/timeset.pyx":57
  *     cdef Interval interval
  * 
  *     def __init__(self, start: datetime, end: datetime):             # <<<<<<<<<<<<<<
@@ -1971,8 +1971,8 @@ static __pyx_t_9pytimeset_7timeset_Interval __pyx_f_9pytimeset_7timeset_translat
  */
 
 /* Python wrapper */
-static int __pyx_pw_9pytimeset_7timeset_12TimeInterval_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_9pytimeset_7timeset_12TimeInterval_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_7timeset_7timeset_12TimeInterval_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_7timeset_7timeset_12TimeInterval_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_start = 0;
   PyObject *__pyx_v_end = 0;
   int __pyx_r;
@@ -2020,28 +2020,28 @@ static int __pyx_pw_9pytimeset_7timeset_12TimeInterval_1__init__(PyObject *__pyx
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 57, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval___init__(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self), __pyx_v_start, __pyx_v_end);
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval___init__(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self), __pyx_v_start, __pyx_v_end);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_9pytimeset_7timeset_12TimeInterval___init__(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_start, PyObject *__pyx_v_end) {
+static int __pyx_pf_7timeset_7timeset_12TimeInterval___init__(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_start, PyObject *__pyx_v_end) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_t_1;
+  __pyx_t_7timeset_7timeset_Interval __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   double __pyx_t_5;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "pytimeset/timeset.pyx":58
+  /* "timeset/timeset.pyx":58
  * 
  *     def __init__(self, start: datetime, end: datetime):
  *         self.interval = Interval(start.timestamp(), end.timestamp())             # <<<<<<<<<<<<<<
@@ -2090,7 +2090,7 @@ static int __pyx_pf_9pytimeset_7timeset_12TimeInterval___init__(struct __pyx_obj
   __pyx_t_1.end = __pyx_t_5;
   __pyx_v_self->interval = __pyx_t_1;
 
-  /* "pytimeset/timeset.pyx":57
+  /* "timeset/timeset.pyx":57
  *     cdef Interval interval
  * 
  *     def __init__(self, start: datetime, end: datetime):             # <<<<<<<<<<<<<<
@@ -2105,14 +2105,14 @@ static int __pyx_pf_9pytimeset_7timeset_12TimeInterval___init__(struct __pyx_obj
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":61
+/* "timeset/timeset.pyx":61
  * 
  *     @staticmethod
  *     cdef TimeInterval from_interval(Interval interval):             # <<<<<<<<<<<<<<
@@ -2120,26 +2120,26 @@ static int __pyx_pf_9pytimeset_7timeset_12TimeInterval___init__(struct __pyx_obj
  *         ti.interval = interval
  */
 
-static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7timeset_12TimeInterval_from_interval(__pyx_t_9pytimeset_7timeset_Interval __pyx_v_interval) {
-  struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_ti = 0;
-  struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_r = NULL;
+static struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_f_7timeset_7timeset_12TimeInterval_from_interval(__pyx_t_7timeset_7timeset_Interval __pyx_v_interval) {
+  struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_ti = 0;
+  struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("from_interval", 0);
 
-  /* "pytimeset/timeset.pyx":62
+  /* "timeset/timeset.pyx":62
  *     @staticmethod
  *     cdef TimeInterval from_interval(Interval interval):
  *         cdef TimeInterval ti = TimeInterval.__new__(TimeInterval)             # <<<<<<<<<<<<<<
  *         ti.interval = interval
  *         return ti
  */
-  __pyx_t_1 = ((PyObject *)__pyx_tp_new_9pytimeset_7timeset_TimeInterval(((PyTypeObject *)__pyx_ptype_9pytimeset_7timeset_TimeInterval), __pyx_empty_tuple, NULL)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_tp_new_7timeset_7timeset_TimeInterval(((PyTypeObject *)__pyx_ptype_7timeset_7timeset_TimeInterval), __pyx_empty_tuple, NULL)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(((PyObject *)__pyx_t_1));
-  __pyx_v_ti = ((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_t_1);
+  __pyx_v_ti = ((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pytimeset/timeset.pyx":63
+  /* "timeset/timeset.pyx":63
  *     cdef TimeInterval from_interval(Interval interval):
  *         cdef TimeInterval ti = TimeInterval.__new__(TimeInterval)
  *         ti.interval = interval             # <<<<<<<<<<<<<<
@@ -2148,7 +2148,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
  */
   __pyx_v_ti->interval = __pyx_v_interval;
 
-  /* "pytimeset/timeset.pyx":64
+  /* "timeset/timeset.pyx":64
  *         cdef TimeInterval ti = TimeInterval.__new__(TimeInterval)
  *         ti.interval = interval
  *         return ti             # <<<<<<<<<<<<<<
@@ -2160,7 +2160,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
   __pyx_r = __pyx_v_ti;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":61
+  /* "timeset/timeset.pyx":61
  * 
  *     @staticmethod
  *     cdef TimeInterval from_interval(Interval interval):             # <<<<<<<<<<<<<<
@@ -2171,7 +2171,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.from_interval", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.from_interval", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_ti);
@@ -2180,7 +2180,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":66
+/* "timeset/timeset.pyx":66
  *         return ti
  * 
  *     cpdef bint contains(self, moment: datetime):             # <<<<<<<<<<<<<<
@@ -2188,8 +2188,8 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
  * 
  */
 
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_3contains(PyObject *__pyx_v_self, PyObject *__pyx_v_moment); /*proto*/
-static int __pyx_f_9pytimeset_7timeset_12TimeInterval_contains(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_moment, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_3contains(PyObject *__pyx_v_self, PyObject *__pyx_v_moment); /*proto*/
+static int __pyx_f_7timeset_7timeset_12TimeInterval_contains(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_moment, int __pyx_skip_dispatch) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2210,7 +2210,7 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_contains(struct __pyx_obj_
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_contains); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9pytimeset_7timeset_12TimeInterval_3contains)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_7timeset_7timeset_12TimeInterval_3contains)) {
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -2246,7 +2246,7 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_contains(struct __pyx_obj_
     #endif
   }
 
-  /* "pytimeset/timeset.pyx":67
+  /* "timeset/timeset.pyx":67
  * 
  *     cpdef bint contains(self, moment: datetime):
  *         return contains(self.interval, moment.timestamp())             # <<<<<<<<<<<<<<
@@ -2272,10 +2272,10 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_contains(struct __pyx_obj_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_6 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_r = __pyx_f_9pytimeset_7timeset_contains(__pyx_v_self->interval, __pyx_t_6);
+  __pyx_r = __pyx_f_7timeset_7timeset_contains(__pyx_v_self->interval, __pyx_t_6);
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":66
+  /* "timeset/timeset.pyx":66
  *         return ti
  * 
  *     cpdef bint contains(self, moment: datetime):             # <<<<<<<<<<<<<<
@@ -2289,7 +2289,7 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_contains(struct __pyx_obj_
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_WriteUnraisable("pytimeset.timeset.TimeInterval.contains", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("timeset.timeset.TimeInterval.contains", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -2297,25 +2297,25 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_contains(struct __pyx_obj_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_3contains(PyObject *__pyx_v_self, PyObject *__pyx_v_moment); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_3contains(PyObject *__pyx_v_self, PyObject *__pyx_v_moment) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_3contains(PyObject *__pyx_v_self, PyObject *__pyx_v_moment); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_3contains(PyObject *__pyx_v_self, PyObject *__pyx_v_moment) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("contains (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval_2contains(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self), ((PyObject *)__pyx_v_moment));
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval_2contains(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self), ((PyObject *)__pyx_v_moment));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_2contains(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_moment) {
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_2contains(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_moment) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("contains", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9pytimeset_7timeset_12TimeInterval_contains(__pyx_v_self, __pyx_v_moment, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_7timeset_7timeset_12TimeInterval_contains(__pyx_v_self, __pyx_v_moment, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2324,7 +2324,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_2contains(struct __
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.contains", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.contains", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2332,7 +2332,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_2contains(struct __
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":69
+/* "timeset/timeset.pyx":69
  *         return contains(self.interval, moment.timestamp())
  * 
  *     cpdef bint overlaps_with(self, TimeInterval other):             # <<<<<<<<<<<<<<
@@ -2340,8 +2340,8 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_2contains(struct __
  * 
  */
 
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_5overlaps_with(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static int __pyx_f_9pytimeset_7timeset_12TimeInterval_overlaps_with(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_other, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_5overlaps_with(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static int __pyx_f_7timeset_7timeset_12TimeInterval_overlaps_with(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_other, int __pyx_skip_dispatch) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2361,7 +2361,7 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_overlaps_with(struct __pyx
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_overlaps_with); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9pytimeset_7timeset_12TimeInterval_5overlaps_with)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_7timeset_7timeset_12TimeInterval_5overlaps_with)) {
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -2397,17 +2397,17 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_overlaps_with(struct __pyx
     #endif
   }
 
-  /* "pytimeset/timeset.pyx":70
+  /* "timeset/timeset.pyx":70
  * 
  *     cpdef bint overlaps_with(self, TimeInterval other):
  *         return overlaps(self.interval, other.interval)             # <<<<<<<<<<<<<<
  * 
  *     cpdef bint is_subset(self, TimeInterval other):
  */
-  __pyx_r = __pyx_f_9pytimeset_7timeset_overlaps(__pyx_v_self->interval, __pyx_v_other->interval);
+  __pyx_r = __pyx_f_7timeset_7timeset_overlaps(__pyx_v_self->interval, __pyx_v_other->interval);
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":69
+  /* "timeset/timeset.pyx":69
  *         return contains(self.interval, moment.timestamp())
  * 
  *     cpdef bint overlaps_with(self, TimeInterval other):             # <<<<<<<<<<<<<<
@@ -2421,7 +2421,7 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_overlaps_with(struct __pyx
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_WriteUnraisable("pytimeset.timeset.TimeInterval.overlaps_with", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("timeset.timeset.TimeInterval.overlaps_with", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -2429,13 +2429,13 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_overlaps_with(struct __pyx
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_5overlaps_with(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_5overlaps_with(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_5overlaps_with(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_5overlaps_with(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("overlaps_with (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_9pytimeset_7timeset_TimeInterval, 1, "other", 0))) __PYX_ERR(0, 69, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval_4overlaps_with(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self), ((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_other));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_7timeset_7timeset_TimeInterval, 1, "other", 0))) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval_4overlaps_with(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self), ((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_other));
 
   /* function exit code */
   goto __pyx_L0;
@@ -2446,13 +2446,13 @@ static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_5overlaps_with(PyOb
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_4overlaps_with(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_other) {
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_4overlaps_with(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_other) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("overlaps_with", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9pytimeset_7timeset_12TimeInterval_overlaps_with(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_7timeset_7timeset_12TimeInterval_overlaps_with(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2461,7 +2461,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_4overlaps_with(stru
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.overlaps_with", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.overlaps_with", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2469,7 +2469,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_4overlaps_with(stru
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":72
+/* "timeset/timeset.pyx":72
  *         return overlaps(self.interval, other.interval)
  * 
  *     cpdef bint is_subset(self, TimeInterval other):             # <<<<<<<<<<<<<<
@@ -2477,8 +2477,8 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_4overlaps_with(stru
  * 
  */
 
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_7is_subset(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static int __pyx_f_9pytimeset_7timeset_12TimeInterval_is_subset(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_other, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_7is_subset(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static int __pyx_f_7timeset_7timeset_12TimeInterval_is_subset(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_other, int __pyx_skip_dispatch) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2498,7 +2498,7 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_is_subset(struct __pyx_obj
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_is_subset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9pytimeset_7timeset_12TimeInterval_7is_subset)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_7timeset_7timeset_12TimeInterval_7is_subset)) {
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -2534,17 +2534,17 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_is_subset(struct __pyx_obj
     #endif
   }
 
-  /* "pytimeset/timeset.pyx":73
+  /* "timeset/timeset.pyx":73
  * 
  *     cpdef bint is_subset(self, TimeInterval other):
  *         return is_subset(self.interval, other.interval)             # <<<<<<<<<<<<<<
  * 
  *     cpdef duration(self):
  */
-  __pyx_r = __pyx_f_9pytimeset_7timeset_is_subset(__pyx_v_self->interval, __pyx_v_other->interval);
+  __pyx_r = __pyx_f_7timeset_7timeset_is_subset(__pyx_v_self->interval, __pyx_v_other->interval);
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":72
+  /* "timeset/timeset.pyx":72
  *         return overlaps(self.interval, other.interval)
  * 
  *     cpdef bint is_subset(self, TimeInterval other):             # <<<<<<<<<<<<<<
@@ -2558,7 +2558,7 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_is_subset(struct __pyx_obj
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_WriteUnraisable("pytimeset.timeset.TimeInterval.is_subset", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("timeset.timeset.TimeInterval.is_subset", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -2566,13 +2566,13 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_is_subset(struct __pyx_obj
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_7is_subset(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_7is_subset(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_7is_subset(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_7is_subset(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("is_subset (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_9pytimeset_7timeset_TimeInterval, 1, "other", 0))) __PYX_ERR(0, 72, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval_6is_subset(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self), ((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_other));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_7timeset_7timeset_TimeInterval, 1, "other", 0))) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval_6is_subset(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self), ((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_other));
 
   /* function exit code */
   goto __pyx_L0;
@@ -2583,13 +2583,13 @@ static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_7is_subset(PyObject
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_6is_subset(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_other) {
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_6is_subset(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_other) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("is_subset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9pytimeset_7timeset_12TimeInterval_is_subset(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_7timeset_7timeset_12TimeInterval_is_subset(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2598,7 +2598,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_6is_subset(struct _
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.is_subset", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.is_subset", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2606,7 +2606,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_6is_subset(struct _
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":75
+/* "timeset/timeset.pyx":75
  *         return is_subset(self.interval, other.interval)
  * 
  *     cpdef duration(self):             # <<<<<<<<<<<<<<
@@ -2614,8 +2614,8 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_6is_subset(struct _
  * 
  */
 
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_9duration(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_f_9pytimeset_7timeset_12TimeInterval_duration(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_9duration(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_f_7timeset_7timeset_12TimeInterval_duration(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, int __pyx_skip_dispatch) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2634,7 +2634,7 @@ static PyObject *__pyx_f_9pytimeset_7timeset_12TimeInterval_duration(struct __py
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_duration); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9pytimeset_7timeset_12TimeInterval_9duration)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_7timeset_7timeset_12TimeInterval_9duration)) {
         __Pyx_XDECREF(__pyx_r);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -2670,7 +2670,7 @@ static PyObject *__pyx_f_9pytimeset_7timeset_12TimeInterval_duration(struct __py
     #endif
   }
 
-  /* "pytimeset/timeset.pyx":76
+  /* "timeset/timeset.pyx":76
  * 
  *     cpdef duration(self):
  *         return timedelta(seconds=duration(self.interval))             # <<<<<<<<<<<<<<
@@ -2682,7 +2682,7 @@ static PyObject *__pyx_f_9pytimeset_7timeset_12TimeInterval_duration(struct __py
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_f_9pytimeset_7timeset_duration(__pyx_v_self->interval)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_f_7timeset_7timeset_duration(__pyx_v_self->interval)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_seconds, __pyx_t_3) < 0) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -2694,7 +2694,7 @@ static PyObject *__pyx_f_9pytimeset_7timeset_12TimeInterval_duration(struct __py
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":75
+  /* "timeset/timeset.pyx":75
  *         return is_subset(self.interval, other.interval)
  * 
  *     cpdef duration(self):             # <<<<<<<<<<<<<<
@@ -2708,7 +2708,7 @@ static PyObject *__pyx_f_9pytimeset_7timeset_12TimeInterval_duration(struct __py
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.duration", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.duration", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2717,25 +2717,25 @@ static PyObject *__pyx_f_9pytimeset_7timeset_12TimeInterval_duration(struct __py
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_9duration(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_9duration(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_9duration(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_9duration(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("duration (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval_8duration(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval_8duration(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_8duration(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self) {
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_8duration(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("duration", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9pytimeset_7timeset_12TimeInterval_duration(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_7timeset_7timeset_12TimeInterval_duration(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2744,7 +2744,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_8duration(struct __
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.duration", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.duration", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2752,7 +2752,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_8duration(struct __
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":78
+/* "timeset/timeset.pyx":78
  *         return timedelta(seconds=duration(self.interval))
  * 
  *     cpdef bint is_empty(self):             # <<<<<<<<<<<<<<
@@ -2760,8 +2760,8 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_8duration(struct __
  * 
  */
 
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_11is_empty(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static int __pyx_f_9pytimeset_7timeset_12TimeInterval_is_empty(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_11is_empty(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static int __pyx_f_7timeset_7timeset_12TimeInterval_is_empty(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, int __pyx_skip_dispatch) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2781,7 +2781,7 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_is_empty(struct __pyx_obj_
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_is_empty); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9pytimeset_7timeset_12TimeInterval_11is_empty)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_7timeset_7timeset_12TimeInterval_11is_empty)) {
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -2817,17 +2817,17 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_is_empty(struct __pyx_obj_
     #endif
   }
 
-  /* "pytimeset/timeset.pyx":79
+  /* "timeset/timeset.pyx":79
  * 
  *     cpdef bint is_empty(self):
  *         return Interval_is_empty(self.interval)             # <<<<<<<<<<<<<<
  * 
  *     cpdef TimeInterval intersection(self, TimeInterval other):
  */
-  __pyx_r = __pyx_f_9pytimeset_7timeset_Interval_is_empty(__pyx_v_self->interval);
+  __pyx_r = __pyx_f_7timeset_7timeset_Interval_is_empty(__pyx_v_self->interval);
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":78
+  /* "timeset/timeset.pyx":78
  *         return timedelta(seconds=duration(self.interval))
  * 
  *     cpdef bint is_empty(self):             # <<<<<<<<<<<<<<
@@ -2841,7 +2841,7 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_is_empty(struct __pyx_obj_
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_WriteUnraisable("pytimeset.timeset.TimeInterval.is_empty", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("timeset.timeset.TimeInterval.is_empty", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -2849,25 +2849,25 @@ static int __pyx_f_9pytimeset_7timeset_12TimeInterval_is_empty(struct __pyx_obj_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_11is_empty(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_11is_empty(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_11is_empty(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_11is_empty(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("is_empty (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval_10is_empty(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval_10is_empty(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_10is_empty(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self) {
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_10is_empty(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("is_empty", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9pytimeset_7timeset_12TimeInterval_is_empty(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_7timeset_7timeset_12TimeInterval_is_empty(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2876,7 +2876,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_10is_empty(struct _
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.is_empty", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.is_empty", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2884,7 +2884,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_10is_empty(struct _
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":81
+/* "timeset/timeset.pyx":81
  *         return Interval_is_empty(self.interval)
  * 
  *     cpdef TimeInterval intersection(self, TimeInterval other):             # <<<<<<<<<<<<<<
@@ -2892,10 +2892,10 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_10is_empty(struct _
  *         return TimeInterval.from_interval(new_int)
  */
 
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_13intersection(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7timeset_12TimeInterval_intersection(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_other, int __pyx_skip_dispatch) {
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_v_new_int;
-  struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_r = NULL;
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_13intersection(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_f_7timeset_7timeset_12TimeInterval_intersection(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_other, int __pyx_skip_dispatch) {
+  __pyx_t_7timeset_7timeset_Interval __pyx_v_new_int;
+  struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
@@ -2913,7 +2913,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_intersection); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9pytimeset_7timeset_12TimeInterval_13intersection)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_7timeset_7timeset_12TimeInterval_13intersection)) {
         __Pyx_XDECREF(((PyObject *)__pyx_r));
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -2931,8 +2931,8 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
         if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 81, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_9pytimeset_7timeset_TimeInterval))))) __PYX_ERR(0, 81, __pyx_L1_error)
-        __pyx_r = ((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_t_2);
+        if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_7timeset_7timeset_TimeInterval))))) __PYX_ERR(0, 81, __pyx_L1_error)
+        __pyx_r = ((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         goto __pyx_L0;
@@ -2950,16 +2950,16 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
     #endif
   }
 
-  /* "pytimeset/timeset.pyx":82
+  /* "timeset/timeset.pyx":82
  * 
  *     cpdef TimeInterval intersection(self, TimeInterval other):
  *         cdef Interval new_int = Interval_intersection(self.interval, other.interval)             # <<<<<<<<<<<<<<
  *         return TimeInterval.from_interval(new_int)
  * 
  */
-  __pyx_v_new_int = __pyx_f_9pytimeset_7timeset_Interval_intersection(__pyx_v_self->interval, __pyx_v_other->interval);
+  __pyx_v_new_int = __pyx_f_7timeset_7timeset_Interval_intersection(__pyx_v_self->interval, __pyx_v_other->interval);
 
-  /* "pytimeset/timeset.pyx":83
+  /* "timeset/timeset.pyx":83
  *     cpdef TimeInterval intersection(self, TimeInterval other):
  *         cdef Interval new_int = Interval_intersection(self.interval, other.interval)
  *         return TimeInterval.from_interval(new_int)             # <<<<<<<<<<<<<<
@@ -2967,13 +2967,13 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
  *     cpdef TimeInterval translate(self, _by):
  */
   __Pyx_XDECREF(((PyObject *)__pyx_r));
-  __pyx_t_1 = ((PyObject *)__pyx_f_9pytimeset_7timeset_12TimeInterval_from_interval(__pyx_v_new_int)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7timeset_7timeset_12TimeInterval_from_interval(__pyx_v_new_int)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = ((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_t_1);
+  __pyx_r = ((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":81
+  /* "timeset/timeset.pyx":81
  *         return Interval_is_empty(self.interval)
  * 
  *     cpdef TimeInterval intersection(self, TimeInterval other):             # <<<<<<<<<<<<<<
@@ -2987,7 +2987,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.intersection", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.intersection", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF((PyObject *)__pyx_r);
@@ -2996,13 +2996,13 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_13intersection(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_13intersection(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_13intersection(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_13intersection(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("intersection (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_9pytimeset_7timeset_TimeInterval, 1, "other", 0))) __PYX_ERR(0, 81, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval_12intersection(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self), ((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_other));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_7timeset_7timeset_TimeInterval, 1, "other", 0))) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval_12intersection(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self), ((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_other));
 
   /* function exit code */
   goto __pyx_L0;
@@ -3013,13 +3013,13 @@ static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_13intersection(PyOb
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_12intersection(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_other) {
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_12intersection(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_other) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("intersection", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_9pytimeset_7timeset_12TimeInterval_intersection(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7timeset_7timeset_12TimeInterval_intersection(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3028,7 +3028,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_12intersection(stru
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.intersection", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.intersection", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3036,7 +3036,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_12intersection(stru
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":85
+/* "timeset/timeset.pyx":85
  *         return TimeInterval.from_interval(new_int)
  * 
  *     cpdef TimeInterval translate(self, _by):             # <<<<<<<<<<<<<<
@@ -3044,10 +3044,10 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_12intersection(stru
  *         return TimeInterval.from_interval(new_int)
  */
 
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_15translate(PyObject *__pyx_v_self, PyObject *__pyx_v__by); /*proto*/
-static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7timeset_12TimeInterval_translate(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v__by, int __pyx_skip_dispatch) {
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_v_new_int;
-  struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_r = NULL;
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_15translate(PyObject *__pyx_v_self, PyObject *__pyx_v__by); /*proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_f_7timeset_7timeset_12TimeInterval_translate(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v__by, int __pyx_skip_dispatch) {
+  __pyx_t_7timeset_7timeset_Interval __pyx_v_new_int;
+  struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
@@ -3066,7 +3066,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_translate); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 85, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9pytimeset_7timeset_12TimeInterval_15translate)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_7timeset_7timeset_12TimeInterval_15translate)) {
         __Pyx_XDECREF(((PyObject *)__pyx_r));
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -3084,8 +3084,8 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
         if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 85, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_9pytimeset_7timeset_TimeInterval))))) __PYX_ERR(0, 85, __pyx_L1_error)
-        __pyx_r = ((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_t_2);
+        if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_7timeset_7timeset_TimeInterval))))) __PYX_ERR(0, 85, __pyx_L1_error)
+        __pyx_r = ((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         goto __pyx_L0;
@@ -3103,7 +3103,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
     #endif
   }
 
-  /* "pytimeset/timeset.pyx":86
+  /* "timeset/timeset.pyx":86
  * 
  *     cpdef TimeInterval translate(self, _by):
  *         cdef Interval new_int = translate(self.interval, _by.total_seconds())             # <<<<<<<<<<<<<<
@@ -3129,9 +3129,9 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 86, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_new_int = __pyx_f_9pytimeset_7timeset_translate(__pyx_v_self->interval, __pyx_t_5);
+  __pyx_v_new_int = __pyx_f_7timeset_7timeset_translate(__pyx_v_self->interval, __pyx_t_5);
 
-  /* "pytimeset/timeset.pyx":87
+  /* "timeset/timeset.pyx":87
  *     cpdef TimeInterval translate(self, _by):
  *         cdef Interval new_int = translate(self.interval, _by.total_seconds())
  *         return TimeInterval.from_interval(new_int)             # <<<<<<<<<<<<<<
@@ -3139,13 +3139,13 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
  *     @property
  */
   __Pyx_XDECREF(((PyObject *)__pyx_r));
-  __pyx_t_1 = ((PyObject *)__pyx_f_9pytimeset_7timeset_12TimeInterval_from_interval(__pyx_v_new_int)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7timeset_7timeset_12TimeInterval_from_interval(__pyx_v_new_int)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 87, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = ((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_t_1);
+  __pyx_r = ((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":85
+  /* "timeset/timeset.pyx":85
  *         return TimeInterval.from_interval(new_int)
  * 
  *     cpdef TimeInterval translate(self, _by):             # <<<<<<<<<<<<<<
@@ -3159,7 +3159,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.translate", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.translate", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF((PyObject *)__pyx_r);
@@ -3168,25 +3168,25 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_f_9pytimeset_7ti
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_15translate(PyObject *__pyx_v_self, PyObject *__pyx_v__by); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_15translate(PyObject *__pyx_v_self, PyObject *__pyx_v__by) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_15translate(PyObject *__pyx_v_self, PyObject *__pyx_v__by); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_15translate(PyObject *__pyx_v_self, PyObject *__pyx_v__by) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("translate (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval_14translate(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self), ((PyObject *)__pyx_v__by));
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval_14translate(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self), ((PyObject *)__pyx_v__by));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_14translate(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v__by) {
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_14translate(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v__by) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("translate", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_9pytimeset_7timeset_12TimeInterval_translate(__pyx_v_self, __pyx_v__by, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7timeset_7timeset_12TimeInterval_translate(__pyx_v_self, __pyx_v__by, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 85, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3195,7 +3195,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_14translate(struct 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.translate", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.translate", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3203,7 +3203,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_14translate(struct 
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":90
+/* "timeset/timeset.pyx":90
  * 
  *     @property
  *     def start(self):             # <<<<<<<<<<<<<<
@@ -3212,19 +3212,19 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_14translate(struct 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_5start_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_5start_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_5start_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_5start_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval_5start___get__(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval_5start___get__(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_5start___get__(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self) {
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_5start___get__(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3233,7 +3233,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_5start___get__(stru
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "pytimeset/timeset.pyx":91
+  /* "timeset/timeset.pyx":91
  *     @property
  *     def start(self):
  *         return datetime.fromtimestamp(self.interval.start)             # <<<<<<<<<<<<<<
@@ -3268,7 +3268,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_5start___get__(stru
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":90
+  /* "timeset/timeset.pyx":90
  * 
  *     @property
  *     def start(self):             # <<<<<<<<<<<<<<
@@ -3282,7 +3282,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_5start___get__(stru
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.start.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.start.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3290,7 +3290,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_5start___get__(stru
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":94
+/* "timeset/timeset.pyx":94
  * 
  *     @property
  *     def end(self):             # <<<<<<<<<<<<<<
@@ -3299,19 +3299,19 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_5start___get__(stru
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_3end_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_3end_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_3end_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_3end_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval_3end___get__(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval_3end___get__(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_3end___get__(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self) {
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_3end___get__(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3320,7 +3320,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_3end___get__(struct
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "pytimeset/timeset.pyx":95
+  /* "timeset/timeset.pyx":95
  *     @property
  *     def end(self):
  *         return datetime.fromtimestamp(self.interval.end)             # <<<<<<<<<<<<<<
@@ -3355,7 +3355,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_3end___get__(struct
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":94
+  /* "timeset/timeset.pyx":94
  * 
  *     @property
  *     def end(self):             # <<<<<<<<<<<<<<
@@ -3369,7 +3369,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_3end___get__(struct
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.end.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.end.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3377,7 +3377,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_3end___get__(struct
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":97
+/* "timeset/timeset.pyx":97
  *         return datetime.fromtimestamp(self.interval.end)
  * 
  *     def __eq__(self, other):             # <<<<<<<<<<<<<<
@@ -3386,19 +3386,19 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_3end___get__(struct
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_17__eq__(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_17__eq__(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_17__eq__(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_17__eq__(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__eq__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval_16__eq__(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self), ((PyObject *)__pyx_v_other));
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval_16__eq__(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self), ((PyObject *)__pyx_v_other));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_16__eq__(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_other) {
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_16__eq__(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self, PyObject *__pyx_v_other) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -3409,18 +3409,18 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_16__eq__(struct __p
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("__eq__", 0);
 
-  /* "pytimeset/timeset.pyx":98
+  /* "timeset/timeset.pyx":98
  * 
  *     def __eq__(self, other):
  *         if not isinstance(other, TimeInterval):             # <<<<<<<<<<<<<<
  *             return False
  *         return self.start == other.start and self.end == other.end
  */
-  __pyx_t_1 = __Pyx_TypeCheck(__pyx_v_other, __pyx_ptype_9pytimeset_7timeset_TimeInterval); 
+  __pyx_t_1 = __Pyx_TypeCheck(__pyx_v_other, __pyx_ptype_7timeset_7timeset_TimeInterval); 
   __pyx_t_2 = ((!(__pyx_t_1 != 0)) != 0);
   if (__pyx_t_2) {
 
-    /* "pytimeset/timeset.pyx":99
+    /* "timeset/timeset.pyx":99
  *     def __eq__(self, other):
  *         if not isinstance(other, TimeInterval):
  *             return False             # <<<<<<<<<<<<<<
@@ -3432,7 +3432,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_16__eq__(struct __p
     __pyx_r = Py_False;
     goto __pyx_L0;
 
-    /* "pytimeset/timeset.pyx":98
+    /* "timeset/timeset.pyx":98
  * 
  *     def __eq__(self, other):
  *         if not isinstance(other, TimeInterval):             # <<<<<<<<<<<<<<
@@ -3441,7 +3441,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_16__eq__(struct __p
  */
   }
 
-  /* "pytimeset/timeset.pyx":100
+  /* "timeset/timeset.pyx":100
  *         if not isinstance(other, TimeInterval):
  *             return False
  *         return self.start == other.start and self.end == other.end             # <<<<<<<<<<<<<<
@@ -3480,7 +3480,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_16__eq__(struct __p
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":97
+  /* "timeset/timeset.pyx":97
  *         return datetime.fromtimestamp(self.interval.end)
  * 
  *     def __eq__(self, other):             # <<<<<<<<<<<<<<
@@ -3494,7 +3494,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_16__eq__(struct __p
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.__eq__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.__eq__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3502,7 +3502,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_16__eq__(struct __p
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":102
+/* "timeset/timeset.pyx":102
  *         return self.start == other.start and self.end == other.end
  * 
  *     def __hash__(self):             # <<<<<<<<<<<<<<
@@ -3511,19 +3511,19 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_16__eq__(struct __p
  */
 
 /* Python wrapper */
-static Py_hash_t __pyx_pw_9pytimeset_7timeset_12TimeInterval_19__hash__(PyObject *__pyx_v_self); /*proto*/
-static Py_hash_t __pyx_pw_9pytimeset_7timeset_12TimeInterval_19__hash__(PyObject *__pyx_v_self) {
+static Py_hash_t __pyx_pw_7timeset_7timeset_12TimeInterval_19__hash__(PyObject *__pyx_v_self); /*proto*/
+static Py_hash_t __pyx_pw_7timeset_7timeset_12TimeInterval_19__hash__(PyObject *__pyx_v_self) {
   Py_hash_t __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__hash__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval_18__hash__(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval_18__hash__(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static Py_hash_t __pyx_pf_9pytimeset_7timeset_12TimeInterval_18__hash__(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self) {
+static Py_hash_t __pyx_pf_7timeset_7timeset_12TimeInterval_18__hash__(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self) {
   Py_hash_t __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3532,7 +3532,7 @@ static Py_hash_t __pyx_pf_9pytimeset_7timeset_12TimeInterval_18__hash__(struct _
   Py_hash_t __pyx_t_4;
   __Pyx_RefNannySetupContext("__hash__", 0);
 
-  /* "pytimeset/timeset.pyx":103
+  /* "timeset/timeset.pyx":103
  * 
  *     def __hash__(self):
  *         return hash((self.start, self.end))             # <<<<<<<<<<<<<<
@@ -3556,7 +3556,7 @@ static Py_hash_t __pyx_pf_9pytimeset_7timeset_12TimeInterval_18__hash__(struct _
   __pyx_r = __pyx_t_4;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":102
+  /* "timeset/timeset.pyx":102
  *         return self.start == other.start and self.end == other.end
  * 
  *     def __hash__(self):             # <<<<<<<<<<<<<<
@@ -3569,7 +3569,7 @@ static Py_hash_t __pyx_pf_9pytimeset_7timeset_12TimeInterval_18__hash__(struct _
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.__hash__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.__hash__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   if (unlikely(__pyx_r == -1) && !PyErr_Occurred()) __pyx_r = -2;
@@ -3577,7 +3577,7 @@ static Py_hash_t __pyx_pf_9pytimeset_7timeset_12TimeInterval_18__hash__(struct _
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":105
+/* "timeset/timeset.pyx":105
  *         return hash((self.start, self.end))
  * 
  *     def __str__(self):             # <<<<<<<<<<<<<<
@@ -3586,19 +3586,19 @@ static Py_hash_t __pyx_pf_9pytimeset_7timeset_12TimeInterval_18__hash__(struct _
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_21__str__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_12TimeInterval_21__str__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_21__str__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_12TimeInterval_21__str__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__str__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_12TimeInterval_20__str__(((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_12TimeInterval_20__str__(((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_20__str__(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_self) {
+static PyObject *__pyx_pf_7timeset_7timeset_12TimeInterval_20__str__(struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3608,7 +3608,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_20__str__(struct __
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("__str__", 0);
 
-  /* "pytimeset/timeset.pyx":106
+  /* "timeset/timeset.pyx":106
  * 
  *     def __str__(self):
  *         return f'TimeInterval [{self.start}; {self.end})'             # <<<<<<<<<<<<<<
@@ -3659,7 +3659,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_20__str__(struct __
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":105
+  /* "timeset/timeset.pyx":105
  *         return hash((self.start, self.end))
  * 
  *     def __str__(self):             # <<<<<<<<<<<<<<
@@ -3672,7 +3672,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_20__str__(struct __
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeInterval.__str__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeInterval.__str__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3680,7 +3680,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_20__str__(struct __
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":114
+/* "timeset/timeset.pyx":114
  * 
  * 
  * cdef void free_list(IntervalList* head):             # <<<<<<<<<<<<<<
@@ -3688,12 +3688,12 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_12TimeInterval_20__str__(struct __
  *         return
  */
 
-static void __pyx_f_9pytimeset_7timeset_free_list(__pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_head) {
+static void __pyx_f_7timeset_7timeset_free_list(__pyx_t_7timeset_7timeset_IntervalList *__pyx_v_head) {
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("free_list", 0);
 
-  /* "pytimeset/timeset.pyx":115
+  /* "timeset/timeset.pyx":115
  * 
  * cdef void free_list(IntervalList* head):
  *     if head is NULL:             # <<<<<<<<<<<<<<
@@ -3703,7 +3703,7 @@ static void __pyx_f_9pytimeset_7timeset_free_list(__pyx_t_9pytimeset_7timeset_In
   __pyx_t_1 = ((__pyx_v_head == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "pytimeset/timeset.pyx":116
+    /* "timeset/timeset.pyx":116
  * cdef void free_list(IntervalList* head):
  *     if head is NULL:
  *         return             # <<<<<<<<<<<<<<
@@ -3712,7 +3712,7 @@ static void __pyx_f_9pytimeset_7timeset_free_list(__pyx_t_9pytimeset_7timeset_In
  */
     goto __pyx_L0;
 
-    /* "pytimeset/timeset.pyx":115
+    /* "timeset/timeset.pyx":115
  * 
  * cdef void free_list(IntervalList* head):
  *     if head is NULL:             # <<<<<<<<<<<<<<
@@ -3721,16 +3721,16 @@ static void __pyx_f_9pytimeset_7timeset_free_list(__pyx_t_9pytimeset_7timeset_In
  */
   }
 
-  /* "pytimeset/timeset.pyx":117
+  /* "timeset/timeset.pyx":117
  *     if head is NULL:
  *         return
  *     free_list(head.next)             # <<<<<<<<<<<<<<
  *     PyMem_Free(head)
  * 
  */
-  __pyx_f_9pytimeset_7timeset_free_list(__pyx_v_head->next);
+  __pyx_f_7timeset_7timeset_free_list(__pyx_v_head->next);
 
-  /* "pytimeset/timeset.pyx":118
+  /* "timeset/timeset.pyx":118
  *         return
  *     free_list(head.next)
  *     PyMem_Free(head)             # <<<<<<<<<<<<<<
@@ -3739,7 +3739,7 @@ static void __pyx_f_9pytimeset_7timeset_free_list(__pyx_t_9pytimeset_7timeset_In
  */
   PyMem_Free(__pyx_v_head);
 
-  /* "pytimeset/timeset.pyx":114
+  /* "timeset/timeset.pyx":114
  * 
  * 
  * cdef void free_list(IntervalList* head):             # <<<<<<<<<<<<<<
@@ -3752,7 +3752,7 @@ static void __pyx_f_9pytimeset_7timeset_free_list(__pyx_t_9pytimeset_7timeset_In
   __Pyx_RefNannyFinishContext();
 }
 
-/* "pytimeset/timeset.pyx":120
+/* "timeset/timeset.pyx":120
  *     PyMem_Free(head)
  * 
  * cdef int mycmp(const_void * pa, const_void * pb):             # <<<<<<<<<<<<<<
@@ -3760,33 +3760,33 @@ static void __pyx_f_9pytimeset_7timeset_free_list(__pyx_t_9pytimeset_7timeset_In
  *     cdef Interval b = (<Interval *>pb)[0]
  */
 
-static int __pyx_f_9pytimeset_7timeset_mycmp(const void *__pyx_v_pa, const void *__pyx_v_pb) {
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_v_a;
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_v_b;
+static int __pyx_f_7timeset_7timeset_mycmp(const void *__pyx_v_pa, const void *__pyx_v_pb) {
+  __pyx_t_7timeset_7timeset_Interval __pyx_v_a;
+  __pyx_t_7timeset_7timeset_Interval __pyx_v_b;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("mycmp", 0);
 
-  /* "pytimeset/timeset.pyx":121
+  /* "timeset/timeset.pyx":121
  * 
  * cdef int mycmp(const_void * pa, const_void * pb):
  *     cdef Interval a = (<Interval *>pa)[0]             # <<<<<<<<<<<<<<
  *     cdef Interval b = (<Interval *>pb)[0]
  *     if a.start < b.start:
  */
-  __pyx_v_a = (((__pyx_t_9pytimeset_7timeset_Interval *)__pyx_v_pa)[0]);
+  __pyx_v_a = (((__pyx_t_7timeset_7timeset_Interval *)__pyx_v_pa)[0]);
 
-  /* "pytimeset/timeset.pyx":122
+  /* "timeset/timeset.pyx":122
  * cdef int mycmp(const_void * pa, const_void * pb):
  *     cdef Interval a = (<Interval *>pa)[0]
  *     cdef Interval b = (<Interval *>pb)[0]             # <<<<<<<<<<<<<<
  *     if a.start < b.start:
  *         return -1
  */
-  __pyx_v_b = (((__pyx_t_9pytimeset_7timeset_Interval *)__pyx_v_pb)[0]);
+  __pyx_v_b = (((__pyx_t_7timeset_7timeset_Interval *)__pyx_v_pb)[0]);
 
-  /* "pytimeset/timeset.pyx":123
+  /* "timeset/timeset.pyx":123
  *     cdef Interval a = (<Interval *>pa)[0]
  *     cdef Interval b = (<Interval *>pb)[0]
  *     if a.start < b.start:             # <<<<<<<<<<<<<<
@@ -3796,7 +3796,7 @@ static int __pyx_f_9pytimeset_7timeset_mycmp(const void *__pyx_v_pa, const void 
   __pyx_t_1 = ((__pyx_v_a.start < __pyx_v_b.start) != 0);
   if (__pyx_t_1) {
 
-    /* "pytimeset/timeset.pyx":124
+    /* "timeset/timeset.pyx":124
  *     cdef Interval b = (<Interval *>pb)[0]
  *     if a.start < b.start:
  *         return -1             # <<<<<<<<<<<<<<
@@ -3806,7 +3806,7 @@ static int __pyx_f_9pytimeset_7timeset_mycmp(const void *__pyx_v_pa, const void 
     __pyx_r = -1;
     goto __pyx_L0;
 
-    /* "pytimeset/timeset.pyx":123
+    /* "timeset/timeset.pyx":123
  *     cdef Interval a = (<Interval *>pa)[0]
  *     cdef Interval b = (<Interval *>pb)[0]
  *     if a.start < b.start:             # <<<<<<<<<<<<<<
@@ -3815,7 +3815,7 @@ static int __pyx_f_9pytimeset_7timeset_mycmp(const void *__pyx_v_pa, const void 
  */
   }
 
-  /* "pytimeset/timeset.pyx":125
+  /* "timeset/timeset.pyx":125
  *     if a.start < b.start:
  *         return -1
  *     elif a.start > b.start:             # <<<<<<<<<<<<<<
@@ -3825,7 +3825,7 @@ static int __pyx_f_9pytimeset_7timeset_mycmp(const void *__pyx_v_pa, const void 
   __pyx_t_1 = ((__pyx_v_a.start > __pyx_v_b.start) != 0);
   if (__pyx_t_1) {
 
-    /* "pytimeset/timeset.pyx":126
+    /* "timeset/timeset.pyx":126
  *         return -1
  *     elif a.start > b.start:
  *         return 1             # <<<<<<<<<<<<<<
@@ -3835,7 +3835,7 @@ static int __pyx_f_9pytimeset_7timeset_mycmp(const void *__pyx_v_pa, const void 
     __pyx_r = 1;
     goto __pyx_L0;
 
-    /* "pytimeset/timeset.pyx":125
+    /* "timeset/timeset.pyx":125
  *     if a.start < b.start:
  *         return -1
  *     elif a.start > b.start:             # <<<<<<<<<<<<<<
@@ -3844,7 +3844,7 @@ static int __pyx_f_9pytimeset_7timeset_mycmp(const void *__pyx_v_pa, const void 
  */
   }
 
-  /* "pytimeset/timeset.pyx":128
+  /* "timeset/timeset.pyx":128
  *         return 1
  *     else:
  *         return 0             # <<<<<<<<<<<<<<
@@ -3856,7 +3856,7 @@ static int __pyx_f_9pytimeset_7timeset_mycmp(const void *__pyx_v_pa, const void 
     goto __pyx_L0;
   }
 
-  /* "pytimeset/timeset.pyx":120
+  /* "timeset/timeset.pyx":120
  *     PyMem_Free(head)
  * 
  * cdef int mycmp(const_void * pa, const_void * pb):             # <<<<<<<<<<<<<<
@@ -3870,7 +3870,7 @@ static int __pyx_f_9pytimeset_7timeset_mycmp(const void *__pyx_v_pa, const void 
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":134
+/* "timeset/timeset.pyx":134
  *     cdef frozenset _timeintervals
  * 
  *     def __init__(self, intervals: Collection[TimeInterval]):             # <<<<<<<<<<<<<<
@@ -3879,8 +3879,8 @@ static int __pyx_f_9pytimeset_7timeset_mycmp(const void *__pyx_v_pa, const void 
  */
 
 /* Python wrapper */
-static int __pyx_pw_9pytimeset_7timeset_7TimeSet_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_9pytimeset_7timeset_7TimeSet_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_7timeset_7timeset_7TimeSet_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_7timeset_7timeset_7TimeSet_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_intervals = 0;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -3917,23 +3917,23 @@ static int __pyx_pw_9pytimeset_7timeset_7TimeSet_1__init__(PyObject *__pyx_v_sel
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 134, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self), __pyx_v_intervals);
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet___init__(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self), __pyx_v_intervals);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, PyObject *__pyx_v_intervals) {
+static int __pyx_pf_7timeset_7timeset_7TimeSet___init__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, PyObject *__pyx_v_intervals) {
   int __pyx_v_i;
   int __pyx_v_size;
   PyObject *__pyx_v_empty = 0;
-  __pyx_t_9pytimeset_7timeset_Interval *__pyx_v_temp_array;
-  struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_v_ti = 0;
+  __pyx_t_7timeset_7timeset_Interval *__pyx_v_temp_array;
+  struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_v_ti = 0;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3942,7 +3942,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
   int __pyx_t_4;
   int __pyx_t_5;
   int __pyx_t_6;
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_t_7;
+  __pyx_t_7timeset_7timeset_Interval __pyx_t_7;
   PyObject *__pyx_t_8 = NULL;
   char const *__pyx_t_9;
   PyObject *__pyx_t_10 = NULL;
@@ -3954,7 +3954,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
   int __pyx_t_16;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "pytimeset/timeset.pyx":136
+  /* "timeset/timeset.pyx":136
  *     def __init__(self, intervals: Collection[TimeInterval]):
  *         cdef int i, size
  *         cdef empty = 0             # <<<<<<<<<<<<<<
@@ -3964,7 +3964,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_empty = __pyx_int_0;
 
-  /* "pytimeset/timeset.pyx":139
+  /* "timeset/timeset.pyx":139
  *         cdef Interval* temp_array
  *         cdef TimeInterval ti
  *         self._timeintervals = frozenset()             # <<<<<<<<<<<<<<
@@ -3979,7 +3979,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
   __pyx_v_self->_timeintervals = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pytimeset/timeset.pyx":141
+  /* "timeset/timeset.pyx":141
  *         self._timeintervals = frozenset()
  * 
  *         size = len(intervals)             # <<<<<<<<<<<<<<
@@ -3989,7 +3989,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
   __pyx_t_2 = PyObject_Length(__pyx_v_intervals); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 141, __pyx_L1_error)
   __pyx_v_size = __pyx_t_2;
 
-  /* "pytimeset/timeset.pyx":142
+  /* "timeset/timeset.pyx":142
  * 
  *         size = len(intervals)
  *         try:             # <<<<<<<<<<<<<<
@@ -3998,16 +3998,16 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
  */
   /*try:*/ {
 
-    /* "pytimeset/timeset.pyx":143
+    /* "timeset/timeset.pyx":143
  *         size = len(intervals)
  *         try:
  *             temp_array = <Interval*>PyMem_Malloc(size*sizeof(Interval))             # <<<<<<<<<<<<<<
  *             if temp_array is NULL:
  *                 raise MemoryError()
  */
-    __pyx_v_temp_array = ((__pyx_t_9pytimeset_7timeset_Interval *)PyMem_Malloc((__pyx_v_size * (sizeof(__pyx_t_9pytimeset_7timeset_Interval)))));
+    __pyx_v_temp_array = ((__pyx_t_7timeset_7timeset_Interval *)PyMem_Malloc((__pyx_v_size * (sizeof(__pyx_t_7timeset_7timeset_Interval)))));
 
-    /* "pytimeset/timeset.pyx":144
+    /* "timeset/timeset.pyx":144
  *         try:
  *             temp_array = <Interval*>PyMem_Malloc(size*sizeof(Interval))
  *             if temp_array is NULL:             # <<<<<<<<<<<<<<
@@ -4017,7 +4017,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
     __pyx_t_3 = ((__pyx_v_temp_array == NULL) != 0);
     if (unlikely(__pyx_t_3)) {
 
-      /* "pytimeset/timeset.pyx":145
+      /* "timeset/timeset.pyx":145
  *             temp_array = <Interval*>PyMem_Malloc(size*sizeof(Interval))
  *             if temp_array is NULL:
  *                 raise MemoryError()             # <<<<<<<<<<<<<<
@@ -4026,7 +4026,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
  */
       PyErr_NoMemory(); __PYX_ERR(0, 145, __pyx_L4_error)
 
-      /* "pytimeset/timeset.pyx":144
+      /* "timeset/timeset.pyx":144
  *         try:
  *             temp_array = <Interval*>PyMem_Malloc(size*sizeof(Interval))
  *             if temp_array is NULL:             # <<<<<<<<<<<<<<
@@ -4035,7 +4035,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
  */
     }
 
-    /* "pytimeset/timeset.pyx":146
+    /* "timeset/timeset.pyx":146
  *             if temp_array is NULL:
  *                 raise MemoryError()
  *             for i in range(size):             # <<<<<<<<<<<<<<
@@ -4047,7 +4047,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_i = __pyx_t_6;
 
-      /* "pytimeset/timeset.pyx":147
+      /* "timeset/timeset.pyx":147
  *                 raise MemoryError()
  *             for i in range(size):
  *                 ti = intervals[i]             # <<<<<<<<<<<<<<
@@ -4056,21 +4056,21 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
  */
       __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_intervals, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 147, __pyx_L4_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_9pytimeset_7timeset_TimeInterval))))) __PYX_ERR(0, 147, __pyx_L4_error)
-      __Pyx_XDECREF_SET(__pyx_v_ti, ((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_t_1));
+      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_7timeset_7timeset_TimeInterval))))) __PYX_ERR(0, 147, __pyx_L4_error)
+      __Pyx_XDECREF_SET(__pyx_v_ti, ((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_t_1));
       __pyx_t_1 = 0;
 
-      /* "pytimeset/timeset.pyx":148
+      /* "timeset/timeset.pyx":148
  *             for i in range(size):
  *                 ti = intervals[i]
  *                 if ti.is_empty():             # <<<<<<<<<<<<<<
  *                     empty += 1
  *                     continue
  */
-      __pyx_t_3 = (((struct __pyx_vtabstruct_9pytimeset_7timeset_TimeInterval *)__pyx_v_ti->__pyx_vtab)->is_empty(__pyx_v_ti, 0) != 0);
+      __pyx_t_3 = (((struct __pyx_vtabstruct_7timeset_7timeset_TimeInterval *)__pyx_v_ti->__pyx_vtab)->is_empty(__pyx_v_ti, 0) != 0);
       if (__pyx_t_3) {
 
-        /* "pytimeset/timeset.pyx":149
+        /* "timeset/timeset.pyx":149
  *                 ti = intervals[i]
  *                 if ti.is_empty():
  *                     empty += 1             # <<<<<<<<<<<<<<
@@ -4082,7 +4082,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
         __Pyx_DECREF_SET(__pyx_v_empty, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "pytimeset/timeset.pyx":150
+        /* "timeset/timeset.pyx":150
  *                 if ti.is_empty():
  *                     empty += 1
  *                     continue             # <<<<<<<<<<<<<<
@@ -4091,7 +4091,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
  */
         goto __pyx_L7_continue;
 
-        /* "pytimeset/timeset.pyx":148
+        /* "timeset/timeset.pyx":148
  *             for i in range(size):
  *                 ti = intervals[i]
  *                 if ti.is_empty():             # <<<<<<<<<<<<<<
@@ -4100,7 +4100,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
  */
       }
 
-      /* "pytimeset/timeset.pyx":151
+      /* "timeset/timeset.pyx":151
  *                     empty += 1
  *                     continue
  *                 temp_array[i-empty] = ti.interval             # <<<<<<<<<<<<<<
@@ -4119,7 +4119,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
       __pyx_L7_continue:;
     }
 
-    /* "pytimeset/timeset.pyx":152
+    /* "timeset/timeset.pyx":152
  *                     continue
  *                 temp_array[i-empty] = ti.interval
  *             size = size-empty             # <<<<<<<<<<<<<<
@@ -4135,7 +4135,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_size = __pyx_t_4;
 
-    /* "pytimeset/timeset.pyx":153
+    /* "timeset/timeset.pyx":153
  *                 temp_array[i-empty] = ti.interval
  *             size = size-empty
  *             if size == 0:             # <<<<<<<<<<<<<<
@@ -4145,7 +4145,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
     __pyx_t_3 = ((__pyx_v_size == 0) != 0);
     if (__pyx_t_3) {
 
-      /* "pytimeset/timeset.pyx":154
+      /* "timeset/timeset.pyx":154
  *             size = size-empty
  *             if size == 0:
  *                 self._intervals = NULL             # <<<<<<<<<<<<<<
@@ -4154,7 +4154,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
  */
       __pyx_v_self->_intervals = NULL;
 
-      /* "pytimeset/timeset.pyx":155
+      /* "timeset/timeset.pyx":155
  *             if size == 0:
  *                 self._intervals = NULL
  *                 return             # <<<<<<<<<<<<<<
@@ -4164,7 +4164,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
       __pyx_r = 0;
       goto __pyx_L3_return;
 
-      /* "pytimeset/timeset.pyx":153
+      /* "timeset/timeset.pyx":153
  *                 temp_array[i-empty] = ti.interval
  *             size = size-empty
  *             if size == 0:             # <<<<<<<<<<<<<<
@@ -4173,17 +4173,17 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
  */
     }
 
-    /* "pytimeset/timeset.pyx":156
+    /* "timeset/timeset.pyx":156
  *                 self._intervals = NULL
  *                 return
  *             self._normalize(temp_array, size)             # <<<<<<<<<<<<<<
  *         finally:
  *             PyMem_Free(temp_array)
  */
-    ((struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->_normalize(__pyx_v_self, __pyx_v_temp_array, __pyx_v_size);
+    ((struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->_normalize(__pyx_v_self, __pyx_v_temp_array, __pyx_v_size);
   }
 
-  /* "pytimeset/timeset.pyx":158
+  /* "timeset/timeset.pyx":158
  *             self._normalize(temp_array, size)
  *         finally:
  *             PyMem_Free(temp_array)             # <<<<<<<<<<<<<<
@@ -4237,7 +4237,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
     __pyx_L5:;
   }
 
-  /* "pytimeset/timeset.pyx":134
+  /* "timeset/timeset.pyx":134
  *     cdef frozenset _timeintervals
  * 
  *     def __init__(self, intervals: Collection[TimeInterval]):             # <<<<<<<<<<<<<<
@@ -4251,7 +4251,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_empty);
@@ -4260,7 +4260,7 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":160
+/* "timeset/timeset.pyx":160
  *             PyMem_Free(temp_array)
  * 
  *     cdef void _initialize_list(self, Interval interval):             # <<<<<<<<<<<<<<
@@ -4268,22 +4268,22 @@ static int __pyx_pf_9pytimeset_7timeset_7TimeSet___init__(struct __pyx_obj_9pyti
  *         if not self._intervals:
  */
 
-static void __pyx_f_9pytimeset_7timeset_7TimeSet__initialize_list(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, __pyx_t_9pytimeset_7timeset_Interval __pyx_v_interval) {
+static void __pyx_f_7timeset_7timeset_7TimeSet__initialize_list(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, __pyx_t_7timeset_7timeset_Interval __pyx_v_interval) {
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_t_2;
+  __pyx_t_7timeset_7timeset_Interval __pyx_t_2;
   __Pyx_RefNannySetupContext("_initialize_list", 0);
 
-  /* "pytimeset/timeset.pyx":161
+  /* "timeset/timeset.pyx":161
  * 
  *     cdef void _initialize_list(self, Interval interval):
  *         self._intervals = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))             # <<<<<<<<<<<<<<
  *         if not self._intervals:
  *             raise MemoryError()
  */
-  __pyx_v_self->_intervals = ((__pyx_t_9pytimeset_7timeset_IntervalList *)PyMem_Malloc((sizeof(__pyx_t_9pytimeset_7timeset_IntervalList))));
+  __pyx_v_self->_intervals = ((__pyx_t_7timeset_7timeset_IntervalList *)PyMem_Malloc((sizeof(__pyx_t_7timeset_7timeset_IntervalList))));
 
-  /* "pytimeset/timeset.pyx":162
+  /* "timeset/timeset.pyx":162
  *     cdef void _initialize_list(self, Interval interval):
  *         self._intervals = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *         if not self._intervals:             # <<<<<<<<<<<<<<
@@ -4293,7 +4293,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__initialize_list(struct __pyx_o
   __pyx_t_1 = ((!(__pyx_v_self->_intervals != 0)) != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "pytimeset/timeset.pyx":163
+    /* "timeset/timeset.pyx":163
  *         self._intervals = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *         if not self._intervals:
  *             raise MemoryError()             # <<<<<<<<<<<<<<
@@ -4302,7 +4302,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__initialize_list(struct __pyx_o
  */
     PyErr_NoMemory(); __PYX_ERR(0, 163, __pyx_L1_error)
 
-    /* "pytimeset/timeset.pyx":162
+    /* "timeset/timeset.pyx":162
  *     cdef void _initialize_list(self, Interval interval):
  *         self._intervals = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *         if not self._intervals:             # <<<<<<<<<<<<<<
@@ -4311,7 +4311,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__initialize_list(struct __pyx_o
  */
   }
 
-  /* "pytimeset/timeset.pyx":164
+  /* "timeset/timeset.pyx":164
  *         if not self._intervals:
  *             raise MemoryError()
  *         self._intervals[0].interval = Interval(interval.start, interval.end)             # <<<<<<<<<<<<<<
@@ -4322,7 +4322,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__initialize_list(struct __pyx_o
   __pyx_t_2.end = __pyx_v_interval.end;
   (__pyx_v_self->_intervals[0]).interval = __pyx_t_2;
 
-  /* "pytimeset/timeset.pyx":165
+  /* "timeset/timeset.pyx":165
  *             raise MemoryError()
  *         self._intervals[0].interval = Interval(interval.start, interval.end)
  *         self._intervals[0].next = NULL             # <<<<<<<<<<<<<<
@@ -4331,7 +4331,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__initialize_list(struct __pyx_o
  */
   (__pyx_v_self->_intervals[0]).next = NULL;
 
-  /* "pytimeset/timeset.pyx":160
+  /* "timeset/timeset.pyx":160
  *             PyMem_Free(temp_array)
  * 
  *     cdef void _initialize_list(self, Interval interval):             # <<<<<<<<<<<<<<
@@ -4342,12 +4342,12 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__initialize_list(struct __pyx_o
   /* function exit code */
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_WriteUnraisable("pytimeset.timeset.TimeSet._initialize_list", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("timeset.timeset.TimeSet._initialize_list", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
 }
 
-/* "pytimeset/timeset.pyx":167
+/* "timeset/timeset.pyx":167
  *         self._intervals[0].next = NULL
  * 
  *     cdef void _normalize(self, Interval* intervals, int size):             # <<<<<<<<<<<<<<
@@ -4355,12 +4355,12 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__initialize_list(struct __pyx_o
  *         cdef IntervalList* tail
  */
 
-static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, __pyx_t_9pytimeset_7timeset_Interval *__pyx_v_intervals, int __pyx_v_size) {
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_tail;
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_v_ref;
+static void __pyx_f_7timeset_7timeset_7TimeSet__normalize(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, __pyx_t_7timeset_7timeset_Interval *__pyx_v_intervals, int __pyx_v_size) {
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_tail;
+  __pyx_t_7timeset_7timeset_Interval __pyx_v_ref;
   long __pyx_v_i;
   __Pyx_RefNannyDeclarations
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_t_1;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_t_1;
   int __pyx_t_2;
   int __pyx_t_3;
   long __pyx_t_4;
@@ -4370,25 +4370,25 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
   double __pyx_t_8;
   __Pyx_RefNannySetupContext("_normalize", 0);
 
-  /* "pytimeset/timeset.pyx":171
+  /* "timeset/timeset.pyx":171
  *         cdef IntervalList* tail
  *         cdef Interval ref
  *         qsort(intervals, size, sizeof(Interval), mycmp)             # <<<<<<<<<<<<<<
  *         self._initialize_list(intervals[0])
  *         tail = self._intervals
  */
-  qsort(__pyx_v_intervals, __pyx_v_size, (sizeof(__pyx_t_9pytimeset_7timeset_Interval)), __pyx_f_9pytimeset_7timeset_mycmp);
+  qsort(__pyx_v_intervals, __pyx_v_size, (sizeof(__pyx_t_7timeset_7timeset_Interval)), __pyx_f_7timeset_7timeset_mycmp);
 
-  /* "pytimeset/timeset.pyx":172
+  /* "timeset/timeset.pyx":172
  *         cdef Interval ref
  *         qsort(intervals, size, sizeof(Interval), mycmp)
  *         self._initialize_list(intervals[0])             # <<<<<<<<<<<<<<
  *         tail = self._intervals
  * 
  */
-  ((struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->_initialize_list(__pyx_v_self, (__pyx_v_intervals[0]));
+  ((struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->_initialize_list(__pyx_v_self, (__pyx_v_intervals[0]));
 
-  /* "pytimeset/timeset.pyx":173
+  /* "timeset/timeset.pyx":173
  *         qsort(intervals, size, sizeof(Interval), mycmp)
  *         self._initialize_list(intervals[0])
  *         tail = self._intervals             # <<<<<<<<<<<<<<
@@ -4398,7 +4398,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
   __pyx_t_1 = __pyx_v_self->_intervals;
   __pyx_v_tail = __pyx_t_1;
 
-  /* "pytimeset/timeset.pyx":175
+  /* "timeset/timeset.pyx":175
  *         tail = self._intervals
  * 
  *         for i in range(1, size):             # <<<<<<<<<<<<<<
@@ -4410,7 +4410,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
   for (__pyx_t_4 = 1; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_i = __pyx_t_4;
 
-    /* "pytimeset/timeset.pyx":176
+    /* "timeset/timeset.pyx":176
  * 
  *         for i in range(1, size):
  *             ref = intervals[i]             # <<<<<<<<<<<<<<
@@ -4419,7 +4419,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
  */
     __pyx_v_ref = (__pyx_v_intervals[__pyx_v_i]);
 
-    /* "pytimeset/timeset.pyx":177
+    /* "timeset/timeset.pyx":177
  *         for i in range(1, size):
  *             ref = intervals[i]
  *             if ref.start <= tail.interval.end:             # <<<<<<<<<<<<<<
@@ -4429,7 +4429,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
     __pyx_t_5 = ((__pyx_v_ref.start <= __pyx_v_tail->interval.end) != 0);
     if (__pyx_t_5) {
 
-      /* "pytimeset/timeset.pyx":178
+      /* "timeset/timeset.pyx":178
  *             ref = intervals[i]
  *             if ref.start <= tail.interval.end:
  *                 tail.interval.end = max(tail.interval.end, ref.end)             # <<<<<<<<<<<<<<
@@ -4445,7 +4445,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
       }
       __pyx_v_tail->interval.end = __pyx_t_8;
 
-      /* "pytimeset/timeset.pyx":177
+      /* "timeset/timeset.pyx":177
  *         for i in range(1, size):
  *             ref = intervals[i]
  *             if ref.start <= tail.interval.end:             # <<<<<<<<<<<<<<
@@ -4455,26 +4455,26 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
       goto __pyx_L5;
     }
 
-    /* "pytimeset/timeset.pyx":179
+    /* "timeset/timeset.pyx":179
  *             if ref.start <= tail.interval.end:
  *                 tail.interval.end = max(tail.interval.end, ref.end)
  *             elif not Interval_is_empty(ref):             # <<<<<<<<<<<<<<
  *                 tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *                 tail.next.interval.start = ref.start
  */
-    __pyx_t_5 = ((!(__pyx_f_9pytimeset_7timeset_Interval_is_empty(__pyx_v_ref) != 0)) != 0);
+    __pyx_t_5 = ((!(__pyx_f_7timeset_7timeset_Interval_is_empty(__pyx_v_ref) != 0)) != 0);
     if (__pyx_t_5) {
 
-      /* "pytimeset/timeset.pyx":180
+      /* "timeset/timeset.pyx":180
  *                 tail.interval.end = max(tail.interval.end, ref.end)
  *             elif not Interval_is_empty(ref):
  *                 tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))             # <<<<<<<<<<<<<<
  *                 tail.next.interval.start = ref.start
  *                 tail.next.interval.end = ref.end
  */
-      __pyx_v_tail->next = ((__pyx_t_9pytimeset_7timeset_IntervalList *)PyMem_Malloc((sizeof(__pyx_t_9pytimeset_7timeset_IntervalList))));
+      __pyx_v_tail->next = ((__pyx_t_7timeset_7timeset_IntervalList *)PyMem_Malloc((sizeof(__pyx_t_7timeset_7timeset_IntervalList))));
 
-      /* "pytimeset/timeset.pyx":181
+      /* "timeset/timeset.pyx":181
  *             elif not Interval_is_empty(ref):
  *                 tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *                 tail.next.interval.start = ref.start             # <<<<<<<<<<<<<<
@@ -4484,7 +4484,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
       __pyx_t_8 = __pyx_v_ref.start;
       __pyx_v_tail->next->interval.start = __pyx_t_8;
 
-      /* "pytimeset/timeset.pyx":182
+      /* "timeset/timeset.pyx":182
  *                 tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *                 tail.next.interval.start = ref.start
  *                 tail.next.interval.end = ref.end             # <<<<<<<<<<<<<<
@@ -4494,7 +4494,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
       __pyx_t_8 = __pyx_v_ref.end;
       __pyx_v_tail->next->interval.end = __pyx_t_8;
 
-      /* "pytimeset/timeset.pyx":183
+      /* "timeset/timeset.pyx":183
  *                 tail.next.interval.start = ref.start
  *                 tail.next.interval.end = ref.end
  *                 tail = tail.next             # <<<<<<<<<<<<<<
@@ -4504,7 +4504,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
       __pyx_t_1 = __pyx_v_tail->next;
       __pyx_v_tail = __pyx_t_1;
 
-      /* "pytimeset/timeset.pyx":184
+      /* "timeset/timeset.pyx":184
  *                 tail.next.interval.end = ref.end
  *                 tail = tail.next
  *                 tail.next = NULL             # <<<<<<<<<<<<<<
@@ -4513,7 +4513,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
  */
       __pyx_v_tail->next = NULL;
 
-      /* "pytimeset/timeset.pyx":179
+      /* "timeset/timeset.pyx":179
  *             if ref.start <= tail.interval.end:
  *                 tail.interval.end = max(tail.interval.end, ref.end)
  *             elif not Interval_is_empty(ref):             # <<<<<<<<<<<<<<
@@ -4524,7 +4524,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
     __pyx_L5:;
   }
 
-  /* "pytimeset/timeset.pyx":167
+  /* "timeset/timeset.pyx":167
  *         self._intervals[0].next = NULL
  * 
  *     cdef void _normalize(self, Interval* intervals, int size):             # <<<<<<<<<<<<<<
@@ -4536,7 +4536,7 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
   __Pyx_RefNannyFinishContext();
 }
 
-/* "pytimeset/timeset.pyx":187
+/* "timeset/timeset.pyx":187
  * 
  *     @staticmethod
  *     cdef TimeSet from_list(IntervalList* _list):             # <<<<<<<<<<<<<<
@@ -4544,24 +4544,24 @@ static void __pyx_f_9pytimeset_7timeset_7TimeSet__normalize(struct __pyx_obj_9py
  *         cdef int i
  */
 
-static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset_7TimeSet_from_list(__pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v__list) {
+static struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_f_7timeset_7timeset_7TimeSet_from_list(__pyx_t_7timeset_7timeset_IntervalList *__pyx_v__list) {
   int __pyx_v_size;
   int __pyx_v_i;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v__iter;
-  __pyx_t_9pytimeset_7timeset_Interval *__pyx_v_temp_array;
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_ts = 0;
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_r = NULL;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v__iter;
+  __pyx_t_7timeset_7timeset_Interval *__pyx_v_temp_array;
+  struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_ts = 0;
+  struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   int __pyx_t_2;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_t_3;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_t_3;
   int __pyx_t_4;
   int __pyx_t_5;
   int __pyx_t_6;
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_t_7;
+  __pyx_t_7timeset_7timeset_Interval __pyx_t_7;
   __Pyx_RefNannySetupContext("from_list", 0);
 
-  /* "pytimeset/timeset.pyx":188
+  /* "timeset/timeset.pyx":188
  *     @staticmethod
  *     cdef TimeSet from_list(IntervalList* _list):
  *         cdef int size = 0             # <<<<<<<<<<<<<<
@@ -4570,7 +4570,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
   __pyx_v_size = 0;
 
-  /* "pytimeset/timeset.pyx":190
+  /* "timeset/timeset.pyx":190
  *         cdef int size = 0
  *         cdef int i
  *         cdef IntervalList* _iter = _list             # <<<<<<<<<<<<<<
@@ -4579,19 +4579,19 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
   __pyx_v__iter = __pyx_v__list;
 
-  /* "pytimeset/timeset.pyx":192
+  /* "timeset/timeset.pyx":192
  *         cdef IntervalList* _iter = _list
  *         cdef Interval* temp_array
  *         cdef TimeSet ts = TimeSet.__new__(TimeSet)             # <<<<<<<<<<<<<<
  *         ts._timeintervals = frozenset()
  * 
  */
-  __pyx_t_1 = ((PyObject *)__pyx_tp_new_9pytimeset_7timeset_TimeSet(((PyTypeObject *)__pyx_ptype_9pytimeset_7timeset_TimeSet), __pyx_empty_tuple, NULL)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_tp_new_7timeset_7timeset_TimeSet(((PyTypeObject *)__pyx_ptype_7timeset_7timeset_TimeSet), __pyx_empty_tuple, NULL)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_GOTREF(((PyObject *)__pyx_t_1));
-  __pyx_v_ts = ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_t_1);
+  __pyx_v_ts = ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pytimeset/timeset.pyx":193
+  /* "timeset/timeset.pyx":193
  *         cdef Interval* temp_array
  *         cdef TimeSet ts = TimeSet.__new__(TimeSet)
  *         ts._timeintervals = frozenset()             # <<<<<<<<<<<<<<
@@ -4606,7 +4606,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   __pyx_v_ts->_timeintervals = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pytimeset/timeset.pyx":196
+  /* "timeset/timeset.pyx":196
  * 
  *         # Calculate size
  *         while _iter is not NULL:             # <<<<<<<<<<<<<<
@@ -4617,7 +4617,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_t_2 = ((__pyx_v__iter != NULL) != 0);
     if (!__pyx_t_2) break;
 
-    /* "pytimeset/timeset.pyx":197
+    /* "timeset/timeset.pyx":197
  *         # Calculate size
  *         while _iter is not NULL:
  *             size += 1             # <<<<<<<<<<<<<<
@@ -4626,7 +4626,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
     __pyx_v_size = (__pyx_v_size + 1);
 
-    /* "pytimeset/timeset.pyx":198
+    /* "timeset/timeset.pyx":198
  *         while _iter is not NULL:
  *             size += 1
  *             _iter = _iter.next             # <<<<<<<<<<<<<<
@@ -4637,7 +4637,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_v__iter = __pyx_t_3;
   }
 
-  /* "pytimeset/timeset.pyx":200
+  /* "timeset/timeset.pyx":200
  *             _iter = _iter.next
  * 
  *         _iter = _list  # Reset the iterator to the start of the list             # <<<<<<<<<<<<<<
@@ -4646,7 +4646,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
   __pyx_v__iter = __pyx_v__list;
 
-  /* "pytimeset/timeset.pyx":202
+  /* "timeset/timeset.pyx":202
  *         _iter = _list  # Reset the iterator to the start of the list
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -4655,16 +4655,16 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
   /*try:*/ {
 
-    /* "pytimeset/timeset.pyx":204
+    /* "timeset/timeset.pyx":204
  *         try:
  *             # Now build the temporary array that will be passed to "normalize"
  *             temp_array = <Interval*>PyMem_Malloc(size*sizeof(Interval))             # <<<<<<<<<<<<<<
  *             for i in range(size):
  *                 temp_array[i] = _iter.interval
  */
-    __pyx_v_temp_array = ((__pyx_t_9pytimeset_7timeset_Interval *)PyMem_Malloc((__pyx_v_size * (sizeof(__pyx_t_9pytimeset_7timeset_Interval)))));
+    __pyx_v_temp_array = ((__pyx_t_7timeset_7timeset_Interval *)PyMem_Malloc((__pyx_v_size * (sizeof(__pyx_t_7timeset_7timeset_Interval)))));
 
-    /* "pytimeset/timeset.pyx":205
+    /* "timeset/timeset.pyx":205
  *             # Now build the temporary array that will be passed to "normalize"
  *             temp_array = <Interval*>PyMem_Malloc(size*sizeof(Interval))
  *             for i in range(size):             # <<<<<<<<<<<<<<
@@ -4676,7 +4676,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_i = __pyx_t_6;
 
-      /* "pytimeset/timeset.pyx":206
+      /* "timeset/timeset.pyx":206
  *             temp_array = <Interval*>PyMem_Malloc(size*sizeof(Interval))
  *             for i in range(size):
  *                 temp_array[i] = _iter.interval             # <<<<<<<<<<<<<<
@@ -4686,7 +4686,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       __pyx_t_7 = __pyx_v__iter->interval;
       (__pyx_v_temp_array[__pyx_v_i]) = __pyx_t_7;
 
-      /* "pytimeset/timeset.pyx":207
+      /* "timeset/timeset.pyx":207
  *             for i in range(size):
  *                 temp_array[i] = _iter.interval
  *                 _iter = _iter.next             # <<<<<<<<<<<<<<
@@ -4697,17 +4697,17 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       __pyx_v__iter = __pyx_t_3;
     }
 
-    /* "pytimeset/timeset.pyx":208
+    /* "timeset/timeset.pyx":208
  *                 temp_array[i] = _iter.interval
  *                 _iter = _iter.next
  *             ts._normalize(temp_array, size)             # <<<<<<<<<<<<<<
  *         finally:
  *             PyMem_Free(temp_array)
  */
-    ((struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *)__pyx_v_ts->__pyx_vtab)->_normalize(__pyx_v_ts, __pyx_v_temp_array, __pyx_v_size);
+    ((struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *)__pyx_v_ts->__pyx_vtab)->_normalize(__pyx_v_ts, __pyx_v_temp_array, __pyx_v_size);
   }
 
-  /* "pytimeset/timeset.pyx":210
+  /* "timeset/timeset.pyx":210
  *             ts._normalize(temp_array, size)
  *         finally:
  *             PyMem_Free(temp_array)             # <<<<<<<<<<<<<<
@@ -4722,7 +4722,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_L7:;
   }
 
-  /* "pytimeset/timeset.pyx":211
+  /* "timeset/timeset.pyx":211
  *         finally:
  *             PyMem_Free(temp_array)
  *         return ts             # <<<<<<<<<<<<<<
@@ -4734,7 +4734,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   __pyx_r = __pyx_v_ts;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":187
+  /* "timeset/timeset.pyx":187
  * 
  *     @staticmethod
  *     cdef TimeSet from_list(IntervalList* _list):             # <<<<<<<<<<<<<<
@@ -4745,7 +4745,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.from_list", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.from_list", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_ts);
@@ -4754,7 +4754,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":214
+/* "timeset/timeset.pyx":214
  * 
  *     @classmethod
  *     def from_interval(cls, start: datetime, end: datetime):             # <<<<<<<<<<<<<<
@@ -4763,8 +4763,8 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_3from_interval(PyObject *__pyx_v_cls, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_3from_interval(PyObject *__pyx_v_cls, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_3from_interval(PyObject *__pyx_v_cls, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_3from_interval(PyObject *__pyx_v_cls, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_start = 0;
   PyObject *__pyx_v_end = 0;
   PyObject *__pyx_r = 0;
@@ -4812,25 +4812,25 @@ static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_3from_interval(PyObject *
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("from_interval", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 214, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.from_interval", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.from_interval", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_2from_interval(((PyTypeObject*)__pyx_v_cls), __pyx_v_start, __pyx_v_end);
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_2from_interval(((PyTypeObject*)__pyx_v_cls), __pyx_v_start, __pyx_v_end);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_2from_interval(CYTHON_UNUSED PyTypeObject *__pyx_v_cls, PyObject *__pyx_v_start, PyObject *__pyx_v_end) {
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_2from_interval(CYTHON_UNUSED PyTypeObject *__pyx_v_cls, PyObject *__pyx_v_start, PyObject *__pyx_v_end) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("from_interval", 0);
 
-  /* "pytimeset/timeset.pyx":215
+  /* "timeset/timeset.pyx":215
  *     @classmethod
  *     def from_interval(cls, start: datetime, end: datetime):
  *         return TimeSet([TimeInterval(start, end)])             # <<<<<<<<<<<<<<
@@ -4846,7 +4846,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_2from_interval(CYTHON_UNU
   __Pyx_INCREF(__pyx_v_end);
   __Pyx_GIVEREF(__pyx_v_end);
   PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_end);
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9pytimeset_7timeset_TimeInterval), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_7timeset_7timeset_TimeInterval), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 215, __pyx_L1_error)
@@ -4854,14 +4854,14 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_2from_interval(CYTHON_UNU
   __Pyx_GIVEREF(__pyx_t_2);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)__pyx_ptype_9pytimeset_7timeset_TimeSet), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)__pyx_ptype_7timeset_7timeset_TimeSet), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":214
+  /* "timeset/timeset.pyx":214
  * 
  *     @classmethod
  *     def from_interval(cls, start: datetime, end: datetime):             # <<<<<<<<<<<<<<
@@ -4873,7 +4873,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_2from_interval(CYTHON_UNU
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.from_interval", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.from_interval", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4881,7 +4881,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_2from_interval(CYTHON_UNU
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":218
+/* "timeset/timeset.pyx":218
  * 
  *     @classmethod
  *     def empty(cls):             # <<<<<<<<<<<<<<
@@ -4890,24 +4890,24 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_2from_interval(CYTHON_UNU
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_5empty(PyObject *__pyx_v_cls, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_5empty(PyObject *__pyx_v_cls, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_5empty(PyObject *__pyx_v_cls, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_5empty(PyObject *__pyx_v_cls, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("empty (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_4empty(((PyTypeObject*)__pyx_v_cls));
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_4empty(((PyTypeObject*)__pyx_v_cls));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_4empty(CYTHON_UNUSED PyTypeObject *__pyx_v_cls) {
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_4empty(CYTHON_UNUSED PyTypeObject *__pyx_v_cls) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("empty", 0);
 
-  /* "pytimeset/timeset.pyx":219
+  /* "timeset/timeset.pyx":219
  *     @classmethod
  *     def empty(cls):
  *         return empty_set             # <<<<<<<<<<<<<<
@@ -4915,11 +4915,11 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_4empty(CYTHON_UNUSED PyTy
  *     cpdef TimeSet union(self, TimeSet other):
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(((PyObject *)__pyx_v_9pytimeset_7timeset_empty_set));
-  __pyx_r = ((PyObject *)__pyx_v_9pytimeset_7timeset_empty_set);
+  __Pyx_INCREF(((PyObject *)__pyx_v_7timeset_7timeset_empty_set));
+  __pyx_r = ((PyObject *)__pyx_v_7timeset_7timeset_empty_set);
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":218
+  /* "timeset/timeset.pyx":218
  * 
  *     @classmethod
  *     def empty(cls):             # <<<<<<<<<<<<<<
@@ -4934,7 +4934,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_4empty(CYTHON_UNUSED PyTy
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":221
+/* "timeset/timeset.pyx":221
  *         return empty_set
  * 
  *     cpdef TimeSet union(self, TimeSet other):             # <<<<<<<<<<<<<<
@@ -4942,18 +4942,18 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_4empty(CYTHON_UNUSED PyTy
  *         cdef IntervalList* _iter = full_list
  */
 
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_7union(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset_7TimeSet_union(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch) {
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_full_list;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v__iter;
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_ts = 0;
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_r = NULL;
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_7union(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_f_7timeset_7timeset_7TimeSet_union(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch) {
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_full_list;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v__iter;
+  struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_ts = 0;
+  struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_t_5;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_t_5;
   int __pyx_t_6;
   __Pyx_RefNannySetupContext("union", 0);
   /* Check if called by wrapper */
@@ -4967,7 +4967,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_union); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 221, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9pytimeset_7timeset_7TimeSet_7union)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_7timeset_7timeset_7TimeSet_7union)) {
         __Pyx_XDECREF(((PyObject *)__pyx_r));
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -4985,8 +4985,8 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
         if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 221, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_9pytimeset_7timeset_TimeSet))))) __PYX_ERR(0, 221, __pyx_L1_error)
-        __pyx_r = ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_t_2);
+        if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_7timeset_7timeset_TimeSet))))) __PYX_ERR(0, 221, __pyx_L1_error)
+        __pyx_r = ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         goto __pyx_L0;
@@ -5004,7 +5004,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     #endif
   }
 
-  /* "pytimeset/timeset.pyx":222
+  /* "timeset/timeset.pyx":222
  * 
  *     cpdef TimeSet union(self, TimeSet other):
  *         cdef IntervalList* full_list = self._intervals             # <<<<<<<<<<<<<<
@@ -5014,7 +5014,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   __pyx_t_5 = __pyx_v_self->_intervals;
   __pyx_v_full_list = __pyx_t_5;
 
-  /* "pytimeset/timeset.pyx":223
+  /* "timeset/timeset.pyx":223
  *     cpdef TimeSet union(self, TimeSet other):
  *         cdef IntervalList* full_list = self._intervals
  *         cdef IntervalList* _iter = full_list             # <<<<<<<<<<<<<<
@@ -5023,7 +5023,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
   __pyx_v__iter = __pyx_v_full_list;
 
-  /* "pytimeset/timeset.pyx":225
+  /* "timeset/timeset.pyx":225
  *         cdef IntervalList* _iter = full_list
  *         cdef TimeSet ts
  *         while _iter.next is not NULL:             # <<<<<<<<<<<<<<
@@ -5034,7 +5034,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_t_6 = ((__pyx_v__iter->next != NULL) != 0);
     if (!__pyx_t_6) break;
 
-    /* "pytimeset/timeset.pyx":226
+    /* "timeset/timeset.pyx":226
  *         cdef TimeSet ts
  *         while _iter.next is not NULL:
  *             _iter = _iter.next             # <<<<<<<<<<<<<<
@@ -5045,7 +5045,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_v__iter = __pyx_t_5;
   }
 
-  /* "pytimeset/timeset.pyx":227
+  /* "timeset/timeset.pyx":227
  *         while _iter.next is not NULL:
  *             _iter = _iter.next
  *         _iter.next = other._intervals             # <<<<<<<<<<<<<<
@@ -5055,19 +5055,19 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   __pyx_t_5 = __pyx_v_other->_intervals;
   __pyx_v__iter->next = __pyx_t_5;
 
-  /* "pytimeset/timeset.pyx":228
+  /* "timeset/timeset.pyx":228
  *             _iter = _iter.next
  *         _iter.next = other._intervals
  *         ts = TimeSet.from_list(full_list)             # <<<<<<<<<<<<<<
  *         _iter.next = NULL  # Return self to previous condition!
  *         return ts
  */
-  __pyx_t_1 = ((PyObject *)__pyx_f_9pytimeset_7timeset_7TimeSet_from_list(__pyx_v_full_list)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 228, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7timeset_7timeset_7TimeSet_from_list(__pyx_v_full_list)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_v_ts = ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_t_1);
+  __pyx_v_ts = ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pytimeset/timeset.pyx":229
+  /* "timeset/timeset.pyx":229
  *         _iter.next = other._intervals
  *         ts = TimeSet.from_list(full_list)
  *         _iter.next = NULL  # Return self to previous condition!             # <<<<<<<<<<<<<<
@@ -5076,7 +5076,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
   __pyx_v__iter->next = NULL;
 
-  /* "pytimeset/timeset.pyx":230
+  /* "timeset/timeset.pyx":230
  *         ts = TimeSet.from_list(full_list)
  *         _iter.next = NULL  # Return self to previous condition!
  *         return ts             # <<<<<<<<<<<<<<
@@ -5088,7 +5088,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   __pyx_r = __pyx_v_ts;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":221
+  /* "timeset/timeset.pyx":221
  *         return empty_set
  * 
  *     cpdef TimeSet union(self, TimeSet other):             # <<<<<<<<<<<<<<
@@ -5102,7 +5102,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.union", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.union", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_ts);
@@ -5112,13 +5112,13 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_7union(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_7union(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_7union(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_7union(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("union (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_9pytimeset_7timeset_TimeSet, 1, "other", 0))) __PYX_ERR(0, 221, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_6union(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self), ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_other));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_7timeset_7timeset_TimeSet, 1, "other", 0))) __PYX_ERR(0, 221, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_6union(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self), ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_other));
 
   /* function exit code */
   goto __pyx_L0;
@@ -5129,13 +5129,13 @@ static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_7union(PyObject *__pyx_v_
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_6union(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other) {
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_6union(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("union", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_9pytimeset_7timeset_7TimeSet_union(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 221, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7timeset_7timeset_7TimeSet_union(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5144,7 +5144,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_6union(struct __pyx_obj_9
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.union", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.union", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5152,7 +5152,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_6union(struct __pyx_obj_9
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":232
+/* "timeset/timeset.pyx":232
  *         return ts
  * 
  *     cpdef TimeSet intersection(self, TimeSet other):             # <<<<<<<<<<<<<<
@@ -5160,22 +5160,22 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_6union(struct __pyx_obj_9
  *         cdef IntervalList* iter2
  */
 
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_9intersection(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset_7TimeSet_intersection(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch) {
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_iter1;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_iter2;
-  __pyx_t_9pytimeset_7timeset_IntervalList __pyx_v_new_list;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_tail;
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_v__intersection;
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_ts = 0;
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_r = NULL;
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_9intersection(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_f_7timeset_7timeset_7TimeSet_intersection(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch) {
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_iter1;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_iter2;
+  __pyx_t_7timeset_7timeset_IntervalList __pyx_v_new_list;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_tail;
+  __pyx_t_7timeset_7timeset_Interval __pyx_v__intersection;
+  struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_ts = 0;
+  struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_t_5;
-  __pyx_t_9pytimeset_7timeset_IntervalList __pyx_t_6;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_t_5;
+  __pyx_t_7timeset_7timeset_IntervalList __pyx_t_6;
   int __pyx_t_7;
   int __pyx_t_8;
   __Pyx_RefNannySetupContext("intersection", 0);
@@ -5190,7 +5190,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_intersection); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9pytimeset_7timeset_7TimeSet_9intersection)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_7timeset_7timeset_7TimeSet_9intersection)) {
         __Pyx_XDECREF(((PyObject *)__pyx_r));
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -5208,8 +5208,8 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
         if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_9pytimeset_7timeset_TimeSet))))) __PYX_ERR(0, 232, __pyx_L1_error)
-        __pyx_r = ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_t_2);
+        if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_7timeset_7timeset_TimeSet))))) __PYX_ERR(0, 232, __pyx_L1_error)
+        __pyx_r = ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         goto __pyx_L0;
@@ -5227,7 +5227,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     #endif
   }
 
-  /* "pytimeset/timeset.pyx":233
+  /* "timeset/timeset.pyx":233
  * 
  *     cpdef TimeSet intersection(self, TimeSet other):
  *         cdef IntervalList* iter1 = self._intervals             # <<<<<<<<<<<<<<
@@ -5237,18 +5237,18 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   __pyx_t_5 = __pyx_v_self->_intervals;
   __pyx_v_iter1 = __pyx_t_5;
 
-  /* "pytimeset/timeset.pyx":236
+  /* "timeset/timeset.pyx":236
  *         cdef IntervalList* iter2
  *         # Start the list with a dummy head
  *         cdef IntervalList new_list = IntervalList(empty, NULL)             # <<<<<<<<<<<<<<
  *         cdef IntervalList* tail = &new_list
  *         cdef Interval _intersection
  */
-  __pyx_t_6.interval = __pyx_v_9pytimeset_7timeset_empty;
+  __pyx_t_6.interval = __pyx_v_7timeset_7timeset_empty;
   __pyx_t_6.next = NULL;
   __pyx_v_new_list = __pyx_t_6;
 
-  /* "pytimeset/timeset.pyx":237
+  /* "timeset/timeset.pyx":237
  *         # Start the list with a dummy head
  *         cdef IntervalList new_list = IntervalList(empty, NULL)
  *         cdef IntervalList* tail = &new_list             # <<<<<<<<<<<<<<
@@ -5257,25 +5257,25 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
   __pyx_v_tail = (&__pyx_v_new_list);
 
-  /* "pytimeset/timeset.pyx":241
+  /* "timeset/timeset.pyx":241
  *         cdef TimeSet ts
  * 
  *         if self.is_empty() or other.is_empty():             # <<<<<<<<<<<<<<
  *             return empty_set
  * 
  */
-  __pyx_t_8 = (((struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->is_empty(__pyx_v_self, 0) != 0);
+  __pyx_t_8 = (((struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->is_empty(__pyx_v_self, 0) != 0);
   if (!__pyx_t_8) {
   } else {
     __pyx_t_7 = __pyx_t_8;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_8 = (((struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *)__pyx_v_other->__pyx_vtab)->is_empty(__pyx_v_other, 0) != 0);
+  __pyx_t_8 = (((struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *)__pyx_v_other->__pyx_vtab)->is_empty(__pyx_v_other, 0) != 0);
   __pyx_t_7 = __pyx_t_8;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_7) {
 
-    /* "pytimeset/timeset.pyx":242
+    /* "timeset/timeset.pyx":242
  * 
  *         if self.is_empty() or other.is_empty():
  *             return empty_set             # <<<<<<<<<<<<<<
@@ -5283,11 +5283,11 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  *         while iter1 is not NULL:
  */
     __Pyx_XDECREF(((PyObject *)__pyx_r));
-    __Pyx_INCREF(((PyObject *)__pyx_v_9pytimeset_7timeset_empty_set));
-    __pyx_r = __pyx_v_9pytimeset_7timeset_empty_set;
+    __Pyx_INCREF(((PyObject *)__pyx_v_7timeset_7timeset_empty_set));
+    __pyx_r = __pyx_v_7timeset_7timeset_empty_set;
     goto __pyx_L0;
 
-    /* "pytimeset/timeset.pyx":241
+    /* "timeset/timeset.pyx":241
  *         cdef TimeSet ts
  * 
  *         if self.is_empty() or other.is_empty():             # <<<<<<<<<<<<<<
@@ -5296,7 +5296,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
   }
 
-  /* "pytimeset/timeset.pyx":244
+  /* "timeset/timeset.pyx":244
  *             return empty_set
  * 
  *         while iter1 is not NULL:             # <<<<<<<<<<<<<<
@@ -5307,7 +5307,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_t_7 = ((__pyx_v_iter1 != NULL) != 0);
     if (!__pyx_t_7) break;
 
-    /* "pytimeset/timeset.pyx":245
+    /* "timeset/timeset.pyx":245
  * 
  *         while iter1 is not NULL:
  *             iter2 = other._intervals             # <<<<<<<<<<<<<<
@@ -5317,7 +5317,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_t_5 = __pyx_v_other->_intervals;
     __pyx_v_iter2 = __pyx_t_5;
 
-    /* "pytimeset/timeset.pyx":246
+    /* "timeset/timeset.pyx":246
  *         while iter1 is not NULL:
  *             iter2 = other._intervals
  *             while iter2 is not NULL:             # <<<<<<<<<<<<<<
@@ -5328,35 +5328,35 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       __pyx_t_7 = ((__pyx_v_iter2 != NULL) != 0);
       if (!__pyx_t_7) break;
 
-      /* "pytimeset/timeset.pyx":247
+      /* "timeset/timeset.pyx":247
  *             iter2 = other._intervals
  *             while iter2 is not NULL:
  *                 _intersection = Interval_intersection(iter1.interval, iter2.interval)             # <<<<<<<<<<<<<<
  *                 if not Interval_is_empty(_intersection):
  *                     tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  */
-      __pyx_v__intersection = __pyx_f_9pytimeset_7timeset_Interval_intersection(__pyx_v_iter1->interval, __pyx_v_iter2->interval);
+      __pyx_v__intersection = __pyx_f_7timeset_7timeset_Interval_intersection(__pyx_v_iter1->interval, __pyx_v_iter2->interval);
 
-      /* "pytimeset/timeset.pyx":248
+      /* "timeset/timeset.pyx":248
  *             while iter2 is not NULL:
  *                 _intersection = Interval_intersection(iter1.interval, iter2.interval)
  *                 if not Interval_is_empty(_intersection):             # <<<<<<<<<<<<<<
  *                     tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *                     tail.next.interval = _intersection
  */
-      __pyx_t_7 = ((!(__pyx_f_9pytimeset_7timeset_Interval_is_empty(__pyx_v__intersection) != 0)) != 0);
+      __pyx_t_7 = ((!(__pyx_f_7timeset_7timeset_Interval_is_empty(__pyx_v__intersection) != 0)) != 0);
       if (__pyx_t_7) {
 
-        /* "pytimeset/timeset.pyx":249
+        /* "timeset/timeset.pyx":249
  *                 _intersection = Interval_intersection(iter1.interval, iter2.interval)
  *                 if not Interval_is_empty(_intersection):
  *                     tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))             # <<<<<<<<<<<<<<
  *                     tail.next.interval = _intersection
  *                     tail = tail.next
  */
-        __pyx_v_tail->next = ((__pyx_t_9pytimeset_7timeset_IntervalList *)PyMem_Malloc((sizeof(__pyx_t_9pytimeset_7timeset_IntervalList))));
+        __pyx_v_tail->next = ((__pyx_t_7timeset_7timeset_IntervalList *)PyMem_Malloc((sizeof(__pyx_t_7timeset_7timeset_IntervalList))));
 
-        /* "pytimeset/timeset.pyx":250
+        /* "timeset/timeset.pyx":250
  *                 if not Interval_is_empty(_intersection):
  *                     tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *                     tail.next.interval = _intersection             # <<<<<<<<<<<<<<
@@ -5365,7 +5365,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
         __pyx_v_tail->next->interval = __pyx_v__intersection;
 
-        /* "pytimeset/timeset.pyx":251
+        /* "timeset/timeset.pyx":251
  *                     tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *                     tail.next.interval = _intersection
  *                     tail = tail.next             # <<<<<<<<<<<<<<
@@ -5375,7 +5375,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
         __pyx_t_5 = __pyx_v_tail->next;
         __pyx_v_tail = __pyx_t_5;
 
-        /* "pytimeset/timeset.pyx":252
+        /* "timeset/timeset.pyx":252
  *                     tail.next.interval = _intersection
  *                     tail = tail.next
  *                     tail.next = NULL             # <<<<<<<<<<<<<<
@@ -5384,7 +5384,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
         __pyx_v_tail->next = NULL;
 
-        /* "pytimeset/timeset.pyx":248
+        /* "timeset/timeset.pyx":248
  *             while iter2 is not NULL:
  *                 _intersection = Interval_intersection(iter1.interval, iter2.interval)
  *                 if not Interval_is_empty(_intersection):             # <<<<<<<<<<<<<<
@@ -5393,7 +5393,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
       }
 
-      /* "pytimeset/timeset.pyx":253
+      /* "timeset/timeset.pyx":253
  *                     tail = tail.next
  *                     tail.next = NULL
  *                 iter2 = iter2.next             # <<<<<<<<<<<<<<
@@ -5404,7 +5404,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       __pyx_v_iter2 = __pyx_t_5;
     }
 
-    /* "pytimeset/timeset.pyx":254
+    /* "timeset/timeset.pyx":254
  *                     tail.next = NULL
  *                 iter2 = iter2.next
  *             iter1 = iter1.next             # <<<<<<<<<<<<<<
@@ -5415,19 +5415,19 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_v_iter1 = __pyx_t_5;
   }
 
-  /* "pytimeset/timeset.pyx":255
+  /* "timeset/timeset.pyx":255
  *                 iter2 = iter2.next
  *             iter1 = iter1.next
  *         ts = TimeSet.from_list(new_list.next)             # <<<<<<<<<<<<<<
  *         return ts
  * 
  */
-  __pyx_t_1 = ((PyObject *)__pyx_f_9pytimeset_7timeset_7TimeSet_from_list(__pyx_v_new_list.next)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7timeset_7timeset_7TimeSet_from_list(__pyx_v_new_list.next)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_v_ts = ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_t_1);
+  __pyx_v_ts = ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pytimeset/timeset.pyx":256
+  /* "timeset/timeset.pyx":256
  *             iter1 = iter1.next
  *         ts = TimeSet.from_list(new_list.next)
  *         return ts             # <<<<<<<<<<<<<<
@@ -5439,7 +5439,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   __pyx_r = __pyx_v_ts;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":232
+  /* "timeset/timeset.pyx":232
  *         return ts
  * 
  *     cpdef TimeSet intersection(self, TimeSet other):             # <<<<<<<<<<<<<<
@@ -5453,7 +5453,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.intersection", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.intersection", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_ts);
@@ -5463,13 +5463,13 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_9intersection(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_9intersection(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_9intersection(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_9intersection(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("intersection (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_9pytimeset_7timeset_TimeSet, 1, "other", 0))) __PYX_ERR(0, 232, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_8intersection(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self), ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_other));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_7timeset_7timeset_TimeSet, 1, "other", 0))) __PYX_ERR(0, 232, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_8intersection(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self), ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_other));
 
   /* function exit code */
   goto __pyx_L0;
@@ -5480,13 +5480,13 @@ static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_9intersection(PyObject *_
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_8intersection(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other) {
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_8intersection(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("intersection", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_9pytimeset_7timeset_7TimeSet_intersection(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7timeset_7timeset_7TimeSet_intersection(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5495,7 +5495,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_8intersection(struct __py
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.intersection", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.intersection", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5503,7 +5503,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_8intersection(struct __py
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":258
+/* "timeset/timeset.pyx":258
  *         return ts
  * 
  *     cpdef TimeSet difference(self, TimeSet other):             # <<<<<<<<<<<<<<
@@ -5511,21 +5511,21 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_8intersection(struct __py
  *         cdef IntervalList* iter1 = self._intervals
  */
 
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_11difference(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset_7TimeSet_difference(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch) {
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_iter1;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_iter2;
-  __pyx_t_9pytimeset_7timeset_IntervalList __pyx_v_new_list;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_tail;
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_11difference(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_f_7timeset_7timeset_7TimeSet_difference(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch) {
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_iter1;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_iter2;
+  __pyx_t_7timeset_7timeset_IntervalList __pyx_v_new_list;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_tail;
   double __pyx_v_next_start;
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_r = NULL;
+  struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_t_5;
-  __pyx_t_9pytimeset_7timeset_IntervalList __pyx_t_6;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_t_5;
+  __pyx_t_7timeset_7timeset_IntervalList __pyx_t_6;
   int __pyx_t_7;
   double __pyx_t_8;
   __Pyx_RefNannySetupContext("difference", 0);
@@ -5540,7 +5540,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_difference); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 258, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9pytimeset_7timeset_7TimeSet_11difference)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_7timeset_7timeset_7TimeSet_11difference)) {
         __Pyx_XDECREF(((PyObject *)__pyx_r));
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -5558,8 +5558,8 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
         if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 258, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_9pytimeset_7timeset_TimeSet))))) __PYX_ERR(0, 258, __pyx_L1_error)
-        __pyx_r = ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_t_2);
+        if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_7timeset_7timeset_TimeSet))))) __PYX_ERR(0, 258, __pyx_L1_error)
+        __pyx_r = ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         goto __pyx_L0;
@@ -5577,7 +5577,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     #endif
   }
 
-  /* "pytimeset/timeset.pyx":260
+  /* "timeset/timeset.pyx":260
  *     cpdef TimeSet difference(self, TimeSet other):
  *         #This only works if both sets are normalized
  *         cdef IntervalList* iter1 = self._intervals             # <<<<<<<<<<<<<<
@@ -5587,18 +5587,18 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   __pyx_t_5 = __pyx_v_self->_intervals;
   __pyx_v_iter1 = __pyx_t_5;
 
-  /* "pytimeset/timeset.pyx":263
+  /* "timeset/timeset.pyx":263
  *         cdef IntervalList* iter2
  *         # Start the list with a dummy head
  *         cdef IntervalList new_list = IntervalList(empty, NULL)             # <<<<<<<<<<<<<<
  *         cdef IntervalList* tail = &new_list
  *         cdef double next_start
  */
-  __pyx_t_6.interval = __pyx_v_9pytimeset_7timeset_empty;
+  __pyx_t_6.interval = __pyx_v_7timeset_7timeset_empty;
   __pyx_t_6.next = NULL;
   __pyx_v_new_list = __pyx_t_6;
 
-  /* "pytimeset/timeset.pyx":264
+  /* "timeset/timeset.pyx":264
  *         # Start the list with a dummy head
  *         cdef IntervalList new_list = IntervalList(empty, NULL)
  *         cdef IntervalList* tail = &new_list             # <<<<<<<<<<<<<<
@@ -5607,17 +5607,17 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
   __pyx_v_tail = (&__pyx_v_new_list);
 
-  /* "pytimeset/timeset.pyx":267
+  /* "timeset/timeset.pyx":267
  *         cdef double next_start
  * 
  *         if other.is_empty():             # <<<<<<<<<<<<<<
  *             return self
  *         while iter1 is not NULL:
  */
-  __pyx_t_7 = (((struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *)__pyx_v_other->__pyx_vtab)->is_empty(__pyx_v_other, 0) != 0);
+  __pyx_t_7 = (((struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *)__pyx_v_other->__pyx_vtab)->is_empty(__pyx_v_other, 0) != 0);
   if (__pyx_t_7) {
 
-    /* "pytimeset/timeset.pyx":268
+    /* "timeset/timeset.pyx":268
  * 
  *         if other.is_empty():
  *             return self             # <<<<<<<<<<<<<<
@@ -5629,7 +5629,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_r = __pyx_v_self;
     goto __pyx_L0;
 
-    /* "pytimeset/timeset.pyx":267
+    /* "timeset/timeset.pyx":267
  *         cdef double next_start
  * 
  *         if other.is_empty():             # <<<<<<<<<<<<<<
@@ -5638,7 +5638,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
   }
 
-  /* "pytimeset/timeset.pyx":269
+  /* "timeset/timeset.pyx":269
  *         if other.is_empty():
  *             return self
  *         while iter1 is not NULL:             # <<<<<<<<<<<<<<
@@ -5649,7 +5649,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_t_7 = ((__pyx_v_iter1 != NULL) != 0);
     if (!__pyx_t_7) break;
 
-    /* "pytimeset/timeset.pyx":270
+    /* "timeset/timeset.pyx":270
  *             return self
  *         while iter1 is not NULL:
  *             next_start = iter1.interval.start             # <<<<<<<<<<<<<<
@@ -5659,7 +5659,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_t_8 = __pyx_v_iter1->interval.start;
     __pyx_v_next_start = __pyx_t_8;
 
-    /* "pytimeset/timeset.pyx":271
+    /* "timeset/timeset.pyx":271
  *         while iter1 is not NULL:
  *             next_start = iter1.interval.start
  *             iter2 = other._intervals             # <<<<<<<<<<<<<<
@@ -5669,7 +5669,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_t_5 = __pyx_v_other->_intervals;
     __pyx_v_iter2 = __pyx_t_5;
 
-    /* "pytimeset/timeset.pyx":272
+    /* "timeset/timeset.pyx":272
  *             next_start = iter1.interval.start
  *             iter2 = other._intervals
  *             while iter2 is not NULL:             # <<<<<<<<<<<<<<
@@ -5680,7 +5680,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       __pyx_t_7 = ((__pyx_v_iter2 != NULL) != 0);
       if (!__pyx_t_7) break;
 
-      /* "pytimeset/timeset.pyx":273
+      /* "timeset/timeset.pyx":273
  *             iter2 = other._intervals
  *             while iter2 is not NULL:
  *                 if iter2.interval.end <= next_start:             # <<<<<<<<<<<<<<
@@ -5690,7 +5690,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       __pyx_t_7 = ((__pyx_v_iter2->interval.end <= __pyx_v_next_start) != 0);
       if (__pyx_t_7) {
 
-        /* "pytimeset/timeset.pyx":274
+        /* "timeset/timeset.pyx":274
  *             while iter2 is not NULL:
  *                 if iter2.interval.end <= next_start:
  *                     iter2 = iter2.next             # <<<<<<<<<<<<<<
@@ -5700,7 +5700,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
         __pyx_t_5 = __pyx_v_iter2->next;
         __pyx_v_iter2 = __pyx_t_5;
 
-        /* "pytimeset/timeset.pyx":275
+        /* "timeset/timeset.pyx":275
  *                 if iter2.interval.end <= next_start:
  *                     iter2 = iter2.next
  *                     continue             # <<<<<<<<<<<<<<
@@ -5709,7 +5709,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
         goto __pyx_L6_continue;
 
-        /* "pytimeset/timeset.pyx":273
+        /* "timeset/timeset.pyx":273
  *             iter2 = other._intervals
  *             while iter2 is not NULL:
  *                 if iter2.interval.end <= next_start:             # <<<<<<<<<<<<<<
@@ -5718,7 +5718,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
       }
 
-      /* "pytimeset/timeset.pyx":276
+      /* "timeset/timeset.pyx":276
  *                     iter2 = iter2.next
  *                     continue
  *                 if iter2.interval.start >= iter1.interval.end:             # <<<<<<<<<<<<<<
@@ -5728,7 +5728,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       __pyx_t_7 = ((__pyx_v_iter2->interval.start >= __pyx_v_iter1->interval.end) != 0);
       if (__pyx_t_7) {
 
-        /* "pytimeset/timeset.pyx":277
+        /* "timeset/timeset.pyx":277
  *                     continue
  *                 if iter2.interval.start >= iter1.interval.end:
  *                     break             # <<<<<<<<<<<<<<
@@ -5737,7 +5737,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
         goto __pyx_L7_break;
 
-        /* "pytimeset/timeset.pyx":276
+        /* "timeset/timeset.pyx":276
  *                     iter2 = iter2.next
  *                     continue
  *                 if iter2.interval.start >= iter1.interval.end:             # <<<<<<<<<<<<<<
@@ -5746,7 +5746,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
       }
 
-      /* "pytimeset/timeset.pyx":278
+      /* "timeset/timeset.pyx":278
  *                 if iter2.interval.start >= iter1.interval.end:
  *                     break
  *                 if iter2.interval.start > next_start:             # <<<<<<<<<<<<<<
@@ -5756,16 +5756,16 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       __pyx_t_7 = ((__pyx_v_iter2->interval.start > __pyx_v_next_start) != 0);
       if (__pyx_t_7) {
 
-        /* "pytimeset/timeset.pyx":279
+        /* "timeset/timeset.pyx":279
  *                     break
  *                 if iter2.interval.start > next_start:
  *                     tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))             # <<<<<<<<<<<<<<
  *                     tail.next.interval.start = next_start
  *                     tail.next.interval.end = iter2.interval.start
  */
-        __pyx_v_tail->next = ((__pyx_t_9pytimeset_7timeset_IntervalList *)PyMem_Malloc((sizeof(__pyx_t_9pytimeset_7timeset_IntervalList))));
+        __pyx_v_tail->next = ((__pyx_t_7timeset_7timeset_IntervalList *)PyMem_Malloc((sizeof(__pyx_t_7timeset_7timeset_IntervalList))));
 
-        /* "pytimeset/timeset.pyx":280
+        /* "timeset/timeset.pyx":280
  *                 if iter2.interval.start > next_start:
  *                     tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *                     tail.next.interval.start = next_start             # <<<<<<<<<<<<<<
@@ -5774,7 +5774,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
         __pyx_v_tail->next->interval.start = __pyx_v_next_start;
 
-        /* "pytimeset/timeset.pyx":281
+        /* "timeset/timeset.pyx":281
  *                     tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *                     tail.next.interval.start = next_start
  *                     tail.next.interval.end = iter2.interval.start             # <<<<<<<<<<<<<<
@@ -5784,7 +5784,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
         __pyx_t_8 = __pyx_v_iter2->interval.start;
         __pyx_v_tail->next->interval.end = __pyx_t_8;
 
-        /* "pytimeset/timeset.pyx":282
+        /* "timeset/timeset.pyx":282
  *                     tail.next.interval.start = next_start
  *                     tail.next.interval.end = iter2.interval.start
  *                     tail = tail.next             # <<<<<<<<<<<<<<
@@ -5794,7 +5794,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
         __pyx_t_5 = __pyx_v_tail->next;
         __pyx_v_tail = __pyx_t_5;
 
-        /* "pytimeset/timeset.pyx":283
+        /* "timeset/timeset.pyx":283
  *                     tail.next.interval.end = iter2.interval.start
  *                     tail = tail.next
  *                     tail.next = NULL             # <<<<<<<<<<<<<<
@@ -5803,7 +5803,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
         __pyx_v_tail->next = NULL;
 
-        /* "pytimeset/timeset.pyx":278
+        /* "timeset/timeset.pyx":278
  *                 if iter2.interval.start >= iter1.interval.end:
  *                     break
  *                 if iter2.interval.start > next_start:             # <<<<<<<<<<<<<<
@@ -5812,7 +5812,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
       }
 
-      /* "pytimeset/timeset.pyx":284
+      /* "timeset/timeset.pyx":284
  *                     tail = tail.next
  *                     tail.next = NULL
  *                 next_start = iter2.interval.end             # <<<<<<<<<<<<<<
@@ -5822,7 +5822,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       __pyx_t_8 = __pyx_v_iter2->interval.end;
       __pyx_v_next_start = __pyx_t_8;
 
-      /* "pytimeset/timeset.pyx":285
+      /* "timeset/timeset.pyx":285
  *                     tail.next = NULL
  *                 next_start = iter2.interval.end
  *                 iter2 = iter2.next             # <<<<<<<<<<<<<<
@@ -5835,7 +5835,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     }
     __pyx_L7_break:;
 
-    /* "pytimeset/timeset.pyx":286
+    /* "timeset/timeset.pyx":286
  *                 next_start = iter2.interval.end
  *                 iter2 = iter2.next
  *             if next_start < iter1.interval.end:             # <<<<<<<<<<<<<<
@@ -5845,16 +5845,16 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_t_7 = ((__pyx_v_next_start < __pyx_v_iter1->interval.end) != 0);
     if (__pyx_t_7) {
 
-      /* "pytimeset/timeset.pyx":287
+      /* "timeset/timeset.pyx":287
  *                 iter2 = iter2.next
  *             if next_start < iter1.interval.end:
  *                 tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))             # <<<<<<<<<<<<<<
  *                 tail.next.interval.start = next_start
  *                 tail.next.interval.end = iter1.interval.end
  */
-      __pyx_v_tail->next = ((__pyx_t_9pytimeset_7timeset_IntervalList *)PyMem_Malloc((sizeof(__pyx_t_9pytimeset_7timeset_IntervalList))));
+      __pyx_v_tail->next = ((__pyx_t_7timeset_7timeset_IntervalList *)PyMem_Malloc((sizeof(__pyx_t_7timeset_7timeset_IntervalList))));
 
-      /* "pytimeset/timeset.pyx":288
+      /* "timeset/timeset.pyx":288
  *             if next_start < iter1.interval.end:
  *                 tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *                 tail.next.interval.start = next_start             # <<<<<<<<<<<<<<
@@ -5863,7 +5863,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
       __pyx_v_tail->next->interval.start = __pyx_v_next_start;
 
-      /* "pytimeset/timeset.pyx":289
+      /* "timeset/timeset.pyx":289
  *                 tail.next = <IntervalList*>PyMem_Malloc(sizeof(IntervalList))
  *                 tail.next.interval.start = next_start
  *                 tail.next.interval.end = iter1.interval.end             # <<<<<<<<<<<<<<
@@ -5873,7 +5873,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       __pyx_t_8 = __pyx_v_iter1->interval.end;
       __pyx_v_tail->next->interval.end = __pyx_t_8;
 
-      /* "pytimeset/timeset.pyx":290
+      /* "timeset/timeset.pyx":290
  *                 tail.next.interval.start = next_start
  *                 tail.next.interval.end = iter1.interval.end
  *                 tail = tail.next             # <<<<<<<<<<<<<<
@@ -5883,7 +5883,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
       __pyx_t_5 = __pyx_v_tail->next;
       __pyx_v_tail = __pyx_t_5;
 
-      /* "pytimeset/timeset.pyx":291
+      /* "timeset/timeset.pyx":291
  *                 tail.next.interval.end = iter1.interval.end
  *                 tail = tail.next
  *                 tail.next = NULL             # <<<<<<<<<<<<<<
@@ -5892,7 +5892,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
       __pyx_v_tail->next = NULL;
 
-      /* "pytimeset/timeset.pyx":286
+      /* "timeset/timeset.pyx":286
  *                 next_start = iter2.interval.end
  *                 iter2 = iter2.next
  *             if next_start < iter1.interval.end:             # <<<<<<<<<<<<<<
@@ -5901,7 +5901,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  */
     }
 
-    /* "pytimeset/timeset.pyx":292
+    /* "timeset/timeset.pyx":292
  *                 tail = tail.next
  *                 tail.next = NULL
  *             iter1 = iter1.next             # <<<<<<<<<<<<<<
@@ -5912,7 +5912,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
     __pyx_v_iter1 = __pyx_t_5;
   }
 
-  /* "pytimeset/timeset.pyx":293
+  /* "timeset/timeset.pyx":293
  *                 tail.next = NULL
  *             iter1 = iter1.next
  *         return TimeSet.from_list(new_list.next)             # <<<<<<<<<<<<<<
@@ -5920,13 +5920,13 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
  *     def contains(self, moment: datetime) -> bool:
  */
   __Pyx_XDECREF(((PyObject *)__pyx_r));
-  __pyx_t_1 = ((PyObject *)__pyx_f_9pytimeset_7timeset_7TimeSet_from_list(__pyx_v_new_list.next)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 293, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7timeset_7timeset_7TimeSet_from_list(__pyx_v_new_list.next)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 293, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_t_1);
+  __pyx_r = ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":258
+  /* "timeset/timeset.pyx":258
  *         return ts
  * 
  *     cpdef TimeSet difference(self, TimeSet other):             # <<<<<<<<<<<<<<
@@ -5940,7 +5940,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.difference", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.difference", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF((PyObject *)__pyx_r);
@@ -5949,13 +5949,13 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_f_9pytimeset_7timeset
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_11difference(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_11difference(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_11difference(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_11difference(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("difference (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_9pytimeset_7timeset_TimeSet, 1, "other", 0))) __PYX_ERR(0, 258, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_10difference(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self), ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_other));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_7timeset_7timeset_TimeSet, 1, "other", 0))) __PYX_ERR(0, 258, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_10difference(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self), ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_other));
 
   /* function exit code */
   goto __pyx_L0;
@@ -5966,13 +5966,13 @@ static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_11difference(PyObject *__
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_10difference(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other) {
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_10difference(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("difference", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_9pytimeset_7timeset_7TimeSet_difference(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 258, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7timeset_7timeset_7TimeSet_difference(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 258, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5981,7 +5981,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_10difference(struct __pyx
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.difference", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.difference", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5989,7 +5989,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_10difference(struct __pyx
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":295
+/* "timeset/timeset.pyx":295
  *         return TimeSet.from_list(new_list.next)
  * 
  *     def contains(self, moment: datetime) -> bool:             # <<<<<<<<<<<<<<
@@ -5998,24 +5998,24 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_10difference(struct __pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_13contains(PyObject *__pyx_v_self, PyObject *__pyx_v_moment); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_13contains(PyObject *__pyx_v_self, PyObject *__pyx_v_moment) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_13contains(PyObject *__pyx_v_self, PyObject *__pyx_v_moment); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_13contains(PyObject *__pyx_v_self, PyObject *__pyx_v_moment) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("contains (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self), ((PyObject *)__pyx_v_moment));
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_12contains(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self), ((PyObject *)__pyx_v_moment));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, PyObject *__pyx_v_moment) {
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v__iter;
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_12contains(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, PyObject *__pyx_v_moment) {
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v__iter;
   double __pyx_v__moment;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_t_1;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
@@ -6023,7 +6023,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_o
   int __pyx_t_6;
   __Pyx_RefNannySetupContext("contains", 0);
 
-  /* "pytimeset/timeset.pyx":296
+  /* "timeset/timeset.pyx":296
  * 
  *     def contains(self, moment: datetime) -> bool:
  *         cdef IntervalList* _iter = self._intervals             # <<<<<<<<<<<<<<
@@ -6033,7 +6033,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_o
   __pyx_t_1 = __pyx_v_self->_intervals;
   __pyx_v__iter = __pyx_t_1;
 
-  /* "pytimeset/timeset.pyx":297
+  /* "timeset/timeset.pyx":297
  *     def contains(self, moment: datetime) -> bool:
  *         cdef IntervalList* _iter = self._intervals
  *         cdef double _moment = moment.timestamp()             # <<<<<<<<<<<<<<
@@ -6061,7 +6061,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_o
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v__moment = __pyx_t_5;
 
-  /* "pytimeset/timeset.pyx":298
+  /* "timeset/timeset.pyx":298
  *         cdef IntervalList* _iter = self._intervals
  *         cdef double _moment = moment.timestamp()
  *         while _iter is not NULL:             # <<<<<<<<<<<<<<
@@ -6072,17 +6072,17 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_o
     __pyx_t_6 = ((__pyx_v__iter != NULL) != 0);
     if (!__pyx_t_6) break;
 
-    /* "pytimeset/timeset.pyx":299
+    /* "timeset/timeset.pyx":299
  *         cdef double _moment = moment.timestamp()
  *         while _iter is not NULL:
  *             if contains(_iter.interval, _moment):             # <<<<<<<<<<<<<<
  *                 return True
  *             _iter = _iter.next
  */
-    __pyx_t_6 = (__pyx_f_9pytimeset_7timeset_contains(__pyx_v__iter->interval, __pyx_v__moment) != 0);
+    __pyx_t_6 = (__pyx_f_7timeset_7timeset_contains(__pyx_v__iter->interval, __pyx_v__moment) != 0);
     if (__pyx_t_6) {
 
-      /* "pytimeset/timeset.pyx":300
+      /* "timeset/timeset.pyx":300
  *         while _iter is not NULL:
  *             if contains(_iter.interval, _moment):
  *                 return True             # <<<<<<<<<<<<<<
@@ -6094,7 +6094,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_o
       __pyx_r = Py_True;
       goto __pyx_L0;
 
-      /* "pytimeset/timeset.pyx":299
+      /* "timeset/timeset.pyx":299
  *         cdef double _moment = moment.timestamp()
  *         while _iter is not NULL:
  *             if contains(_iter.interval, _moment):             # <<<<<<<<<<<<<<
@@ -6103,7 +6103,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_o
  */
     }
 
-    /* "pytimeset/timeset.pyx":301
+    /* "timeset/timeset.pyx":301
  *             if contains(_iter.interval, _moment):
  *                 return True
  *             _iter = _iter.next             # <<<<<<<<<<<<<<
@@ -6114,7 +6114,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_o
     __pyx_v__iter = __pyx_t_1;
   }
 
-  /* "pytimeset/timeset.pyx":302
+  /* "timeset/timeset.pyx":302
  *                 return True
  *             _iter = _iter.next
  *         return False             # <<<<<<<<<<<<<<
@@ -6126,7 +6126,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_o
   __pyx_r = Py_False;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":295
+  /* "timeset/timeset.pyx":295
  *         return TimeSet.from_list(new_list.next)
  * 
  *     def contains(self, moment: datetime) -> bool:             # <<<<<<<<<<<<<<
@@ -6139,7 +6139,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_o
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.contains", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.contains", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -6147,7 +6147,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_o
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":304
+/* "timeset/timeset.pyx":304
  *         return False
  * 
  *     cpdef bint is_subset(self, TimeSet other):             # <<<<<<<<<<<<<<
@@ -6155,10 +6155,10 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_12contains(struct __pyx_o
  *         cdef IntervalList* iter2
  */
 
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_15is_subset(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch) {
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_iter1;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_iter2;
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_15is_subset(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static int __pyx_f_7timeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other, int __pyx_skip_dispatch) {
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_iter1;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_iter2;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -6166,7 +6166,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   int __pyx_t_5;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_t_6;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_t_6;
   __Pyx_RefNannySetupContext("is_subset", 0);
   /* Check if called by wrapper */
   if (unlikely(__pyx_skip_dispatch)) ;
@@ -6179,7 +6179,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_is_subset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9pytimeset_7timeset_7TimeSet_15is_subset)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_7timeset_7timeset_7TimeSet_15is_subset)) {
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -6215,7 +6215,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
     #endif
   }
 
-  /* "pytimeset/timeset.pyx":305
+  /* "timeset/timeset.pyx":305
  * 
  *     cpdef bint is_subset(self, TimeSet other):
  *         cdef IntervalList* iter1 = self._intervals             # <<<<<<<<<<<<<<
@@ -6225,17 +6225,17 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
   __pyx_t_6 = __pyx_v_self->_intervals;
   __pyx_v_iter1 = __pyx_t_6;
 
-  /* "pytimeset/timeset.pyx":308
+  /* "timeset/timeset.pyx":308
  *         cdef IntervalList* iter2
  * 
  *         if self.is_empty():             # <<<<<<<<<<<<<<
  *             return True
  *         while iter1 is not NULL:
  */
-  __pyx_t_5 = (((struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->is_empty(__pyx_v_self, 0) != 0);
+  __pyx_t_5 = (((struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->is_empty(__pyx_v_self, 0) != 0);
   if (__pyx_t_5) {
 
-    /* "pytimeset/timeset.pyx":309
+    /* "timeset/timeset.pyx":309
  * 
  *         if self.is_empty():
  *             return True             # <<<<<<<<<<<<<<
@@ -6245,7 +6245,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
     __pyx_r = 1;
     goto __pyx_L0;
 
-    /* "pytimeset/timeset.pyx":308
+    /* "timeset/timeset.pyx":308
  *         cdef IntervalList* iter2
  * 
  *         if self.is_empty():             # <<<<<<<<<<<<<<
@@ -6254,7 +6254,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
  */
   }
 
-  /* "pytimeset/timeset.pyx":310
+  /* "timeset/timeset.pyx":310
  *         if self.is_empty():
  *             return True
  *         while iter1 is not NULL:             # <<<<<<<<<<<<<<
@@ -6265,7 +6265,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
     __pyx_t_5 = ((__pyx_v_iter1 != NULL) != 0);
     if (!__pyx_t_5) break;
 
-    /* "pytimeset/timeset.pyx":311
+    /* "timeset/timeset.pyx":311
  *             return True
  *         while iter1 is not NULL:
  *             iter2 = other._intervals             # <<<<<<<<<<<<<<
@@ -6275,7 +6275,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
     __pyx_t_6 = __pyx_v_other->_intervals;
     __pyx_v_iter2 = __pyx_t_6;
 
-    /* "pytimeset/timeset.pyx":312
+    /* "timeset/timeset.pyx":312
  *         while iter1 is not NULL:
  *             iter2 = other._intervals
  *             while iter2 is not NULL:             # <<<<<<<<<<<<<<
@@ -6286,17 +6286,17 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
       __pyx_t_5 = ((__pyx_v_iter2 != NULL) != 0);
       if (!__pyx_t_5) break;
 
-      /* "pytimeset/timeset.pyx":313
+      /* "timeset/timeset.pyx":313
  *             iter2 = other._intervals
  *             while iter2 is not NULL:
  *                 if is_subset(iter1.interval, iter2.interval):             # <<<<<<<<<<<<<<
  *                     break
  *                 iter2 = iter2.next
  */
-      __pyx_t_5 = (__pyx_f_9pytimeset_7timeset_is_subset(__pyx_v_iter1->interval, __pyx_v_iter2->interval) != 0);
+      __pyx_t_5 = (__pyx_f_7timeset_7timeset_is_subset(__pyx_v_iter1->interval, __pyx_v_iter2->interval) != 0);
       if (__pyx_t_5) {
 
-        /* "pytimeset/timeset.pyx":314
+        /* "timeset/timeset.pyx":314
  *             while iter2 is not NULL:
  *                 if is_subset(iter1.interval, iter2.interval):
  *                     break             # <<<<<<<<<<<<<<
@@ -6305,7 +6305,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
  */
         goto __pyx_L7_break;
 
-        /* "pytimeset/timeset.pyx":313
+        /* "timeset/timeset.pyx":313
  *             iter2 = other._intervals
  *             while iter2 is not NULL:
  *                 if is_subset(iter1.interval, iter2.interval):             # <<<<<<<<<<<<<<
@@ -6314,7 +6314,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
  */
       }
 
-      /* "pytimeset/timeset.pyx":315
+      /* "timeset/timeset.pyx":315
  *                 if is_subset(iter1.interval, iter2.interval):
  *                     break
  *                 iter2 = iter2.next             # <<<<<<<<<<<<<<
@@ -6326,7 +6326,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
     }
     __pyx_L7_break:;
 
-    /* "pytimeset/timeset.pyx":316
+    /* "timeset/timeset.pyx":316
  *                     break
  *                 iter2 = iter2.next
  *             if iter2 is NULL:             # <<<<<<<<<<<<<<
@@ -6336,7 +6336,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
     __pyx_t_5 = ((__pyx_v_iter2 == NULL) != 0);
     if (__pyx_t_5) {
 
-      /* "pytimeset/timeset.pyx":318
+      /* "timeset/timeset.pyx":318
  *             if iter2 is NULL:
  *                 # If the previous loop wasn't broken, this interval isn't contained
  *                 return False             # <<<<<<<<<<<<<<
@@ -6346,7 +6346,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
       __pyx_r = 0;
       goto __pyx_L0;
 
-      /* "pytimeset/timeset.pyx":316
+      /* "timeset/timeset.pyx":316
  *                     break
  *                 iter2 = iter2.next
  *             if iter2 is NULL:             # <<<<<<<<<<<<<<
@@ -6355,7 +6355,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
  */
     }
 
-    /* "pytimeset/timeset.pyx":319
+    /* "timeset/timeset.pyx":319
  *                 # If the previous loop wasn't broken, this interval isn't contained
  *                 return False
  *             iter1 = iter1.next             # <<<<<<<<<<<<<<
@@ -6366,7 +6366,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
     __pyx_v_iter1 = __pyx_t_6;
   }
 
-  /* "pytimeset/timeset.pyx":320
+  /* "timeset/timeset.pyx":320
  *                 return False
  *             iter1 = iter1.next
  *         return True             # <<<<<<<<<<<<<<
@@ -6376,7 +6376,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
   __pyx_r = 1;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":304
+  /* "timeset/timeset.pyx":304
  *         return False
  * 
  *     cpdef bint is_subset(self, TimeSet other):             # <<<<<<<<<<<<<<
@@ -6390,7 +6390,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_WriteUnraisable("pytimeset.timeset.TimeSet.is_subset", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("timeset.timeset.TimeSet.is_subset", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -6398,13 +6398,13 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(struct __pyx_obj_9pyti
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_15is_subset(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_15is_subset(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_15is_subset(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_15is_subset(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("is_subset (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_9pytimeset_7timeset_TimeSet, 1, "other", 0))) __PYX_ERR(0, 304, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_14is_subset(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self), ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_other));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_7timeset_7timeset_TimeSet, 1, "other", 0))) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_14is_subset(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self), ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_other));
 
   /* function exit code */
   goto __pyx_L0;
@@ -6415,13 +6415,13 @@ static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_15is_subset(PyObject *__p
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_14is_subset(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other) {
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_14is_subset(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("is_subset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9pytimeset_7timeset_7TimeSet_is_subset(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_7timeset_7timeset_7TimeSet_is_subset(__pyx_v_self, __pyx_v_other, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6430,7 +6430,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_14is_subset(struct __pyx_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.is_subset", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.is_subset", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -6438,7 +6438,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_14is_subset(struct __pyx_
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":322
+/* "timeset/timeset.pyx":322
  *         return True
  * 
  *     cpdef bint is_empty(self):             # <<<<<<<<<<<<<<
@@ -6446,8 +6446,8 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_14is_subset(struct __pyx_
  * 
  */
 
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_17is_empty(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_empty(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_17is_empty(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static int __pyx_f_7timeset_7timeset_7TimeSet_is_empty(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, int __pyx_skip_dispatch) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -6468,7 +6468,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_empty(struct __pyx_obj_9pytim
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_is_empty); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 322, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9pytimeset_7timeset_7TimeSet_17is_empty)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_7timeset_7timeset_7TimeSet_17is_empty)) {
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -6504,7 +6504,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_empty(struct __pyx_obj_9pytim
     #endif
   }
 
-  /* "pytimeset/timeset.pyx":323
+  /* "timeset/timeset.pyx":323
  * 
  *     cpdef bint is_empty(self):
  *         return self._intervals is NULL or Interval_is_empty(self._intervals.interval)             # <<<<<<<<<<<<<<
@@ -6517,13 +6517,13 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_empty(struct __pyx_obj_9pytim
     __pyx_t_5 = __pyx_t_6;
     goto __pyx_L3_bool_binop_done;
   }
-  __pyx_t_6 = (__pyx_f_9pytimeset_7timeset_Interval_is_empty(__pyx_v_self->_intervals->interval) != 0);
+  __pyx_t_6 = (__pyx_f_7timeset_7timeset_Interval_is_empty(__pyx_v_self->_intervals->interval) != 0);
   __pyx_t_5 = __pyx_t_6;
   __pyx_L3_bool_binop_done:;
   __pyx_r = __pyx_t_5;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":322
+  /* "timeset/timeset.pyx":322
  *         return True
  * 
  *     cpdef bint is_empty(self):             # <<<<<<<<<<<<<<
@@ -6537,7 +6537,7 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_empty(struct __pyx_obj_9pytim
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_WriteUnraisable("pytimeset.timeset.TimeSet.is_empty", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("timeset.timeset.TimeSet.is_empty", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -6545,25 +6545,25 @@ static int __pyx_f_9pytimeset_7timeset_7TimeSet_is_empty(struct __pyx_obj_9pytim
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_17is_empty(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_17is_empty(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_17is_empty(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_17is_empty(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("is_empty (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_16is_empty(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_16is_empty(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_16is_empty(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self) {
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_16is_empty(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("is_empty", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9pytimeset_7timeset_7TimeSet_is_empty(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_7timeset_7timeset_7TimeSet_is_empty(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 322, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6572,7 +6572,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_16is_empty(struct __pyx_o
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.is_empty", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.is_empty", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -6580,7 +6580,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_16is_empty(struct __pyx_o
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":325
+/* "timeset/timeset.pyx":325
  *         return self._intervals is NULL or Interval_is_empty(self._intervals.interval)
  * 
  *     def limiting_interval(self) -> TimeInterval:             # <<<<<<<<<<<<<<
@@ -6589,20 +6589,20 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_16is_empty(struct __pyx_o
  */
 
 /* Python wrapper */
-static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_pw_9pytimeset_7timeset_7TimeSet_19limiting_interval(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_pw_9pytimeset_7timeset_7TimeSet_19limiting_interval(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
-  struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_r = 0;
+static struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_pw_7timeset_7timeset_7TimeSet_19limiting_interval(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_pw_7timeset_7timeset_7TimeSet_19limiting_interval(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("limiting_interval (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_18limiting_interval(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_18limiting_interval(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_pf_9pytimeset_7timeset_7TimeSet_18limiting_interval(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self) {
-  struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_r = NULL;
+static struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_pf_7timeset_7timeset_7TimeSet_18limiting_interval(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self) {
+  struct __pyx_obj_7timeset_7timeset_TimeInterval *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
@@ -6611,17 +6611,17 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_pf_9pytimeset_7t
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("limiting_interval", 0);
 
-  /* "pytimeset/timeset.pyx":326
+  /* "timeset/timeset.pyx":326
  * 
  *     def limiting_interval(self) -> TimeInterval:
  *         if self.is_empty():             # <<<<<<<<<<<<<<
  *             raise ValueError('Unspecified behavior!')
  *         return TimeInterval(self.start(), self.end())
  */
-  __pyx_t_1 = (((struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->is_empty(__pyx_v_self, 0) != 0);
+  __pyx_t_1 = (((struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->is_empty(__pyx_v_self, 0) != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "pytimeset/timeset.pyx":327
+    /* "timeset/timeset.pyx":327
  *     def limiting_interval(self) -> TimeInterval:
  *         if self.is_empty():
  *             raise ValueError('Unspecified behavior!')             # <<<<<<<<<<<<<<
@@ -6634,7 +6634,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_pf_9pytimeset_7t
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 327, __pyx_L1_error)
 
-    /* "pytimeset/timeset.pyx":326
+    /* "timeset/timeset.pyx":326
  * 
  *     def limiting_interval(self) -> TimeInterval:
  *         if self.is_empty():             # <<<<<<<<<<<<<<
@@ -6643,7 +6643,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_pf_9pytimeset_7t
  */
   }
 
-  /* "pytimeset/timeset.pyx":328
+  /* "timeset/timeset.pyx":328
  *         if self.is_empty():
  *             raise ValueError('Unspecified behavior!')
  *         return TimeInterval(self.start(), self.end())             # <<<<<<<<<<<<<<
@@ -6693,14 +6693,14 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_pf_9pytimeset_7t
   PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_3);
   __pyx_t_2 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9pytimeset_7timeset_TimeInterval), __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_7timeset_7timeset_TimeInterval), __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 328, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_r = ((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)__pyx_t_3);
+  __pyx_r = ((struct __pyx_obj_7timeset_7timeset_TimeInterval *)__pyx_t_3);
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":325
+  /* "timeset/timeset.pyx":325
  *         return self._intervals is NULL or Interval_is_empty(self._intervals.interval)
  * 
  *     def limiting_interval(self) -> TimeInterval:             # <<<<<<<<<<<<<<
@@ -6714,7 +6714,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_pf_9pytimeset_7t
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.limiting_interval", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.limiting_interval", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF((PyObject *)__pyx_r);
@@ -6722,7 +6722,7 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_pf_9pytimeset_7t
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":330
+/* "timeset/timeset.pyx":330
  *         return TimeInterval(self.start(), self.end())
  * 
  *     def duration(self) -> timedelta:             # <<<<<<<<<<<<<<
@@ -6731,31 +6731,31 @@ static struct __pyx_obj_9pytimeset_7timeset_TimeInterval *__pyx_pf_9pytimeset_7t
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_21duration(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_21duration(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_21duration(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_21duration(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("duration (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_20duration(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_20duration(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_20duration(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self) {
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_20duration(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self) {
   double __pyx_v__duration;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v__iter;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v__iter;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_t_1;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_t_1;
   int __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("duration", 0);
 
-  /* "pytimeset/timeset.pyx":331
+  /* "timeset/timeset.pyx":331
  * 
  *     def duration(self) -> timedelta:
  *         cdef double _duration = 0.0             # <<<<<<<<<<<<<<
@@ -6764,7 +6764,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_20duration(struct __pyx_o
  */
   __pyx_v__duration = 0.0;
 
-  /* "pytimeset/timeset.pyx":332
+  /* "timeset/timeset.pyx":332
  *     def duration(self) -> timedelta:
  *         cdef double _duration = 0.0
  *         cdef IntervalList* _iter = self._intervals             # <<<<<<<<<<<<<<
@@ -6774,7 +6774,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_20duration(struct __pyx_o
   __pyx_t_1 = __pyx_v_self->_intervals;
   __pyx_v__iter = __pyx_t_1;
 
-  /* "pytimeset/timeset.pyx":333
+  /* "timeset/timeset.pyx":333
  *         cdef double _duration = 0.0
  *         cdef IntervalList* _iter = self._intervals
  *         while _iter is not NULL:             # <<<<<<<<<<<<<<
@@ -6785,16 +6785,16 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_20duration(struct __pyx_o
     __pyx_t_2 = ((__pyx_v__iter != NULL) != 0);
     if (!__pyx_t_2) break;
 
-    /* "pytimeset/timeset.pyx":334
+    /* "timeset/timeset.pyx":334
  *         cdef IntervalList* _iter = self._intervals
  *         while _iter is not NULL:
  *             _duration += duration(_iter.interval)             # <<<<<<<<<<<<<<
  *             _iter = _iter.next
  *         return timedelta(seconds=_duration)
  */
-    __pyx_v__duration = (__pyx_v__duration + __pyx_f_9pytimeset_7timeset_duration(__pyx_v__iter->interval));
+    __pyx_v__duration = (__pyx_v__duration + __pyx_f_7timeset_7timeset_duration(__pyx_v__iter->interval));
 
-    /* "pytimeset/timeset.pyx":335
+    /* "timeset/timeset.pyx":335
  *         while _iter is not NULL:
  *             _duration += duration(_iter.interval)
  *             _iter = _iter.next             # <<<<<<<<<<<<<<
@@ -6805,7 +6805,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_20duration(struct __pyx_o
     __pyx_v__iter = __pyx_t_1;
   }
 
-  /* "pytimeset/timeset.pyx":336
+  /* "timeset/timeset.pyx":336
  *             _duration += duration(_iter.interval)
  *             _iter = _iter.next
  *         return timedelta(seconds=_duration)             # <<<<<<<<<<<<<<
@@ -6829,7 +6829,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_20duration(struct __pyx_o
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":330
+  /* "timeset/timeset.pyx":330
  *         return TimeInterval(self.start(), self.end())
  * 
  *     def duration(self) -> timedelta:             # <<<<<<<<<<<<<<
@@ -6842,7 +6842,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_20duration(struct __pyx_o
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.duration", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.duration", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -6850,7 +6850,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_20duration(struct __pyx_o
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":338
+/* "timeset/timeset.pyx":338
  *         return timedelta(seconds=_duration)
  * 
  *     def start(self) -> datetime:             # <<<<<<<<<<<<<<
@@ -6859,19 +6859,19 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_20duration(struct __pyx_o
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_23start(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_23start(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_23start(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_23start(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("start (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_22start(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_22start(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_22start(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self) {
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_22start(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -6881,17 +6881,17 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_22start(struct __pyx_obj_
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("start", 0);
 
-  /* "pytimeset/timeset.pyx":339
+  /* "timeset/timeset.pyx":339
  * 
  *     def start(self) -> datetime:
  *         if self.is_empty():             # <<<<<<<<<<<<<<
  *             raise ValueError('Unspecified behavior!')
  *         return datetime.fromtimestamp(self._intervals.interval.start)
  */
-  __pyx_t_1 = (((struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->is_empty(__pyx_v_self, 0) != 0);
+  __pyx_t_1 = (((struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->is_empty(__pyx_v_self, 0) != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "pytimeset/timeset.pyx":340
+    /* "timeset/timeset.pyx":340
  *     def start(self) -> datetime:
  *         if self.is_empty():
  *             raise ValueError('Unspecified behavior!')             # <<<<<<<<<<<<<<
@@ -6904,7 +6904,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_22start(struct __pyx_obj_
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 340, __pyx_L1_error)
 
-    /* "pytimeset/timeset.pyx":339
+    /* "timeset/timeset.pyx":339
  * 
  *     def start(self) -> datetime:
  *         if self.is_empty():             # <<<<<<<<<<<<<<
@@ -6913,7 +6913,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_22start(struct __pyx_obj_
  */
   }
 
-  /* "pytimeset/timeset.pyx":341
+  /* "timeset/timeset.pyx":341
  *         if self.is_empty():
  *             raise ValueError('Unspecified behavior!')
  *         return datetime.fromtimestamp(self._intervals.interval.start)             # <<<<<<<<<<<<<<
@@ -6948,7 +6948,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_22start(struct __pyx_obj_
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":338
+  /* "timeset/timeset.pyx":338
  *         return timedelta(seconds=_duration)
  * 
  *     def start(self) -> datetime:             # <<<<<<<<<<<<<<
@@ -6962,7 +6962,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_22start(struct __pyx_obj_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.start", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.start", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -6970,7 +6970,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_22start(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":343
+/* "timeset/timeset.pyx":343
  *         return datetime.fromtimestamp(self._intervals.interval.start)
  * 
  *     def end(self) -> datetime:             # <<<<<<<<<<<<<<
@@ -6979,23 +6979,23 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_22start(struct __pyx_obj_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_25end(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_25end(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_25end(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_25end(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("end (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_24end(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_24end(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_24end(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self) {
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_last;
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_24end(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self) {
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_last;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_t_1;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_t_1;
   int __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
@@ -7003,7 +7003,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_24end(struct __pyx_obj_9p
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("end", 0);
 
-  /* "pytimeset/timeset.pyx":344
+  /* "timeset/timeset.pyx":344
  * 
  *     def end(self) -> datetime:
  *         cdef IntervalList* last = self._intervals             # <<<<<<<<<<<<<<
@@ -7013,17 +7013,17 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_24end(struct __pyx_obj_9p
   __pyx_t_1 = __pyx_v_self->_intervals;
   __pyx_v_last = __pyx_t_1;
 
-  /* "pytimeset/timeset.pyx":345
+  /* "timeset/timeset.pyx":345
  *     def end(self) -> datetime:
  *         cdef IntervalList* last = self._intervals
  *         if self.is_empty():             # <<<<<<<<<<<<<<
  *             raise ValueError('Unspecified behavior!')
  *         while last.next is not NULL:
  */
-  __pyx_t_2 = (((struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->is_empty(__pyx_v_self, 0) != 0);
+  __pyx_t_2 = (((struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->is_empty(__pyx_v_self, 0) != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "pytimeset/timeset.pyx":346
+    /* "timeset/timeset.pyx":346
  *         cdef IntervalList* last = self._intervals
  *         if self.is_empty():
  *             raise ValueError('Unspecified behavior!')             # <<<<<<<<<<<<<<
@@ -7036,7 +7036,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_24end(struct __pyx_obj_9p
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(0, 346, __pyx_L1_error)
 
-    /* "pytimeset/timeset.pyx":345
+    /* "timeset/timeset.pyx":345
  *     def end(self) -> datetime:
  *         cdef IntervalList* last = self._intervals
  *         if self.is_empty():             # <<<<<<<<<<<<<<
@@ -7045,7 +7045,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_24end(struct __pyx_obj_9p
  */
   }
 
-  /* "pytimeset/timeset.pyx":347
+  /* "timeset/timeset.pyx":347
  *         if self.is_empty():
  *             raise ValueError('Unspecified behavior!')
  *         while last.next is not NULL:             # <<<<<<<<<<<<<<
@@ -7056,7 +7056,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_24end(struct __pyx_obj_9p
     __pyx_t_2 = ((__pyx_v_last->next != NULL) != 0);
     if (!__pyx_t_2) break;
 
-    /* "pytimeset/timeset.pyx":348
+    /* "timeset/timeset.pyx":348
  *             raise ValueError('Unspecified behavior!')
  *         while last.next is not NULL:
  *             last = last.next             # <<<<<<<<<<<<<<
@@ -7067,7 +7067,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_24end(struct __pyx_obj_9p
     __pyx_v_last = __pyx_t_1;
   }
 
-  /* "pytimeset/timeset.pyx":349
+  /* "timeset/timeset.pyx":349
  *         while last.next is not NULL:
  *             last = last.next
  *         return datetime.fromtimestamp(last.interval.end)             # <<<<<<<<<<<<<<
@@ -7102,7 +7102,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_24end(struct __pyx_obj_9p
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":343
+  /* "timeset/timeset.pyx":343
  *         return datetime.fromtimestamp(self._intervals.interval.start)
  * 
  *     def end(self) -> datetime:             # <<<<<<<<<<<<<<
@@ -7116,7 +7116,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_24end(struct __pyx_obj_9p
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.end", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.end", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7124,7 +7124,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_24end(struct __pyx_obj_9p
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":352
+/* "timeset/timeset.pyx":352
  * 
  *     @property
  *     def intervals(self) -> FrozenSet[TimeInterval]:             # <<<<<<<<<<<<<<
@@ -7133,41 +7133,41 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_24end(struct __pyx_obj_9p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_9intervals_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_9intervals_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_9intervals_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_9intervals_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_9intervals___get__(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self) {
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_9intervals___get__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self) {
   PyObject *__pyx_v_intervals = 0;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v__iter;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v__iter;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   Py_ssize_t __pyx_t_3;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_t_4;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_t_4;
   int __pyx_t_5;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "pytimeset/timeset.pyx":353
+  /* "timeset/timeset.pyx":353
  *     @property
  *     def intervals(self) -> FrozenSet[TimeInterval]:
  *         if self.is_empty():             # <<<<<<<<<<<<<<
  *             return frozenset()
  *         if len(self._timeintervals):
  */
-  __pyx_t_1 = (((struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->is_empty(__pyx_v_self, 0) != 0);
+  __pyx_t_1 = (((struct __pyx_vtabstruct_7timeset_7timeset_TimeSet *)__pyx_v_self->__pyx_vtab)->is_empty(__pyx_v_self, 0) != 0);
   if (__pyx_t_1) {
 
-    /* "pytimeset/timeset.pyx":354
+    /* "timeset/timeset.pyx":354
  *     def intervals(self) -> FrozenSet[TimeInterval]:
  *         if self.is_empty():
  *             return frozenset()             # <<<<<<<<<<<<<<
@@ -7181,7 +7181,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
     __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "pytimeset/timeset.pyx":353
+    /* "timeset/timeset.pyx":353
  *     @property
  *     def intervals(self) -> FrozenSet[TimeInterval]:
  *         if self.is_empty():             # <<<<<<<<<<<<<<
@@ -7190,7 +7190,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
  */
   }
 
-  /* "pytimeset/timeset.pyx":355
+  /* "timeset/timeset.pyx":355
  *         if self.is_empty():
  *             return frozenset()
  *         if len(self._timeintervals):             # <<<<<<<<<<<<<<
@@ -7208,7 +7208,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
   __pyx_t_1 = (__pyx_t_3 != 0);
   if (__pyx_t_1) {
 
-    /* "pytimeset/timeset.pyx":356
+    /* "timeset/timeset.pyx":356
  *             return frozenset()
  *         if len(self._timeintervals):
  *             return self._timeintervals             # <<<<<<<<<<<<<<
@@ -7220,7 +7220,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
     __pyx_r = __pyx_v_self->_timeintervals;
     goto __pyx_L0;
 
-    /* "pytimeset/timeset.pyx":355
+    /* "timeset/timeset.pyx":355
  *         if self.is_empty():
  *             return frozenset()
  *         if len(self._timeintervals):             # <<<<<<<<<<<<<<
@@ -7229,7 +7229,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
  */
   }
 
-  /* "pytimeset/timeset.pyx":357
+  /* "timeset/timeset.pyx":357
  *         if len(self._timeintervals):
  *             return self._timeintervals
  *         cdef set intervals = set()             # <<<<<<<<<<<<<<
@@ -7241,7 +7241,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
   __pyx_v_intervals = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pytimeset/timeset.pyx":358
+  /* "timeset/timeset.pyx":358
  *             return self._timeintervals
  *         cdef set intervals = set()
  *         cdef IntervalList* _iter = self._intervals             # <<<<<<<<<<<<<<
@@ -7251,7 +7251,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
   __pyx_t_4 = __pyx_v_self->_intervals;
   __pyx_v__iter = __pyx_t_4;
 
-  /* "pytimeset/timeset.pyx":359
+  /* "timeset/timeset.pyx":359
  *         cdef set intervals = set()
  *         cdef IntervalList* _iter = self._intervals
  *         while _iter is not NULL:             # <<<<<<<<<<<<<<
@@ -7262,19 +7262,19 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
     __pyx_t_1 = ((__pyx_v__iter != NULL) != 0);
     if (!__pyx_t_1) break;
 
-    /* "pytimeset/timeset.pyx":360
+    /* "timeset/timeset.pyx":360
  *         cdef IntervalList* _iter = self._intervals
  *         while _iter is not NULL:
  *             intervals.add(TimeInterval.from_interval(_iter.interval))             # <<<<<<<<<<<<<<
  *             _iter = _iter.next
  *         self._timeintervals = frozenset(intervals)
  */
-    __pyx_t_2 = ((PyObject *)__pyx_f_9pytimeset_7timeset_12TimeInterval_from_interval(__pyx_v__iter->interval)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 360, __pyx_L1_error)
+    __pyx_t_2 = ((PyObject *)__pyx_f_7timeset_7timeset_12TimeInterval_from_interval(__pyx_v__iter->interval)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 360, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_5 = PySet_Add(__pyx_v_intervals, __pyx_t_2); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 360, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pytimeset/timeset.pyx":361
+    /* "timeset/timeset.pyx":361
  *         while _iter is not NULL:
  *             intervals.add(TimeInterval.from_interval(_iter.interval))
  *             _iter = _iter.next             # <<<<<<<<<<<<<<
@@ -7285,7 +7285,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
     __pyx_v__iter = __pyx_t_4;
   }
 
-  /* "pytimeset/timeset.pyx":362
+  /* "timeset/timeset.pyx":362
  *             intervals.add(TimeInterval.from_interval(_iter.interval))
  *             _iter = _iter.next
  *         self._timeintervals = frozenset(intervals)             # <<<<<<<<<<<<<<
@@ -7300,7 +7300,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
   __pyx_v_self->_timeintervals = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pytimeset/timeset.pyx":363
+  /* "timeset/timeset.pyx":363
  *             _iter = _iter.next
  *         self._timeintervals = frozenset(intervals)
  *         return self._timeintervals             # <<<<<<<<<<<<<<
@@ -7312,7 +7312,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
   __pyx_r = __pyx_v_self->_timeintervals;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":352
+  /* "timeset/timeset.pyx":352
  * 
  *     @property
  *     def intervals(self) -> FrozenSet[TimeInterval]:             # <<<<<<<<<<<<<<
@@ -7323,7 +7323,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.intervals.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.intervals.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_intervals);
@@ -7332,7 +7332,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":365
+/* "timeset/timeset.pyx":365
  *         return self._timeintervals
  * 
  *     def __eq__(self, TimeSet other):             # <<<<<<<<<<<<<<
@@ -7341,13 +7341,13 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_9intervals___get__(struct
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_27__eq__(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_27__eq__(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_27__eq__(PyObject *__pyx_v_self, PyObject *__pyx_v_other); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_27__eq__(PyObject *__pyx_v_self, PyObject *__pyx_v_other) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__eq__ (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_9pytimeset_7timeset_TimeSet, 1, "other", 0))) __PYX_ERR(0, 365, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self), ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_other));
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_7timeset_7timeset_TimeSet, 1, "other", 0))) __PYX_ERR(0, 365, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_26__eq__(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self), ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_other));
 
   /* function exit code */
   goto __pyx_L0;
@@ -7358,18 +7358,18 @@ static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_27__eq__(PyObject *__pyx_
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_other) {
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_iter1;
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_v_iter2;
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self, struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_other) {
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_iter1;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_v_iter2;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  __pyx_t_9pytimeset_7timeset_IntervalList *__pyx_t_1;
+  __pyx_t_7timeset_7timeset_IntervalList *__pyx_t_1;
   int __pyx_t_2;
   int __pyx_t_3;
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__eq__", 0);
 
-  /* "pytimeset/timeset.pyx":366
+  /* "timeset/timeset.pyx":366
  * 
  *     def __eq__(self, TimeSet other):
  *         cdef IntervalList* iter1 = self._intervals             # <<<<<<<<<<<<<<
@@ -7379,18 +7379,18 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
   __pyx_t_1 = __pyx_v_self->_intervals;
   __pyx_v_iter1 = __pyx_t_1;
 
-  /* "pytimeset/timeset.pyx":368
+  /* "timeset/timeset.pyx":368
  *         cdef IntervalList* iter1 = self._intervals
  *         cdef IntervalList* iter2
  *         if not isinstance(other, TimeSet):             # <<<<<<<<<<<<<<
  *             return False
  *         iter2 = other._intervals
  */
-  __pyx_t_2 = __Pyx_TypeCheck(((PyObject *)__pyx_v_other), __pyx_ptype_9pytimeset_7timeset_TimeSet); 
+  __pyx_t_2 = __Pyx_TypeCheck(((PyObject *)__pyx_v_other), __pyx_ptype_7timeset_7timeset_TimeSet); 
   __pyx_t_3 = ((!(__pyx_t_2 != 0)) != 0);
   if (__pyx_t_3) {
 
-    /* "pytimeset/timeset.pyx":369
+    /* "timeset/timeset.pyx":369
  *         cdef IntervalList* iter2
  *         if not isinstance(other, TimeSet):
  *             return False             # <<<<<<<<<<<<<<
@@ -7402,7 +7402,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
     __pyx_r = Py_False;
     goto __pyx_L0;
 
-    /* "pytimeset/timeset.pyx":368
+    /* "timeset/timeset.pyx":368
  *         cdef IntervalList* iter1 = self._intervals
  *         cdef IntervalList* iter2
  *         if not isinstance(other, TimeSet):             # <<<<<<<<<<<<<<
@@ -7411,7 +7411,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
  */
   }
 
-  /* "pytimeset/timeset.pyx":370
+  /* "timeset/timeset.pyx":370
  *         if not isinstance(other, TimeSet):
  *             return False
  *         iter2 = other._intervals             # <<<<<<<<<<<<<<
@@ -7421,7 +7421,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
   __pyx_t_1 = __pyx_v_other->_intervals;
   __pyx_v_iter2 = __pyx_t_1;
 
-  /* "pytimeset/timeset.pyx":371
+  /* "timeset/timeset.pyx":371
  *             return False
  *         iter2 = other._intervals
  *         while iter1 is not NULL:             # <<<<<<<<<<<<<<
@@ -7432,7 +7432,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
     __pyx_t_3 = ((__pyx_v_iter1 != NULL) != 0);
     if (!__pyx_t_3) break;
 
-    /* "pytimeset/timeset.pyx":372
+    /* "timeset/timeset.pyx":372
  *         iter2 = other._intervals
  *         while iter1 is not NULL:
  *             if iter2 is NULL:             # <<<<<<<<<<<<<<
@@ -7442,7 +7442,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
     __pyx_t_3 = ((__pyx_v_iter2 == NULL) != 0);
     if (__pyx_t_3) {
 
-      /* "pytimeset/timeset.pyx":373
+      /* "timeset/timeset.pyx":373
  *         while iter1 is not NULL:
  *             if iter2 is NULL:
  *                 return False             # <<<<<<<<<<<<<<
@@ -7454,7 +7454,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
       __pyx_r = Py_False;
       goto __pyx_L0;
 
-      /* "pytimeset/timeset.pyx":372
+      /* "timeset/timeset.pyx":372
  *         iter2 = other._intervals
  *         while iter1 is not NULL:
  *             if iter2 is NULL:             # <<<<<<<<<<<<<<
@@ -7463,17 +7463,17 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
  */
     }
 
-    /* "pytimeset/timeset.pyx":374
+    /* "timeset/timeset.pyx":374
  *             if iter2 is NULL:
  *                 return False
  *             if not equals(iter1.interval, iter2.interval):             # <<<<<<<<<<<<<<
  *                 return False
  *             iter1 = iter1.next
  */
-    __pyx_t_3 = ((!(__pyx_f_9pytimeset_7timeset_equals(__pyx_v_iter1->interval, __pyx_v_iter2->interval) != 0)) != 0);
+    __pyx_t_3 = ((!(__pyx_f_7timeset_7timeset_equals(__pyx_v_iter1->interval, __pyx_v_iter2->interval) != 0)) != 0);
     if (__pyx_t_3) {
 
-      /* "pytimeset/timeset.pyx":375
+      /* "timeset/timeset.pyx":375
  *                 return False
  *             if not equals(iter1.interval, iter2.interval):
  *                 return False             # <<<<<<<<<<<<<<
@@ -7485,7 +7485,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
       __pyx_r = Py_False;
       goto __pyx_L0;
 
-      /* "pytimeset/timeset.pyx":374
+      /* "timeset/timeset.pyx":374
  *             if iter2 is NULL:
  *                 return False
  *             if not equals(iter1.interval, iter2.interval):             # <<<<<<<<<<<<<<
@@ -7494,7 +7494,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
  */
     }
 
-    /* "pytimeset/timeset.pyx":376
+    /* "timeset/timeset.pyx":376
  *             if not equals(iter1.interval, iter2.interval):
  *                 return False
  *             iter1 = iter1.next             # <<<<<<<<<<<<<<
@@ -7504,7 +7504,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
     __pyx_t_1 = __pyx_v_iter1->next;
     __pyx_v_iter1 = __pyx_t_1;
 
-    /* "pytimeset/timeset.pyx":377
+    /* "timeset/timeset.pyx":377
  *                 return False
  *             iter1 = iter1.next
  *             iter2 = iter2.next             # <<<<<<<<<<<<<<
@@ -7515,7 +7515,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
     __pyx_v_iter2 = __pyx_t_1;
   }
 
-  /* "pytimeset/timeset.pyx":378
+  /* "timeset/timeset.pyx":378
  *             iter1 = iter1.next
  *             iter2 = iter2.next
  *         return iter2 is NULL             # <<<<<<<<<<<<<<
@@ -7529,7 +7529,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":365
+  /* "timeset/timeset.pyx":365
  *         return self._timeintervals
  * 
  *     def __eq__(self, TimeSet other):             # <<<<<<<<<<<<<<
@@ -7540,7 +7540,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.__eq__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.__eq__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7548,7 +7548,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":380
+/* "timeset/timeset.pyx":380
  *         return iter2 is NULL
  * 
  *     def __hash__(self):             # <<<<<<<<<<<<<<
@@ -7557,26 +7557,26 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_26__eq__(struct __pyx_obj
  */
 
 /* Python wrapper */
-static Py_hash_t __pyx_pw_9pytimeset_7timeset_7TimeSet_29__hash__(PyObject *__pyx_v_self); /*proto*/
-static Py_hash_t __pyx_pw_9pytimeset_7timeset_7TimeSet_29__hash__(PyObject *__pyx_v_self) {
+static Py_hash_t __pyx_pw_7timeset_7timeset_7TimeSet_29__hash__(PyObject *__pyx_v_self); /*proto*/
+static Py_hash_t __pyx_pw_7timeset_7timeset_7TimeSet_29__hash__(PyObject *__pyx_v_self) {
   Py_hash_t __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__hash__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_28__hash__(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_28__hash__(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static Py_hash_t __pyx_pf_9pytimeset_7timeset_7TimeSet_28__hash__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self) {
+static Py_hash_t __pyx_pf_7timeset_7timeset_7TimeSet_28__hash__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self) {
   Py_hash_t __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   Py_hash_t __pyx_t_2;
   __Pyx_RefNannySetupContext("__hash__", 0);
 
-  /* "pytimeset/timeset.pyx":381
+  /* "timeset/timeset.pyx":381
  * 
  *     def __hash__(self):
  *         return hash(self.intervals)             # <<<<<<<<<<<<<<
@@ -7590,7 +7590,7 @@ static Py_hash_t __pyx_pf_9pytimeset_7timeset_7TimeSet_28__hash__(struct __pyx_o
   __pyx_r = __pyx_t_2;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":380
+  /* "timeset/timeset.pyx":380
  *         return iter2 is NULL
  * 
  *     def __hash__(self):             # <<<<<<<<<<<<<<
@@ -7601,7 +7601,7 @@ static Py_hash_t __pyx_pf_9pytimeset_7timeset_7TimeSet_28__hash__(struct __pyx_o
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.__hash__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.__hash__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   if (unlikely(__pyx_r == -1) && !PyErr_Occurred()) __pyx_r = -2;
@@ -7609,7 +7609,7 @@ static Py_hash_t __pyx_pf_9pytimeset_7timeset_7TimeSet_28__hash__(struct __pyx_o
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":383
+/* "timeset/timeset.pyx":383
  *         return hash(self.intervals)
  * 
  *     def __str__(self):             # <<<<<<<<<<<<<<
@@ -7618,19 +7618,19 @@ static Py_hash_t __pyx_pf_9pytimeset_7timeset_7TimeSet_28__hash__(struct __pyx_o
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_31__str__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_31__str__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_31__str__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_31__str__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__str__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_30__str__(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_30__str__(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_30__str__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self) {
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_30__str__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self) {
   PyObject *__pyx_7genexpr__pyx_v_x = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -7645,7 +7645,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_30__str__(struct __pyx_ob
   PyObject *__pyx_t_9 = NULL;
   __Pyx_RefNannySetupContext("__str__", 0);
 
-  /* "pytimeset/timeset.pyx":384
+  /* "timeset/timeset.pyx":384
  * 
  *     def __str__(self):
  *         return 'TimeSet {' +'; '.join([f'[{x.start}, {x.end})' for x in self.intervals]) + '}'             # <<<<<<<<<<<<<<
@@ -7763,7 +7763,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_30__str__(struct __pyx_ob
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":383
+  /* "timeset/timeset.pyx":383
  *         return hash(self.intervals)
  * 
  *     def __str__(self):             # <<<<<<<<<<<<<<
@@ -7778,7 +7778,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_30__str__(struct __pyx_ob
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.__str__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.__str__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_7genexpr__pyx_v_x);
@@ -7787,7 +7787,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_30__str__(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":386
+/* "timeset/timeset.pyx":386
  *         return 'TimeSet {' +'; '.join([f'[{x.start}, {x.end})' for x in self.intervals]) + '}'
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -7796,25 +7796,25 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_30__str__(struct __pyx_ob
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_33__repr__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9pytimeset_7timeset_7TimeSet_33__repr__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_33__repr__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7timeset_7timeset_7TimeSet_33__repr__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__repr__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9pytimeset_7timeset_7TimeSet_32__repr__(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7timeset_7timeset_7TimeSet_32__repr__(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_32__repr__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self) {
+static PyObject *__pyx_pf_7timeset_7timeset_7TimeSet_32__repr__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "pytimeset/timeset.pyx":387
+  /* "timeset/timeset.pyx":387
  * 
  *     def __repr__(self):
  *         return str(self)             # <<<<<<<<<<<<<<
@@ -7828,7 +7828,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_32__repr__(struct __pyx_o
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pytimeset/timeset.pyx":386
+  /* "timeset/timeset.pyx":386
  *         return 'TimeSet {' +'; '.join([f'[{x.start}, {x.end})' for x in self.intervals]) + '}'
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -7839,7 +7839,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_32__repr__(struct __pyx_o
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pytimeset.timeset.TimeSet.__repr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("timeset.timeset.TimeSet.__repr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7847,7 +7847,7 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_32__repr__(struct __pyx_o
   return __pyx_r;
 }
 
-/* "pytimeset/timeset.pyx":389
+/* "timeset/timeset.pyx":389
  *         return str(self)
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -7856,30 +7856,30 @@ static PyObject *__pyx_pf_9pytimeset_7timeset_7TimeSet_32__repr__(struct __pyx_o
  */
 
 /* Python wrapper */
-static void __pyx_pw_9pytimeset_7timeset_7TimeSet_35__dealloc__(PyObject *__pyx_v_self); /*proto*/
-static void __pyx_pw_9pytimeset_7timeset_7TimeSet_35__dealloc__(PyObject *__pyx_v_self) {
+static void __pyx_pw_7timeset_7timeset_7TimeSet_35__dealloc__(PyObject *__pyx_v_self); /*proto*/
+static void __pyx_pw_7timeset_7timeset_7TimeSet_35__dealloc__(PyObject *__pyx_v_self) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__dealloc__ (wrapper)", 0);
-  __pyx_pf_9pytimeset_7timeset_7TimeSet_34__dealloc__(((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_v_self));
+  __pyx_pf_7timeset_7timeset_7TimeSet_34__dealloc__(((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
 }
 
-static void __pyx_pf_9pytimeset_7timeset_7TimeSet_34__dealloc__(struct __pyx_obj_9pytimeset_7timeset_TimeSet *__pyx_v_self) {
+static void __pyx_pf_7timeset_7timeset_7TimeSet_34__dealloc__(struct __pyx_obj_7timeset_7timeset_TimeSet *__pyx_v_self) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
-  /* "pytimeset/timeset.pyx":390
+  /* "timeset/timeset.pyx":390
  * 
  *     def __dealloc__(self):
  *         free_list(self._intervals)             # <<<<<<<<<<<<<<
  * 
  * cdef TimeSet empty_set = TimeSet([])
  */
-  __pyx_f_9pytimeset_7timeset_free_list(__pyx_v_self->_intervals);
+  __pyx_f_7timeset_7timeset_free_list(__pyx_v_self->_intervals);
 
-  /* "pytimeset/timeset.pyx":389
+  /* "timeset/timeset.pyx":389
  *         return str(self)
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -7890,10 +7890,10 @@ static void __pyx_pf_9pytimeset_7timeset_7TimeSet_34__dealloc__(struct __pyx_obj
   /* function exit code */
   __Pyx_RefNannyFinishContext();
 }
-static struct __pyx_vtabstruct_9pytimeset_7timeset_TimeInterval __pyx_vtable_9pytimeset_7timeset_TimeInterval;
+static struct __pyx_vtabstruct_7timeset_7timeset_TimeInterval __pyx_vtable_7timeset_7timeset_TimeInterval;
 
-static PyObject *__pyx_tp_new_9pytimeset_7timeset_TimeInterval(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_9pytimeset_7timeset_TimeInterval *p;
+static PyObject *__pyx_tp_new_7timeset_7timeset_TimeInterval(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_7timeset_7timeset_TimeInterval *p;
   PyObject *o;
   if (likely((t->tp_flags & Py_TPFLAGS_IS_ABSTRACT) == 0)) {
     o = (*t->tp_alloc)(t, 0);
@@ -7901,12 +7901,12 @@ static PyObject *__pyx_tp_new_9pytimeset_7timeset_TimeInterval(PyTypeObject *t, 
     o = (PyObject *) PyBaseObject_Type.tp_new(t, __pyx_empty_tuple, 0);
   }
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_9pytimeset_7timeset_TimeInterval *)o);
-  p->__pyx_vtab = __pyx_vtabptr_9pytimeset_7timeset_TimeInterval;
+  p = ((struct __pyx_obj_7timeset_7timeset_TimeInterval *)o);
+  p->__pyx_vtab = __pyx_vtabptr_7timeset_7timeset_TimeInterval;
   return o;
 }
 
-static void __pyx_tp_dealloc_9pytimeset_7timeset_TimeInterval(PyObject *o) {
+static void __pyx_tp_dealloc_7timeset_7timeset_TimeInterval(PyObject *o) {
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely(PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE) && Py_TYPE(o)->tp_finalize) && (!PyType_IS_GC(Py_TYPE(o)) || !_PyGC_FINALIZED(o))) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
@@ -7915,14 +7915,14 @@ static void __pyx_tp_dealloc_9pytimeset_7timeset_TimeInterval(PyObject *o) {
   (*Py_TYPE(o)->tp_free)(o);
 }
 
-static PyObject *__pyx_tp_richcompare_9pytimeset_7timeset_TimeInterval(PyObject *o1, PyObject *o2, int op) {
+static PyObject *__pyx_tp_richcompare_7timeset_7timeset_TimeInterval(PyObject *o1, PyObject *o2, int op) {
   switch (op) {
     case Py_EQ: {
-      return __pyx_pw_9pytimeset_7timeset_12TimeInterval_17__eq__(o1, o2);
+      return __pyx_pw_7timeset_7timeset_12TimeInterval_17__eq__(o1, o2);
     }
     case Py_NE: {
       PyObject *ret;
-      ret = __pyx_pw_9pytimeset_7timeset_12TimeInterval_17__eq__(o1, o2);
+      ret = __pyx_pw_7timeset_7timeset_12TimeInterval_17__eq__(o1, o2);
       if (likely(ret && ret != Py_NotImplemented)) {
         int b = __Pyx_PyObject_IsTrue(ret); Py_DECREF(ret);
         if (unlikely(b < 0)) return NULL;
@@ -7937,37 +7937,37 @@ static PyObject *__pyx_tp_richcompare_9pytimeset_7timeset_TimeInterval(PyObject 
   }
 }
 
-static PyObject *__pyx_getprop_9pytimeset_7timeset_12TimeInterval_start(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9pytimeset_7timeset_12TimeInterval_5start_1__get__(o);
+static PyObject *__pyx_getprop_7timeset_7timeset_12TimeInterval_start(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7timeset_7timeset_12TimeInterval_5start_1__get__(o);
 }
 
-static PyObject *__pyx_getprop_9pytimeset_7timeset_12TimeInterval_end(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9pytimeset_7timeset_12TimeInterval_3end_1__get__(o);
+static PyObject *__pyx_getprop_7timeset_7timeset_12TimeInterval_end(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7timeset_7timeset_12TimeInterval_3end_1__get__(o);
 }
 
-static PyMethodDef __pyx_methods_9pytimeset_7timeset_TimeInterval[] = {
-  {"contains", (PyCFunction)__pyx_pw_9pytimeset_7timeset_12TimeInterval_3contains, METH_O, 0},
-  {"overlaps_with", (PyCFunction)__pyx_pw_9pytimeset_7timeset_12TimeInterval_5overlaps_with, METH_O, 0},
-  {"is_subset", (PyCFunction)__pyx_pw_9pytimeset_7timeset_12TimeInterval_7is_subset, METH_O, 0},
-  {"duration", (PyCFunction)__pyx_pw_9pytimeset_7timeset_12TimeInterval_9duration, METH_NOARGS, 0},
-  {"is_empty", (PyCFunction)__pyx_pw_9pytimeset_7timeset_12TimeInterval_11is_empty, METH_NOARGS, 0},
-  {"intersection", (PyCFunction)__pyx_pw_9pytimeset_7timeset_12TimeInterval_13intersection, METH_O, 0},
-  {"translate", (PyCFunction)__pyx_pw_9pytimeset_7timeset_12TimeInterval_15translate, METH_O, 0},
+static PyMethodDef __pyx_methods_7timeset_7timeset_TimeInterval[] = {
+  {"contains", (PyCFunction)__pyx_pw_7timeset_7timeset_12TimeInterval_3contains, METH_O, 0},
+  {"overlaps_with", (PyCFunction)__pyx_pw_7timeset_7timeset_12TimeInterval_5overlaps_with, METH_O, 0},
+  {"is_subset", (PyCFunction)__pyx_pw_7timeset_7timeset_12TimeInterval_7is_subset, METH_O, 0},
+  {"duration", (PyCFunction)__pyx_pw_7timeset_7timeset_12TimeInterval_9duration, METH_NOARGS, 0},
+  {"is_empty", (PyCFunction)__pyx_pw_7timeset_7timeset_12TimeInterval_11is_empty, METH_NOARGS, 0},
+  {"intersection", (PyCFunction)__pyx_pw_7timeset_7timeset_12TimeInterval_13intersection, METH_O, 0},
+  {"translate", (PyCFunction)__pyx_pw_7timeset_7timeset_12TimeInterval_15translate, METH_O, 0},
   {0, 0, 0, 0}
 };
 
-static struct PyGetSetDef __pyx_getsets_9pytimeset_7timeset_TimeInterval[] = {
-  {(char *)"start", __pyx_getprop_9pytimeset_7timeset_12TimeInterval_start, 0, (char *)0, 0},
-  {(char *)"end", __pyx_getprop_9pytimeset_7timeset_12TimeInterval_end, 0, (char *)0, 0},
+static struct PyGetSetDef __pyx_getsets_7timeset_7timeset_TimeInterval[] = {
+  {(char *)"start", __pyx_getprop_7timeset_7timeset_12TimeInterval_start, 0, (char *)0, 0},
+  {(char *)"end", __pyx_getprop_7timeset_7timeset_12TimeInterval_end, 0, (char *)0, 0},
   {0, 0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_9pytimeset_7timeset_TimeInterval = {
+static PyTypeObject __pyx_type_7timeset_7timeset_TimeInterval = {
   PyVarObject_HEAD_INIT(0, 0)
-  "pytimeset.timeset.TimeInterval", /*tp_name*/
-  sizeof(struct __pyx_obj_9pytimeset_7timeset_TimeInterval), /*tp_basicsize*/
+  "timeset.timeset.TimeInterval", /*tp_name*/
+  sizeof(struct __pyx_obj_7timeset_7timeset_TimeInterval), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_9pytimeset_7timeset_TimeInterval, /*tp_dealloc*/
+  __pyx_tp_dealloc_7timeset_7timeset_TimeInterval, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -7981,9 +7981,9 @@ static PyTypeObject __pyx_type_9pytimeset_7timeset_TimeInterval = {
   0, /*tp_as_number*/
   0, /*tp_as_sequence*/
   0, /*tp_as_mapping*/
-  __pyx_pw_9pytimeset_7timeset_12TimeInterval_19__hash__, /*tp_hash*/
+  __pyx_pw_7timeset_7timeset_12TimeInterval_19__hash__, /*tp_hash*/
   0, /*tp_call*/
-  __pyx_pw_9pytimeset_7timeset_12TimeInterval_21__str__, /*tp_str*/
+  __pyx_pw_7timeset_7timeset_12TimeInterval_21__str__, /*tp_str*/
   0, /*tp_getattro*/
   0, /*tp_setattro*/
   0, /*tp_as_buffer*/
@@ -7991,21 +7991,21 @@ static PyTypeObject __pyx_type_9pytimeset_7timeset_TimeInterval = {
   0, /*tp_doc*/
   0, /*tp_traverse*/
   0, /*tp_clear*/
-  __pyx_tp_richcompare_9pytimeset_7timeset_TimeInterval, /*tp_richcompare*/
+  __pyx_tp_richcompare_7timeset_7timeset_TimeInterval, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_9pytimeset_7timeset_TimeInterval, /*tp_methods*/
+  __pyx_methods_7timeset_7timeset_TimeInterval, /*tp_methods*/
   0, /*tp_members*/
-  __pyx_getsets_9pytimeset_7timeset_TimeInterval, /*tp_getset*/
+  __pyx_getsets_7timeset_7timeset_TimeInterval, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
   0, /*tp_descr_set*/
   0, /*tp_dictoffset*/
-  __pyx_pw_9pytimeset_7timeset_12TimeInterval_1__init__, /*tp_init*/
+  __pyx_pw_7timeset_7timeset_12TimeInterval_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_9pytimeset_7timeset_TimeInterval, /*tp_new*/
+  __pyx_tp_new_7timeset_7timeset_TimeInterval, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -8022,10 +8022,10 @@ static PyTypeObject __pyx_type_9pytimeset_7timeset_TimeInterval = {
   0, /*tp_vectorcall*/
   #endif
 };
-static struct __pyx_vtabstruct_9pytimeset_7timeset_TimeSet __pyx_vtable_9pytimeset_7timeset_TimeSet;
+static struct __pyx_vtabstruct_7timeset_7timeset_TimeSet __pyx_vtable_7timeset_7timeset_TimeSet;
 
-static PyObject *__pyx_tp_new_9pytimeset_7timeset_TimeSet(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *p;
+static PyObject *__pyx_tp_new_7timeset_7timeset_TimeSet(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_7timeset_7timeset_TimeSet *p;
   PyObject *o;
   if (likely((t->tp_flags & Py_TPFLAGS_IS_ABSTRACT) == 0)) {
     o = (*t->tp_alloc)(t, 0);
@@ -8033,14 +8033,14 @@ static PyObject *__pyx_tp_new_9pytimeset_7timeset_TimeSet(PyTypeObject *t, CYTHO
     o = (PyObject *) PyBaseObject_Type.tp_new(t, __pyx_empty_tuple, 0);
   }
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)o);
-  p->__pyx_vtab = __pyx_vtabptr_9pytimeset_7timeset_TimeSet;
+  p = ((struct __pyx_obj_7timeset_7timeset_TimeSet *)o);
+  p->__pyx_vtab = __pyx_vtabptr_7timeset_7timeset_TimeSet;
   p->_timeintervals = ((PyObject*)Py_None); Py_INCREF(Py_None);
   return o;
 }
 
-static void __pyx_tp_dealloc_9pytimeset_7timeset_TimeSet(PyObject *o) {
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *p = (struct __pyx_obj_9pytimeset_7timeset_TimeSet *)o;
+static void __pyx_tp_dealloc_7timeset_7timeset_TimeSet(PyObject *o) {
+  struct __pyx_obj_7timeset_7timeset_TimeSet *p = (struct __pyx_obj_7timeset_7timeset_TimeSet *)o;
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely(PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE) && Py_TYPE(o)->tp_finalize) && !_PyGC_FINALIZED(o)) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
@@ -8051,7 +8051,7 @@ static void __pyx_tp_dealloc_9pytimeset_7timeset_TimeSet(PyObject *o) {
     PyObject *etype, *eval, *etb;
     PyErr_Fetch(&etype, &eval, &etb);
     ++Py_REFCNT(o);
-    __pyx_pw_9pytimeset_7timeset_7TimeSet_35__dealloc__(o);
+    __pyx_pw_7timeset_7timeset_7TimeSet_35__dealloc__(o);
     --Py_REFCNT(o);
     PyErr_Restore(etype, eval, etb);
   }
@@ -8059,32 +8059,32 @@ static void __pyx_tp_dealloc_9pytimeset_7timeset_TimeSet(PyObject *o) {
   (*Py_TYPE(o)->tp_free)(o);
 }
 
-static int __pyx_tp_traverse_9pytimeset_7timeset_TimeSet(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_7timeset_7timeset_TimeSet(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *p = (struct __pyx_obj_9pytimeset_7timeset_TimeSet *)o;
+  struct __pyx_obj_7timeset_7timeset_TimeSet *p = (struct __pyx_obj_7timeset_7timeset_TimeSet *)o;
   if (p->_timeintervals) {
     e = (*v)(p->_timeintervals, a); if (e) return e;
   }
   return 0;
 }
 
-static int __pyx_tp_clear_9pytimeset_7timeset_TimeSet(PyObject *o) {
+static int __pyx_tp_clear_7timeset_7timeset_TimeSet(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_9pytimeset_7timeset_TimeSet *p = (struct __pyx_obj_9pytimeset_7timeset_TimeSet *)o;
+  struct __pyx_obj_7timeset_7timeset_TimeSet *p = (struct __pyx_obj_7timeset_7timeset_TimeSet *)o;
   tmp = ((PyObject*)p->_timeintervals);
   p->_timeintervals = ((PyObject*)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyObject *__pyx_tp_richcompare_9pytimeset_7timeset_TimeSet(PyObject *o1, PyObject *o2, int op) {
+static PyObject *__pyx_tp_richcompare_7timeset_7timeset_TimeSet(PyObject *o1, PyObject *o2, int op) {
   switch (op) {
     case Py_EQ: {
-      return __pyx_pw_9pytimeset_7timeset_7TimeSet_27__eq__(o1, o2);
+      return __pyx_pw_7timeset_7timeset_7TimeSet_27__eq__(o1, o2);
     }
     case Py_NE: {
       PyObject *ret;
-      ret = __pyx_pw_9pytimeset_7timeset_7TimeSet_27__eq__(o1, o2);
+      ret = __pyx_pw_7timeset_7timeset_7TimeSet_27__eq__(o1, o2);
       if (likely(ret && ret != Py_NotImplemented)) {
         int b = __Pyx_PyObject_IsTrue(ret); Py_DECREF(ret);
         if (unlikely(b < 0)) return NULL;
@@ -8099,37 +8099,37 @@ static PyObject *__pyx_tp_richcompare_9pytimeset_7timeset_TimeSet(PyObject *o1, 
   }
 }
 
-static PyObject *__pyx_getprop_9pytimeset_7timeset_7TimeSet_intervals(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9pytimeset_7timeset_7TimeSet_9intervals_1__get__(o);
+static PyObject *__pyx_getprop_7timeset_7timeset_7TimeSet_intervals(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7timeset_7timeset_7TimeSet_9intervals_1__get__(o);
 }
 
-static PyMethodDef __pyx_methods_9pytimeset_7timeset_TimeSet[] = {
-  {"from_interval", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9pytimeset_7timeset_7TimeSet_3from_interval, METH_VARARGS|METH_KEYWORDS, 0},
-  {"empty", (PyCFunction)__pyx_pw_9pytimeset_7timeset_7TimeSet_5empty, METH_NOARGS, 0},
-  {"union", (PyCFunction)__pyx_pw_9pytimeset_7timeset_7TimeSet_7union, METH_O, 0},
-  {"intersection", (PyCFunction)__pyx_pw_9pytimeset_7timeset_7TimeSet_9intersection, METH_O, 0},
-  {"difference", (PyCFunction)__pyx_pw_9pytimeset_7timeset_7TimeSet_11difference, METH_O, 0},
-  {"contains", (PyCFunction)__pyx_pw_9pytimeset_7timeset_7TimeSet_13contains, METH_O, 0},
-  {"is_subset", (PyCFunction)__pyx_pw_9pytimeset_7timeset_7TimeSet_15is_subset, METH_O, 0},
-  {"is_empty", (PyCFunction)__pyx_pw_9pytimeset_7timeset_7TimeSet_17is_empty, METH_NOARGS, 0},
-  {"limiting_interval", (PyCFunction)__pyx_pw_9pytimeset_7timeset_7TimeSet_19limiting_interval, METH_NOARGS, 0},
-  {"duration", (PyCFunction)__pyx_pw_9pytimeset_7timeset_7TimeSet_21duration, METH_NOARGS, 0},
-  {"start", (PyCFunction)__pyx_pw_9pytimeset_7timeset_7TimeSet_23start, METH_NOARGS, 0},
-  {"end", (PyCFunction)__pyx_pw_9pytimeset_7timeset_7TimeSet_25end, METH_NOARGS, 0},
+static PyMethodDef __pyx_methods_7timeset_7timeset_TimeSet[] = {
+  {"from_interval", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7timeset_7timeset_7TimeSet_3from_interval, METH_VARARGS|METH_KEYWORDS, 0},
+  {"empty", (PyCFunction)__pyx_pw_7timeset_7timeset_7TimeSet_5empty, METH_NOARGS, 0},
+  {"union", (PyCFunction)__pyx_pw_7timeset_7timeset_7TimeSet_7union, METH_O, 0},
+  {"intersection", (PyCFunction)__pyx_pw_7timeset_7timeset_7TimeSet_9intersection, METH_O, 0},
+  {"difference", (PyCFunction)__pyx_pw_7timeset_7timeset_7TimeSet_11difference, METH_O, 0},
+  {"contains", (PyCFunction)__pyx_pw_7timeset_7timeset_7TimeSet_13contains, METH_O, 0},
+  {"is_subset", (PyCFunction)__pyx_pw_7timeset_7timeset_7TimeSet_15is_subset, METH_O, 0},
+  {"is_empty", (PyCFunction)__pyx_pw_7timeset_7timeset_7TimeSet_17is_empty, METH_NOARGS, 0},
+  {"limiting_interval", (PyCFunction)__pyx_pw_7timeset_7timeset_7TimeSet_19limiting_interval, METH_NOARGS, 0},
+  {"duration", (PyCFunction)__pyx_pw_7timeset_7timeset_7TimeSet_21duration, METH_NOARGS, 0},
+  {"start", (PyCFunction)__pyx_pw_7timeset_7timeset_7TimeSet_23start, METH_NOARGS, 0},
+  {"end", (PyCFunction)__pyx_pw_7timeset_7timeset_7TimeSet_25end, METH_NOARGS, 0},
   {0, 0, 0, 0}
 };
 
-static struct PyGetSetDef __pyx_getsets_9pytimeset_7timeset_TimeSet[] = {
-  {(char *)"intervals", __pyx_getprop_9pytimeset_7timeset_7TimeSet_intervals, 0, (char *)0, 0},
+static struct PyGetSetDef __pyx_getsets_7timeset_7timeset_TimeSet[] = {
+  {(char *)"intervals", __pyx_getprop_7timeset_7timeset_7TimeSet_intervals, 0, (char *)0, 0},
   {0, 0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_9pytimeset_7timeset_TimeSet = {
+static PyTypeObject __pyx_type_7timeset_7timeset_TimeSet = {
   PyVarObject_HEAD_INIT(0, 0)
-  "pytimeset.timeset.TimeSet", /*tp_name*/
-  sizeof(struct __pyx_obj_9pytimeset_7timeset_TimeSet), /*tp_basicsize*/
+  "timeset.timeset.TimeSet", /*tp_name*/
+  sizeof(struct __pyx_obj_7timeset_7timeset_TimeSet), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_9pytimeset_7timeset_TimeSet, /*tp_dealloc*/
+  __pyx_tp_dealloc_7timeset_7timeset_TimeSet, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -8139,35 +8139,35 @@ static PyTypeObject __pyx_type_9pytimeset_7timeset_TimeSet = {
   #if PY_MAJOR_VERSION >= 3
   0, /*tp_as_async*/
   #endif
-  __pyx_pw_9pytimeset_7timeset_7TimeSet_33__repr__, /*tp_repr*/
+  __pyx_pw_7timeset_7timeset_7TimeSet_33__repr__, /*tp_repr*/
   0, /*tp_as_number*/
   0, /*tp_as_sequence*/
   0, /*tp_as_mapping*/
-  __pyx_pw_9pytimeset_7timeset_7TimeSet_29__hash__, /*tp_hash*/
+  __pyx_pw_7timeset_7timeset_7TimeSet_29__hash__, /*tp_hash*/
   0, /*tp_call*/
-  __pyx_pw_9pytimeset_7timeset_7TimeSet_31__str__, /*tp_str*/
+  __pyx_pw_7timeset_7timeset_7TimeSet_31__str__, /*tp_str*/
   0, /*tp_getattro*/
   0, /*tp_setattro*/
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_9pytimeset_7timeset_TimeSet, /*tp_traverse*/
-  __pyx_tp_clear_9pytimeset_7timeset_TimeSet, /*tp_clear*/
-  __pyx_tp_richcompare_9pytimeset_7timeset_TimeSet, /*tp_richcompare*/
+  __pyx_tp_traverse_7timeset_7timeset_TimeSet, /*tp_traverse*/
+  __pyx_tp_clear_7timeset_7timeset_TimeSet, /*tp_clear*/
+  __pyx_tp_richcompare_7timeset_7timeset_TimeSet, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_9pytimeset_7timeset_TimeSet, /*tp_methods*/
+  __pyx_methods_7timeset_7timeset_TimeSet, /*tp_methods*/
   0, /*tp_members*/
-  __pyx_getsets_9pytimeset_7timeset_TimeSet, /*tp_getset*/
+  __pyx_getsets_7timeset_7timeset_TimeSet, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
   0, /*tp_descr_set*/
   0, /*tp_dictoffset*/
-  __pyx_pw_9pytimeset_7timeset_7TimeSet_1__init__, /*tp_init*/
+  __pyx_pw_7timeset_7timeset_7TimeSet_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_9pytimeset_7timeset_TimeSet, /*tp_new*/
+  __pyx_tp_new_7timeset_7timeset_TimeSet, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -8290,7 +8290,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pytimeset/timeset.pyx":327
+  /* "timeset/timeset.pyx":327
  *     def limiting_interval(self) -> TimeInterval:
  *         if self.is_empty():
  *             raise ValueError('Unspecified behavior!')             # <<<<<<<<<<<<<<
@@ -8328,7 +8328,7 @@ static int __Pyx_modinit_global_init_code(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_modinit_global_init_code", 0);
   /*--- Global init code ---*/
-  __pyx_v_9pytimeset_7timeset_empty_set = ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)Py_None); Py_INCREF(Py_None);
+  __pyx_v_7timeset_7timeset_empty_set = ((struct __pyx_obj_7timeset_7timeset_TimeSet *)Py_None); Py_INCREF(Py_None);
   __Pyx_RefNannyFinishContext();
   return 0;
 }
@@ -8353,44 +8353,44 @@ static int __Pyx_modinit_type_init_code(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  __pyx_vtabptr_9pytimeset_7timeset_TimeInterval = &__pyx_vtable_9pytimeset_7timeset_TimeInterval;
-  __pyx_vtable_9pytimeset_7timeset_TimeInterval.from_interval = (struct __pyx_obj_9pytimeset_7timeset_TimeInterval *(*)(__pyx_t_9pytimeset_7timeset_Interval))__pyx_f_9pytimeset_7timeset_12TimeInterval_from_interval;
-  __pyx_vtable_9pytimeset_7timeset_TimeInterval.contains = (int (*)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, PyObject *, int __pyx_skip_dispatch))__pyx_f_9pytimeset_7timeset_12TimeInterval_contains;
-  __pyx_vtable_9pytimeset_7timeset_TimeInterval.overlaps_with = (int (*)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, int __pyx_skip_dispatch))__pyx_f_9pytimeset_7timeset_12TimeInterval_overlaps_with;
-  __pyx_vtable_9pytimeset_7timeset_TimeInterval.is_subset = (int (*)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, int __pyx_skip_dispatch))__pyx_f_9pytimeset_7timeset_12TimeInterval_is_subset;
-  __pyx_vtable_9pytimeset_7timeset_TimeInterval.duration = (PyObject *(*)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, int __pyx_skip_dispatch))__pyx_f_9pytimeset_7timeset_12TimeInterval_duration;
-  __pyx_vtable_9pytimeset_7timeset_TimeInterval.is_empty = (int (*)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, int __pyx_skip_dispatch))__pyx_f_9pytimeset_7timeset_12TimeInterval_is_empty;
-  __pyx_vtable_9pytimeset_7timeset_TimeInterval.intersection = (struct __pyx_obj_9pytimeset_7timeset_TimeInterval *(*)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, int __pyx_skip_dispatch))__pyx_f_9pytimeset_7timeset_12TimeInterval_intersection;
-  __pyx_vtable_9pytimeset_7timeset_TimeInterval.translate = (struct __pyx_obj_9pytimeset_7timeset_TimeInterval *(*)(struct __pyx_obj_9pytimeset_7timeset_TimeInterval *, PyObject *, int __pyx_skip_dispatch))__pyx_f_9pytimeset_7timeset_12TimeInterval_translate;
-  if (PyType_Ready(&__pyx_type_9pytimeset_7timeset_TimeInterval) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
+  __pyx_vtabptr_7timeset_7timeset_TimeInterval = &__pyx_vtable_7timeset_7timeset_TimeInterval;
+  __pyx_vtable_7timeset_7timeset_TimeInterval.from_interval = (struct __pyx_obj_7timeset_7timeset_TimeInterval *(*)(__pyx_t_7timeset_7timeset_Interval))__pyx_f_7timeset_7timeset_12TimeInterval_from_interval;
+  __pyx_vtable_7timeset_7timeset_TimeInterval.contains = (int (*)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, PyObject *, int __pyx_skip_dispatch))__pyx_f_7timeset_7timeset_12TimeInterval_contains;
+  __pyx_vtable_7timeset_7timeset_TimeInterval.overlaps_with = (int (*)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, struct __pyx_obj_7timeset_7timeset_TimeInterval *, int __pyx_skip_dispatch))__pyx_f_7timeset_7timeset_12TimeInterval_overlaps_with;
+  __pyx_vtable_7timeset_7timeset_TimeInterval.is_subset = (int (*)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, struct __pyx_obj_7timeset_7timeset_TimeInterval *, int __pyx_skip_dispatch))__pyx_f_7timeset_7timeset_12TimeInterval_is_subset;
+  __pyx_vtable_7timeset_7timeset_TimeInterval.duration = (PyObject *(*)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, int __pyx_skip_dispatch))__pyx_f_7timeset_7timeset_12TimeInterval_duration;
+  __pyx_vtable_7timeset_7timeset_TimeInterval.is_empty = (int (*)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, int __pyx_skip_dispatch))__pyx_f_7timeset_7timeset_12TimeInterval_is_empty;
+  __pyx_vtable_7timeset_7timeset_TimeInterval.intersection = (struct __pyx_obj_7timeset_7timeset_TimeInterval *(*)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, struct __pyx_obj_7timeset_7timeset_TimeInterval *, int __pyx_skip_dispatch))__pyx_f_7timeset_7timeset_12TimeInterval_intersection;
+  __pyx_vtable_7timeset_7timeset_TimeInterval.translate = (struct __pyx_obj_7timeset_7timeset_TimeInterval *(*)(struct __pyx_obj_7timeset_7timeset_TimeInterval *, PyObject *, int __pyx_skip_dispatch))__pyx_f_7timeset_7timeset_12TimeInterval_translate;
+  if (PyType_Ready(&__pyx_type_7timeset_7timeset_TimeInterval) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_9pytimeset_7timeset_TimeInterval.tp_print = 0;
+  __pyx_type_7timeset_7timeset_TimeInterval.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9pytimeset_7timeset_TimeInterval.tp_dictoffset && __pyx_type_9pytimeset_7timeset_TimeInterval.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_9pytimeset_7timeset_TimeInterval.tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_7timeset_7timeset_TimeInterval.tp_dictoffset && __pyx_type_7timeset_7timeset_TimeInterval.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_7timeset_7timeset_TimeInterval.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (__Pyx_SetVtable(__pyx_type_9pytimeset_7timeset_TimeInterval.tp_dict, __pyx_vtabptr_9pytimeset_7timeset_TimeInterval) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_TimeInterval_2, (PyObject *)&__pyx_type_9pytimeset_7timeset_TimeInterval) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
-  __pyx_ptype_9pytimeset_7timeset_TimeInterval = &__pyx_type_9pytimeset_7timeset_TimeInterval;
-  __pyx_vtabptr_9pytimeset_7timeset_TimeSet = &__pyx_vtable_9pytimeset_7timeset_TimeSet;
-  __pyx_vtable_9pytimeset_7timeset_TimeSet._initialize_list = (void (*)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, __pyx_t_9pytimeset_7timeset_Interval))__pyx_f_9pytimeset_7timeset_7TimeSet__initialize_list;
-  __pyx_vtable_9pytimeset_7timeset_TimeSet._normalize = (void (*)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, __pyx_t_9pytimeset_7timeset_Interval *, int))__pyx_f_9pytimeset_7timeset_7TimeSet__normalize;
-  __pyx_vtable_9pytimeset_7timeset_TimeSet.from_list = (struct __pyx_obj_9pytimeset_7timeset_TimeSet *(*)(__pyx_t_9pytimeset_7timeset_IntervalList *))__pyx_f_9pytimeset_7timeset_7TimeSet_from_list;
-  __pyx_vtable_9pytimeset_7timeset_TimeSet.__pyx_union = (struct __pyx_obj_9pytimeset_7timeset_TimeSet *(*)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, struct __pyx_obj_9pytimeset_7timeset_TimeSet *, int __pyx_skip_dispatch))__pyx_f_9pytimeset_7timeset_7TimeSet_union;
-  __pyx_vtable_9pytimeset_7timeset_TimeSet.intersection = (struct __pyx_obj_9pytimeset_7timeset_TimeSet *(*)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, struct __pyx_obj_9pytimeset_7timeset_TimeSet *, int __pyx_skip_dispatch))__pyx_f_9pytimeset_7timeset_7TimeSet_intersection;
-  __pyx_vtable_9pytimeset_7timeset_TimeSet.difference = (struct __pyx_obj_9pytimeset_7timeset_TimeSet *(*)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, struct __pyx_obj_9pytimeset_7timeset_TimeSet *, int __pyx_skip_dispatch))__pyx_f_9pytimeset_7timeset_7TimeSet_difference;
-  __pyx_vtable_9pytimeset_7timeset_TimeSet.is_subset = (int (*)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, struct __pyx_obj_9pytimeset_7timeset_TimeSet *, int __pyx_skip_dispatch))__pyx_f_9pytimeset_7timeset_7TimeSet_is_subset;
-  __pyx_vtable_9pytimeset_7timeset_TimeSet.is_empty = (int (*)(struct __pyx_obj_9pytimeset_7timeset_TimeSet *, int __pyx_skip_dispatch))__pyx_f_9pytimeset_7timeset_7TimeSet_is_empty;
-  if (PyType_Ready(&__pyx_type_9pytimeset_7timeset_TimeSet) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_7timeset_7timeset_TimeInterval.tp_dict, __pyx_vtabptr_7timeset_7timeset_TimeInterval) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_TimeInterval_2, (PyObject *)&__pyx_type_7timeset_7timeset_TimeInterval) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
+  __pyx_ptype_7timeset_7timeset_TimeInterval = &__pyx_type_7timeset_7timeset_TimeInterval;
+  __pyx_vtabptr_7timeset_7timeset_TimeSet = &__pyx_vtable_7timeset_7timeset_TimeSet;
+  __pyx_vtable_7timeset_7timeset_TimeSet._initialize_list = (void (*)(struct __pyx_obj_7timeset_7timeset_TimeSet *, __pyx_t_7timeset_7timeset_Interval))__pyx_f_7timeset_7timeset_7TimeSet__initialize_list;
+  __pyx_vtable_7timeset_7timeset_TimeSet._normalize = (void (*)(struct __pyx_obj_7timeset_7timeset_TimeSet *, __pyx_t_7timeset_7timeset_Interval *, int))__pyx_f_7timeset_7timeset_7TimeSet__normalize;
+  __pyx_vtable_7timeset_7timeset_TimeSet.from_list = (struct __pyx_obj_7timeset_7timeset_TimeSet *(*)(__pyx_t_7timeset_7timeset_IntervalList *))__pyx_f_7timeset_7timeset_7TimeSet_from_list;
+  __pyx_vtable_7timeset_7timeset_TimeSet.__pyx_union = (struct __pyx_obj_7timeset_7timeset_TimeSet *(*)(struct __pyx_obj_7timeset_7timeset_TimeSet *, struct __pyx_obj_7timeset_7timeset_TimeSet *, int __pyx_skip_dispatch))__pyx_f_7timeset_7timeset_7TimeSet_union;
+  __pyx_vtable_7timeset_7timeset_TimeSet.intersection = (struct __pyx_obj_7timeset_7timeset_TimeSet *(*)(struct __pyx_obj_7timeset_7timeset_TimeSet *, struct __pyx_obj_7timeset_7timeset_TimeSet *, int __pyx_skip_dispatch))__pyx_f_7timeset_7timeset_7TimeSet_intersection;
+  __pyx_vtable_7timeset_7timeset_TimeSet.difference = (struct __pyx_obj_7timeset_7timeset_TimeSet *(*)(struct __pyx_obj_7timeset_7timeset_TimeSet *, struct __pyx_obj_7timeset_7timeset_TimeSet *, int __pyx_skip_dispatch))__pyx_f_7timeset_7timeset_7TimeSet_difference;
+  __pyx_vtable_7timeset_7timeset_TimeSet.is_subset = (int (*)(struct __pyx_obj_7timeset_7timeset_TimeSet *, struct __pyx_obj_7timeset_7timeset_TimeSet *, int __pyx_skip_dispatch))__pyx_f_7timeset_7timeset_7TimeSet_is_subset;
+  __pyx_vtable_7timeset_7timeset_TimeSet.is_empty = (int (*)(struct __pyx_obj_7timeset_7timeset_TimeSet *, int __pyx_skip_dispatch))__pyx_f_7timeset_7timeset_7TimeSet_is_empty;
+  if (PyType_Ready(&__pyx_type_7timeset_7timeset_TimeSet) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_9pytimeset_7timeset_TimeSet.tp_print = 0;
+  __pyx_type_7timeset_7timeset_TimeSet.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9pytimeset_7timeset_TimeSet.tp_dictoffset && __pyx_type_9pytimeset_7timeset_TimeSet.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_9pytimeset_7timeset_TimeSet.tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_7timeset_7timeset_TimeSet.tp_dictoffset && __pyx_type_7timeset_7timeset_TimeSet.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_7timeset_7timeset_TimeSet.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (__Pyx_SetVtable(__pyx_type_9pytimeset_7timeset_TimeSet.tp_dict, __pyx_vtabptr_9pytimeset_7timeset_TimeSet) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_TimeSet_2, (PyObject *)&__pyx_type_9pytimeset_7timeset_TimeSet) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
-  __pyx_ptype_9pytimeset_7timeset_TimeSet = &__pyx_type_9pytimeset_7timeset_TimeSet;
+  if (__Pyx_SetVtable(__pyx_type_7timeset_7timeset_TimeSet.tp_dict, __pyx_vtabptr_7timeset_7timeset_TimeSet) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_TimeSet_2, (PyObject *)&__pyx_type_7timeset_7timeset_TimeSet) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_ptype_7timeset_7timeset_TimeSet = &__pyx_type_7timeset_7timeset_TimeSet;
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -8516,7 +8516,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_timeset(PyObject *__pyx_pyinit_mod
 {
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
-  __pyx_t_9pytimeset_7timeset_Interval __pyx_t_3;
+  __pyx_t_7timeset_7timeset_Interval __pyx_t_3;
   __Pyx_RefNannyDeclarations
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
@@ -8593,14 +8593,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_pytimeset__timeset) {
+  if (__pyx_module_is_main_timeset__timeset) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "pytimeset.timeset")) {
-      if (unlikely(PyDict_SetItemString(modules, "pytimeset.timeset", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "timeset.timeset")) {
+      if (unlikely(PyDict_SetItemString(modules, "timeset.timeset", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -8621,7 +8621,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "pytimeset/timeset.pyx":10
+  /* "timeset/timeset.pyx":10
  *                int(*compar)(const_void *, const_void *)) nogil
  * 
  * from datetime import datetime, timedelta             # <<<<<<<<<<<<<<
@@ -8649,7 +8649,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pytimeset/timeset.pyx":11
+  /* "timeset/timeset.pyx":11
  * 
  * from datetime import datetime, timedelta
  * from typing import Collection, FrozenSet             # <<<<<<<<<<<<<<
@@ -8677,7 +8677,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pytimeset/timeset.pyx":51
+  /* "timeset/timeset.pyx":51
  *     return Interval(self.start+_by, self.end+_by)
  * 
  * cdef Interval empty = Interval(0.0, 0.0)             # <<<<<<<<<<<<<<
@@ -8686,19 +8686,19 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_3.start = 0.0;
   __pyx_t_3.end = 0.0;
-  __pyx_v_9pytimeset_7timeset_empty = __pyx_t_3;
+  __pyx_v_7timeset_7timeset_empty = __pyx_t_3;
 
-  /* "pytimeset/timeset.pyx":214
+  /* "timeset/timeset.pyx":214
  * 
  *     @classmethod
  *     def from_interval(cls, start: datetime, end: datetime):             # <<<<<<<<<<<<<<
  *         return TimeSet([TimeInterval(start, end)])
  * 
  */
-  __Pyx_GetNameInClass(__pyx_t_1, (PyObject *)__pyx_ptype_9pytimeset_7timeset_TimeSet, __pyx_n_s_from_interval); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __Pyx_GetNameInClass(__pyx_t_1, (PyObject *)__pyx_ptype_7timeset_7timeset_TimeSet, __pyx_n_s_from_interval); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pytimeset/timeset.pyx":213
+  /* "timeset/timeset.pyx":213
  *         return ts
  * 
  *     @classmethod             # <<<<<<<<<<<<<<
@@ -8708,21 +8708,21 @@ if (!__Pyx_RefNanny) {
   __pyx_t_2 = __Pyx_Method_ClassMethod(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_9pytimeset_7timeset_TimeSet->tp_dict, __pyx_n_s_from_interval, __pyx_t_2) < 0) __PYX_ERR(0, 214, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_7timeset_7timeset_TimeSet->tp_dict, __pyx_n_s_from_interval, __pyx_t_2) < 0) __PYX_ERR(0, 214, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_9pytimeset_7timeset_TimeSet);
+  PyType_Modified(__pyx_ptype_7timeset_7timeset_TimeSet);
 
-  /* "pytimeset/timeset.pyx":218
+  /* "timeset/timeset.pyx":218
  * 
  *     @classmethod
  *     def empty(cls):             # <<<<<<<<<<<<<<
  *         return empty_set
  * 
  */
-  __Pyx_GetNameInClass(__pyx_t_2, (PyObject *)__pyx_ptype_9pytimeset_7timeset_TimeSet, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
+  __Pyx_GetNameInClass(__pyx_t_2, (PyObject *)__pyx_ptype_7timeset_7timeset_TimeSet, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "pytimeset/timeset.pyx":217
+  /* "timeset/timeset.pyx":217
  *         return TimeSet([TimeInterval(start, end)])
  * 
  *     @classmethod             # <<<<<<<<<<<<<<
@@ -8732,26 +8732,26 @@ if (!__Pyx_RefNanny) {
   __pyx_t_1 = __Pyx_Method_ClassMethod(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_9pytimeset_7timeset_TimeSet->tp_dict, __pyx_n_s_empty, __pyx_t_1) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_7timeset_7timeset_TimeSet->tp_dict, __pyx_n_s_empty, __pyx_t_1) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  PyType_Modified(__pyx_ptype_9pytimeset_7timeset_TimeSet);
+  PyType_Modified(__pyx_ptype_7timeset_7timeset_TimeSet);
 
-  /* "pytimeset/timeset.pyx":392
+  /* "timeset/timeset.pyx":392
  *         free_list(self._intervals)
  * 
  * cdef TimeSet empty_set = TimeSet([])             # <<<<<<<<<<<<<<
  */
   __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 392, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)__pyx_ptype_9pytimeset_7timeset_TimeSet), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 392, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)__pyx_ptype_7timeset_7timeset_TimeSet), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 392, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_XGOTREF(((PyObject *)__pyx_v_9pytimeset_7timeset_empty_set));
-  __Pyx_DECREF_SET(__pyx_v_9pytimeset_7timeset_empty_set, ((struct __pyx_obj_9pytimeset_7timeset_TimeSet *)__pyx_t_2));
+  __Pyx_XGOTREF(((PyObject *)__pyx_v_7timeset_7timeset_empty_set));
+  __Pyx_DECREF_SET(__pyx_v_7timeset_7timeset_empty_set, ((struct __pyx_obj_7timeset_7timeset_TimeSet *)__pyx_t_2));
   __Pyx_GIVEREF(__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pytimeset/timeset.pyx":1
+  /* "timeset/timeset.pyx":1
  * # -*- coding: utf-8 -*-             # <<<<<<<<<<<<<<
  * #cython: language_level=3
  * #cython: auto_pickle=False
@@ -8769,11 +8769,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init pytimeset.timeset", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init timeset.timeset", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init pytimeset.timeset");
+    PyErr_SetString(PyExc_ImportError, "init timeset.timeset");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -10535,7 +10535,7 @@ static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
         return (target_type) value;\
     }
 
-static PyObject* __pyx_convert__to_py___pyx_t_9pytimeset_7timeset_Interval(__pyx_t_9pytimeset_7timeset_Interval s) {
+static PyObject* __pyx_convert__to_py___pyx_t_7timeset_7timeset_Interval(__pyx_t_7timeset_7timeset_Interval s) {
   PyObject* res;
   PyObject* member;
   res = __Pyx_PyDict_NewPresized(2); if (unlikely(!res)) return NULL;
