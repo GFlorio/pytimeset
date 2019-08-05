@@ -15,5 +15,9 @@ setup(
     author_email='gabriel@gabrielflorio.com',
     description='Defines sets and intervals to work with time, and provides arithmetic operations '
                 'for them. Uses Cython extensions for performance.',
-    ext_modules=[Extension('timeset.timeset', ['timeset/timeset.c'])]
+    ext_modules=[Extension('timeset.timeset', ['timeset/timeset.c'])],
+    package_data={
+        'timeset': ['*.pyi', 'py.typed']
+    },
+    include_package_data=True,
 )
