@@ -105,6 +105,9 @@ cdef class TimeInterval:
     def __str__(self):
         return f'TimeInterval [{self.start}; {self.end})'
 
+    def __repr__(self):
+        return str(self)
+
 
 ctypedef struct IntervalList:
     Interval interval
