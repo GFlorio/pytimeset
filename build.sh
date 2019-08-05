@@ -9,8 +9,9 @@ echo "### TESTING ###"
 python3 -m unittest discover -s tests
 
 if [ "$1" == "publish" ]; then
+  rm dist/*
   echo "### BUILDING WHEEL ###"
-  python3 setup.py sdist bdist_wheel
+  python3 setup.py sdist # bdist_wheel
   echo "### PUBLISHING ###"
   python3 -m twine upload dist/*
 fi
