@@ -344,11 +344,13 @@ cdef class TimeSet:
             _iter = _iter.next
         return timedelta(seconds=_duration)
 
+    @property
     def start(self) -> datetime:
         if self.is_empty():
             raise ValueError('Unspecified behavior!')
         return datetime.fromtimestamp(self._intervals.interval.start)
 
+    @property
     def end(self) -> datetime:
         cdef IntervalList* last = self._intervals
         if self.is_empty():

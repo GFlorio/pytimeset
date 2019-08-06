@@ -4,6 +4,9 @@ from typing import Collection, FrozenSet
 
 
 class TimeInterval:
+    start: datetime
+    end: datetime
+
     def __init__(self, start: datetime, end: datetime): ...
 
     def contains(self, moment: datetime) -> bool: ...
@@ -20,12 +23,12 @@ class TimeInterval:
 
     def translate(self, by: timedelta) -> TimeInterval: ...
 
-    def start(self) -> datetime: ...
-
-    def end(self) -> datetime: ...
-
 
 class TimeSet:
+    intervals: FrozenSet[TimeInterval]
+    start: datetime
+    end: datetime
+
     def __init__(self, intervals: Collection[TimeInterval]): ...
 
     @classmethod
@@ -49,9 +52,3 @@ class TimeSet:
     def limiting_interval(self) -> TimeInterval: ...
 
     def duration(self) -> timedelta: ...
-
-    def start(self) -> datetime: ...
-
-    def end(self) -> datetime: ...
-
-    def intervals(self) -> FrozenSet[TimeInterval]: ...
