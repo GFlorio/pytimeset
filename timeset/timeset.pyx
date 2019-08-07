@@ -334,7 +334,7 @@ cdef class TimeSet:
     def limiting_interval(self) -> TimeInterval:
         if self.is_empty():
             raise ValueError('Unspecified behavior!')
-        return TimeInterval(self.start(), self.end())
+        return TimeInterval(self.start, self.end)
 
     def duration(self) -> timedelta:
         cdef double _duration = 0.0
