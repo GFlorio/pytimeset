@@ -53,6 +53,7 @@ cdef Interval empty = Interval(0.0, 0.0)
 
 cdef class TimeInterval:
     cdef Interval interval
+    cpdef tzinfo
 
     def __init__(self, start: datetime, end: datetime):
         self.interval = Interval(start.timestamp(), end.timestamp())
