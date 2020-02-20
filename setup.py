@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='pytimeset',
-    version='0.5.7',
+    version='0.5.9',
     packages=['timeset'],
     url='https://github.com/GFlorio/pytimeset',
     license='MIT',

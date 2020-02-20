@@ -56,6 +56,7 @@ cdef class TimeInterval:
 
     def __init__(self, start: datetime, end: datetime):
         self.interval = Interval(start.timestamp(), end.timestamp())
+        self.tzinfo = start.tzinfo
 
     @staticmethod
     cdef TimeInterval from_interval(Interval interval):
@@ -88,11 +89,11 @@ cdef class TimeInterval:
 
     @property
     def start(self):
-        return datetime.fromtimestamp(self.interval.start)
+        return datetime.fromtimestamp(self.interval.start, tz=self.tzinfo)
 
     @property
     def end(self):
-        return datetime.fromtimestamp(self.interval.end)
+        return datetime.fromtimestamp(self.interval.end, tz=self.tzinfo)
 
     def __eq__(self, other):
         if not isinstance(other, TimeInterval):
