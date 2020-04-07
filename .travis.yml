@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.6"
+  - "3.7"
+
+notifications:
+  email: false
+
+install:
+    - pip install -q cython
+    - python setup.py develop
+
+script:
+  - cython -a timeset/timeset.pyx
+  - python3 setup.py build_ext --inplace
+  - python3 -m unittest discover -s tests
