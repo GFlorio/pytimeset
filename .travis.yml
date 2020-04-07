@@ -14,6 +14,6 @@ script:
   - cython -a timeset/timeset.pyx
   - python3 setup.py build_ext --inplace
   - coverage run --source timeset setup.py test
-  -
+
 after_success:
     coveralls
