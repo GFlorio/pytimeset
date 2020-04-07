@@ -7,10 +7,13 @@ notifications:
   email: false
 
 install:
-    - pip install -q cython
+    - pip install -q cython coverage coveralls
     - python setup.py develop
 
 script:
   - cython -a timeset/timeset.pyx
   - python3 setup.py build_ext --inplace
-  - python3 -m unittest discover -s tests
+  - coverage run --source timeset setup.py test
+  -
+after_success:
+    coveralls

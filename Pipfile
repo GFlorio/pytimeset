@@ -9,6 +9,7 @@ name = "pypi"
 cython = "*"
 setuptools = "*"
 twine = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.7"
